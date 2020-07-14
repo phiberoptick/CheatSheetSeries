@@ -1349,11 +1349,11 @@
 <li>Has appropriate permissions so that it can only be read by the required user(s).</li>
 <li>Is not checked into source code repositories.</li>
 </ul>
-<p>Where possible, these credentials should also be encrypted or otherwise protected using built in functionality, such as the <code>web.config</code> encryption available in <a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/connection-strings-and-configuration-files#encrypting-configuration-file-sections-using-protected-configuration">ASP.NET</a>.</p>
+<p>Where possible, these credentials should also be encrypted or otherwise protected using built-in functionality, such as the <code>web.config</code> encryption available in <a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/connection-strings-and-configuration-files#encrypting-configuration-file-sections-using-protected-configuration">ASP.NET</a>.</p>
 <h2 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h2>
 <p>The permissions assigned to database user accounts should be based on the principle of least privilege (i.e, the accounts should only have the minimal permissions required for the application to function). This can be applied at a number of increasingly granular levels levels depending on the functionality available in the database. The following steps should be applicable to all environments:</p>
 <ul>
-<li>Do not use the built in <code>root</code>, <code>sa</code> or <code>SYS</code> accounts.</li>
+<li>Do not use the built-in <code>root</code>, <code>sa</code> or <code>SYS</code> accounts.</li>
 <li>Do not grant the account administrative rights over the database instance.</li>
 <li>Only allow the account to connect from whitelisted hosts.<ul>
 <li>This would often be <code>localhost</code> or the address of the application server.</li>
@@ -1396,7 +1396,8 @@
 <p>The following sections gives some further recommendations for specific database software, in addition to the more general recommendations given above.</p>
 <h3 id="microsoft-sql-server">Microsoft SQL Server<a class="headerlink" href="#microsoft-sql-server" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Disable <code>xp_cmdshell</code>.</li>
+<li>Disable <code>xp_cmdshell</code>, <code>xp_dirtree</code> and other stored procedures that are not required.</li>
+<li>Disable Common Language Runtime (CLR) execution.</li>
 <li>Disable the SQL Browser service.</li>
 <li>Disable <a href="https://docs.microsoft.com/en-us/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15">Mixed Mode Authentication</a> unless it is required.</li>
 <li>Ensure that the sample <a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases">Northwind and AdventureWorks databases</a> have been removed.</li>
