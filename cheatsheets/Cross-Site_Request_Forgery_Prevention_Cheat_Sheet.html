@@ -631,13 +631,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#encrypted-csrf-cookie" class="md-nav__link">
-    Encrypted CSRF Cookie
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#hmac-csrf-token" class="md-nav__link">
     HMAC CSRF Token
   </a>
@@ -1928,13 +1921,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#encrypted-csrf-cookie" class="md-nav__link">
-    Encrypted CSRF Cookie
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#hmac-csrf-token" class="md-nav__link">
     HMAC CSRF Token
   </a>
@@ -2255,14 +2241,8 @@
 <p>In a nutshell, an attacker is unable to access the cookie value during a cross-site request. This prevents them from including a matching value in the hidden form value or as a request parameter/header.</p>
 <p>The Naive Double Submit Cookie method is a good initial step to counter CSRF attacks, but it remains vulnerable to certain attacks. <a href="https://owasp.org/www-chapter-london/assets/slides/David_Johansson-Double_Defeat_of_Double-Submit_Cookie.pdf">This resource</a> provides more information on some vulnerabilities. It is therefore recommended to use a more secure implementation, the <em>Signed Double Submit Cookie</em> pattern.</p>
 <h4 id="signed-double-submit-cookie">Signed Double Submit Cookie<a class="headerlink" href="#signed-double-submit-cookie" title="Permanent link">&para;</a></h4>
-<p>The <em>Signed Double Submit Cookie</em> involves a secret key known only to the server. This ensures that an attacker cannot create and inject their own, known, CSRF token into the victim's authenticated session. There are two common methods for signing tokens:</p>
-<ul>
-<li>Encrypt the cookie that contains the CSRF token</li>
-<li>Generate the CSRF Token using HMAC</li>
-</ul>
+<p>The <em>Signed Double Submit Cookie</em> involves a secret key known only to the server. This ensures that an attacker cannot create and inject their own, known, CSRF token into the victim's authenticated session. Tokens can be secured by hashing or encrypting them, with HMAC algorithm being a popular choice due to its fast speed and easy implementation.</p>
 <p>In both cases, it is recommended to bind the CSRF token with the users current session to even further enhance security.</p>
-<h5 id="encrypted-csrf-cookie">Encrypted CSRF Cookie<a class="headerlink" href="#encrypted-csrf-cookie" title="Permanent link">&para;</a></h5>
-<p>Include the CSRF token in an encrypted cookie - other than the authentication cookie (since they are often shared within subdomains) - and then at the server side match it (after decrypting the encrypted cookie) with the token in hidden form field or request header for AJAX calls. This works because a sub domain has no way to overwrite a properly crafted encrypted cookie without the necessary information such as encryption key.</p>
 <h5 id="hmac-csrf-token">HMAC CSRF Token<a class="headerlink" href="#hmac-csrf-token" title="Permanent link">&para;</a></h5>
 <p>A simpler alternative to an encrypted CSRF cookie is to use HMAC (Hash-based Message Authentication Code) to hash the random value with a secret key known only by the server and place this value in a cookie. This is similar to an encrypted cookie (both require knowledge only the server holds), but is less computationally intensive than encrypting and decrypting the cookie.</p>
 <p>We recommend generating the HMAC CSRF Token, with a session-dependent user value, using the following steps:</p>
