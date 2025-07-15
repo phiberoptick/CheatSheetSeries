@@ -13,14 +13,14 @@
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Choosing_and_Using_Security_Questions_Cheat_Sheet.html">
       
       
-        <link rel="prev" href="C-Based_Toolchain_Hardening_Cheat_Sheet.html">
+        <link rel="prev" href="CI_CD_Security_Cheat_Sheet.html">
       
       
         <link rel="next" href="Clickjacking_Defense_Cheat_Sheet.html">
       
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -28,10 +28,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,9 +69,6 @@
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -97,12 +94,12 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -127,20 +124,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -148,10 +145,13 @@
       
     
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -160,21 +160,21 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -191,7 +191,7 @@
         <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -226,7 +226,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     OWASP Cheat Sheet Series
@@ -236,7 +236,7 @@
       <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -248,6 +248,7 @@
     
       
       
+  
   
   
   
@@ -270,6 +271,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../Glossary.html" class="md-nav__link">
         
@@ -286,6 +288,7 @@
     
       
       
+  
   
   
   
@@ -308,6 +311,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../IndexMASVS.html" class="md-nav__link">
         
@@ -327,6 +331,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../IndexProactiveControls.html" class="md-nav__link">
         
@@ -343,6 +348,7 @@
     
       
       
+  
   
   
   
@@ -367,18 +373,24 @@
     
   
   
+  
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -398,6 +410,7 @@
             
               
                 
+  
   
   
   
@@ -421,6 +434,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Abuse_Case_Cheat_Sheet.html" class="md-nav__link">
         
@@ -438,6 +452,7 @@
             
               
                 
+  
   
   
   
@@ -461,6 +476,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
         
@@ -478,6 +494,7 @@
             
               
                 
+  
   
   
   
@@ -501,6 +518,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Authorization_Cheat_Sheet.html" class="md-nav__link">
         
@@ -518,6 +536,7 @@
             
               
                 
+  
   
   
   
@@ -541,6 +560,28 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Automotive_Security.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automotive Security.md
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Bean_Validation_Cheat_Sheet.html" class="md-nav__link">
         
@@ -558,6 +599,28 @@
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Browser_Extension_Vulnerabilities_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Browser Extension Vulnerabilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -580,7 +643,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="CI_CD_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI CD Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
+  
   
   
     <li class="md-nav__item md-nav__item--active">
@@ -629,14 +714,18 @@
       
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
-    Introduction
+    <span class="md-ellipsis">
+      Introduction
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#choosing-security-questions" class="md-nav__link">
-    Choosing Security Questions
+    <span class="md-ellipsis">
+      Choosing Security Questions
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Choosing Security Questions">
@@ -644,21 +733,27 @@
         
           <li class="md-nav__item">
   <a href="#desired-characteristics" class="md-nav__link">
-    Desired Characteristics
+    <span class="md-ellipsis">
+      Desired Characteristics
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#types-of-security-questions" class="md-nav__link">
-    Types of Security Questions
+    <span class="md-ellipsis">
+      Types of Security Questions
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#user-defined-security-questions" class="md-nav__link">
-    User Defined Security Questions
+    <span class="md-ellipsis">
+      User Defined Security Questions
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="User Defined Security Questions">
@@ -666,35 +761,45 @@
         
           <li class="md-nav__item">
   <a href="#bad-questions" class="md-nav__link">
-    Bad Questions
+    <span class="md-ellipsis">
+      Bad Questions
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#good-questions" class="md-nav__link">
-    Good Questions
+    <span class="md-ellipsis">
+      Good Questions
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#allowing-users-to-write-their-own-questions" class="md-nav__link">
-    Allowing Users to Write Their Own Questions
+    <span class="md-ellipsis">
+      Allowing Users to Write Their Own Questions
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#restricting-answers" class="md-nav__link">
-    Restricting Answers
+    <span class="md-ellipsis">
+      Restricting Answers
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#renewing-security-questions" class="md-nav__link">
-    Renewing Security Questions
+    <span class="md-ellipsis">
+      Renewing Security Questions
+    </span>
   </a>
   
 </li>
@@ -706,7 +811,9 @@
         
           <li class="md-nav__item">
   <a href="#system-defined-security-questions" class="md-nav__link">
-    System Defined Security Questions
+    <span class="md-ellipsis">
+      System Defined Security Questions
+    </span>
   </a>
   
 </li>
@@ -718,7 +825,9 @@
       
         <li class="md-nav__item">
   <a href="#using-security-questions" class="md-nav__link">
-    Using Security Questions
+    <span class="md-ellipsis">
+      Using Security Questions
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Using Security Questions">
@@ -726,7 +835,9 @@
         
           <li class="md-nav__item">
   <a href="#when-to-use-security-questions" class="md-nav__link">
-    When to Use Security Questions
+    <span class="md-ellipsis">
+      When to Use Security Questions
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="When to Use Security Questions">
@@ -734,14 +845,18 @@
         
           <li class="md-nav__item">
   <a href="#authentication-flow" class="md-nav__link">
-    Authentication Flow
+    <span class="md-ellipsis">
+      Authentication Flow
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#forgotten-password-or-lost-mfa-token-flow" class="md-nav__link">
-    Forgotten Password or Lost MFA Token Flow
+    <span class="md-ellipsis">
+      Forgotten Password or Lost MFA Token Flow
+    </span>
   </a>
   
 </li>
@@ -753,7 +868,9 @@
         
           <li class="md-nav__item">
   <a href="#how-to-use-security-questions" class="md-nav__link">
-    How to Use Security Questions
+    <span class="md-ellipsis">
+      How to Use Security Questions
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="How to Use Security Questions">
@@ -761,28 +878,36 @@
         
           <li class="md-nav__item">
   <a href="#storing-answers" class="md-nav__link">
-    Storing Answers
+    <span class="md-ellipsis">
+      Storing Answers
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#comparing-answers" class="md-nav__link">
-    Comparing Answers
+    <span class="md-ellipsis">
+      Comparing Answers
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#updating-answers" class="md-nav__link">
-    Updating Answers
+    <span class="md-ellipsis">
+      Updating Answers
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#multiple-security-questions" class="md-nav__link">
-    Multiple Security Questions
+    <span class="md-ellipsis">
+      Multiple Security Questions
+    </span>
   </a>
   
 </li>
@@ -811,6 +936,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Clickjacking_Defense_Cheat_Sheet.html" class="md-nav__link">
         
@@ -828,6 +954,7 @@
             
               
                 
+  
   
   
   
@@ -851,6 +978,28 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Cookie_Theft_Mitigation_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cookie Theft Mitigation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Credential_Stuffing_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -868,6 +1017,7 @@
             
               
                 
+  
   
   
   
@@ -891,6 +1041,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -908,6 +1059,7 @@
             
               
                 
+  
   
   
   
@@ -931,6 +1083,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="DOM_Clobbering_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -948,6 +1101,7 @@
             
               
                 
+  
   
   
   
@@ -971,6 +1125,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Database_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -988,6 +1143,7 @@
             
               
                 
+  
   
   
   
@@ -1011,6 +1167,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Deserialization_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1028,6 +1185,7 @@
             
               
                 
+  
   
   
   
@@ -1051,6 +1209,28 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Django_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Docker_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1068,6 +1248,7 @@
             
               
                 
+  
   
   
   
@@ -1091,6 +1272,28 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Drone_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drone Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Error_Handling_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1108,6 +1311,7 @@
             
               
                 
+  
   
   
   
@@ -1131,6 +1335,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Forgot_Password_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1148,6 +1353,7 @@
             
               
                 
+  
   
   
   
@@ -1171,6 +1377,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="HTML5_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1188,6 +1395,7 @@
             
               
                 
+  
   
   
   
@@ -1211,6 +1419,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1228,6 +1437,7 @@
             
               
                 
+  
   
   
   
@@ -1251,6 +1461,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1268,6 +1479,7 @@
             
               
                 
+  
   
   
   
@@ -1291,6 +1503,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Input_Validation_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1308,6 +1521,7 @@
             
               
                 
+  
   
   
   
@@ -1331,6 +1545,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="JAAS_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1348,6 +1563,7 @@
             
               
                 
+  
   
   
   
@@ -1371,6 +1587,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Java_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1388,6 +1605,7 @@
             
               
                 
+  
   
   
   
@@ -1411,6 +1629,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Kubernetes_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1428,6 +1647,7 @@
             
               
                 
+  
   
   
   
@@ -1451,6 +1671,28 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="LLM_Prompt_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM Prompt Injection Prevention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Laravel_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1468,6 +1710,28 @@
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Legacy_Application_Management_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Legacy Application Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -1491,6 +1755,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Logging_Vocabulary_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1508,6 +1773,7 @@
             
               
                 
+  
   
   
   
@@ -1531,6 +1797,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Microservices_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1548,6 +1815,7 @@
             
               
                 
+  
   
   
   
@@ -1571,6 +1839,28 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Mobile_Application_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mobile Application Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Multifactor_Authentication_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1588,6 +1878,7 @@
             
               
                 
+  
   
   
   
@@ -1611,6 +1902,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Network_Segmentation_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1628,6 +1920,7 @@
             
               
                 
+  
   
   
   
@@ -1651,6 +1944,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Nodejs_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1668,6 +1962,28 @@
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="OAuth2_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -1691,6 +2007,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="PHP_Configuration_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1708,6 +2025,7 @@
             
               
                 
+  
   
   
   
@@ -1731,6 +2049,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Pinning_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1748,6 +2067,7 @@
             
               
                 
+  
   
   
   
@@ -1771,6 +2091,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Query_Parameterization_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1788,6 +2109,7 @@
             
               
                 
+  
   
   
   
@@ -1811,6 +2133,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="REST_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1828,6 +2151,7 @@
             
               
                 
+  
   
   
   
@@ -1851,6 +2175,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="SAML_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1868,6 +2193,7 @@
             
               
                 
+  
   
   
   
@@ -1891,6 +2217,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Secrets_Management_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1908,6 +2235,7 @@
             
               
                 
+  
   
   
   
@@ -1931,6 +2259,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Secure_Product_Design_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1948,6 +2277,7 @@
             
               
                 
+  
   
   
   
@@ -1971,6 +2301,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1988,6 +2319,7 @@
             
               
                 
+  
   
   
   
@@ -2011,6 +2343,49 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Software_Supply_Chain_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Supply Chain Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Symfony_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Symfony
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="TLS_Cipher_String_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2028,6 +2403,7 @@
             
               
                 
+  
   
   
   
@@ -2051,6 +2427,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Threat_Modeling_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2068,6 +2445,7 @@
             
               
                 
+  
   
   
   
@@ -2091,6 +2469,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Transport_Layer_Protection_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2108,6 +2487,28 @@
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Transport_Layer_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transport Layer Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -2131,6 +2532,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="User_Privacy_Protection_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2148,6 +2550,7 @@
             
               
                 
+  
   
   
   
@@ -2171,6 +2574,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Vulnerability_Disclosure_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2188,6 +2592,7 @@
             
               
                 
+  
   
   
   
@@ -2211,6 +2616,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Web_Service_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2228,6 +2634,7 @@
             
               
                 
+  
   
   
   
@@ -2251,6 +2658,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="XML_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2268,6 +2676,7 @@
             
               
                 
+  
   
   
   
@@ -2291,12 +2700,34 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="XS_Leaks_Cheat_Sheet.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     XS Leaks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Zero_Trust_Architecture_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zero Trust Architecture
   </span>
   
 
@@ -2341,14 +2772,18 @@
       
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
-    Introduction
+    <span class="md-ellipsis">
+      Introduction
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#choosing-security-questions" class="md-nav__link">
-    Choosing Security Questions
+    <span class="md-ellipsis">
+      Choosing Security Questions
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Choosing Security Questions">
@@ -2356,21 +2791,27 @@
         
           <li class="md-nav__item">
   <a href="#desired-characteristics" class="md-nav__link">
-    Desired Characteristics
+    <span class="md-ellipsis">
+      Desired Characteristics
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#types-of-security-questions" class="md-nav__link">
-    Types of Security Questions
+    <span class="md-ellipsis">
+      Types of Security Questions
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#user-defined-security-questions" class="md-nav__link">
-    User Defined Security Questions
+    <span class="md-ellipsis">
+      User Defined Security Questions
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="User Defined Security Questions">
@@ -2378,35 +2819,45 @@
         
           <li class="md-nav__item">
   <a href="#bad-questions" class="md-nav__link">
-    Bad Questions
+    <span class="md-ellipsis">
+      Bad Questions
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#good-questions" class="md-nav__link">
-    Good Questions
+    <span class="md-ellipsis">
+      Good Questions
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#allowing-users-to-write-their-own-questions" class="md-nav__link">
-    Allowing Users to Write Their Own Questions
+    <span class="md-ellipsis">
+      Allowing Users to Write Their Own Questions
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#restricting-answers" class="md-nav__link">
-    Restricting Answers
+    <span class="md-ellipsis">
+      Restricting Answers
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#renewing-security-questions" class="md-nav__link">
-    Renewing Security Questions
+    <span class="md-ellipsis">
+      Renewing Security Questions
+    </span>
   </a>
   
 </li>
@@ -2418,7 +2869,9 @@
         
           <li class="md-nav__item">
   <a href="#system-defined-security-questions" class="md-nav__link">
-    System Defined Security Questions
+    <span class="md-ellipsis">
+      System Defined Security Questions
+    </span>
   </a>
   
 </li>
@@ -2430,7 +2883,9 @@
       
         <li class="md-nav__item">
   <a href="#using-security-questions" class="md-nav__link">
-    Using Security Questions
+    <span class="md-ellipsis">
+      Using Security Questions
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Using Security Questions">
@@ -2438,7 +2893,9 @@
         
           <li class="md-nav__item">
   <a href="#when-to-use-security-questions" class="md-nav__link">
-    When to Use Security Questions
+    <span class="md-ellipsis">
+      When to Use Security Questions
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="When to Use Security Questions">
@@ -2446,14 +2903,18 @@
         
           <li class="md-nav__item">
   <a href="#authentication-flow" class="md-nav__link">
-    Authentication Flow
+    <span class="md-ellipsis">
+      Authentication Flow
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#forgotten-password-or-lost-mfa-token-flow" class="md-nav__link">
-    Forgotten Password or Lost MFA Token Flow
+    <span class="md-ellipsis">
+      Forgotten Password or Lost MFA Token Flow
+    </span>
   </a>
   
 </li>
@@ -2465,7 +2926,9 @@
         
           <li class="md-nav__item">
   <a href="#how-to-use-security-questions" class="md-nav__link">
-    How to Use Security Questions
+    <span class="md-ellipsis">
+      How to Use Security Questions
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="How to Use Security Questions">
@@ -2473,28 +2936,36 @@
         
           <li class="md-nav__item">
   <a href="#storing-answers" class="md-nav__link">
-    Storing Answers
+    <span class="md-ellipsis">
+      Storing Answers
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#comparing-answers" class="md-nav__link">
-    Comparing Answers
+    <span class="md-ellipsis">
+      Comparing Answers
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#updating-answers" class="md-nav__link">
-    Updating Answers
+    <span class="md-ellipsis">
+      Updating Answers
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#multiple-security-questions" class="md-nav__link">
-    Multiple Security Questions
+    <span class="md-ellipsis">
+      Multiple Security Questions
+    </span>
   </a>
   
 </li>
@@ -2600,6 +3071,10 @@
 <td>What is the make and model of your first car?</td>
 <td>Fairly small range of likely answers.</td>
 </tr>
+<tr>
+<td>What is your nickname?</td>
+<td>This could be guessed by glancing through social media posts.</td>
+</tr>
 </tbody>
 </table>
 <p>Additionally, the context of the application must be considered when deciding whether questions are good or bad. For example, a question such as "What was your maths teacher's surname in your 8th year of school?" would be very easy to guess if it was using in a virtual learning environment for your school (as other students probably know this information), but would be much stronger for an online gaming website.</p>
@@ -2620,14 +3095,14 @@
 <p>As such, it is generally best not to allow users to write their own questions.</p>
 <h4 id="restricting-answers">Restricting Answers<a class="headerlink" href="#restricting-answers" title="Permanent link">&para;</a></h4>
 <p>Enforcing a minimum length for answers can prevent users from entering strings such as "a" or "123" for their answers. However, depending on the questions asked, it could also prevent users from being able to correctly answer the question. For example, asking for a first name or surname could result in a two letter answer such as "Li", and a colour-based question could be four letters such as "blue".</p>
-<p>Answers should also be checked against a block list, including:</p>
+<p>Answers should also be checked against a denylist, including:</p>
 <ul>
 <li>The username or email address.</li>
 <li>The user's current password.</li>
 <li>Common strings such as "123" or "password".</li>
 </ul>
 <h4 id="renewing-security-questions">Renewing Security Questions<a class="headerlink" href="#renewing-security-questions" title="Permanent link">&para;</a></h4>
-<p>If the security questions are not used as part of the main authentication process, then consider periodically prompting the user to review their security questions and verify that they still know the answers. This should give them a chance to update any answers that may have changed (although ideally this shouldn't happen with good questions), and increases the likelihood that they will remember them if they ever need to recover their account.</p>
+<p>If the security questions are not used as part of the main authentication process, then consider periodically (such as when they are changing their passwords after expiration) prompting the user to review their security questions and verify that they still know the answers. This should give them a chance to update any answers that may have changed (although ideally this shouldn't happen with good questions), and increases the likelihood that they will remember them if they ever need to recover their account.</p>
 <h3 id="system-defined-security-questions">System Defined Security Questions<a class="headerlink" href="#system-defined-security-questions" title="Permanent link">&para;</a></h3>
 <p>System defined security questions are based on information that is already known about the user. The users' personal details are often used, including the full name, address and date of birth. However these can easily be obtained by an attacker from social media, and as such provide a very weak level of authentication.</p>
 <p>The questions that can be used will vary hugely depending on the application, and how much information is already held about the user. When deciding which bits of information may be usable for security questions, the following areas should be considered:</p>
@@ -2679,11 +3154,22 @@
 
 
 
+
+
+  
+  
+
+
+
+
+
+
                 
               </article>
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
@@ -2695,7 +3181,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+      ©Copyright <script>document.write(new Date().getFullYear())</script> - Cheat Sheets Series Team - This work is licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
     </div>
   
   
@@ -2715,10 +3201,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>

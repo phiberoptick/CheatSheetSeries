@@ -16,11 +16,11 @@
         <link rel="prev" href="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html">
       
       
-        <link rel="next" href="TLS_Cipher_String_Cheat_Sheet.html">
+        <link rel="next" href="Software_Supply_Chain_Security_Cheat_Sheet.html">
       
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -28,10 +28,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,9 +69,6 @@
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -97,12 +94,12 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -127,20 +124,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -148,10 +145,13 @@
       
     
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -160,21 +160,21 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -191,7 +191,7 @@
         <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -226,7 +226,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     OWASP Cheat Sheet Series
@@ -236,7 +236,7 @@
       <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -248,6 +248,7 @@
     
       
       
+  
   
   
   
@@ -270,6 +271,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../Glossary.html" class="md-nav__link">
         
@@ -286,6 +288,7 @@
     
       
       
+  
   
   
   
@@ -308,6 +311,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../IndexMASVS.html" class="md-nav__link">
         
@@ -327,6 +331,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../IndexProactiveControls.html" class="md-nav__link">
         
@@ -343,6 +348,7 @@
     
       
       
+  
   
   
   
@@ -367,18 +373,24 @@
     
   
   
+  
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -398,6 +410,7 @@
             
               
                 
+  
   
   
   
@@ -421,6 +434,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Abuse_Case_Cheat_Sheet.html" class="md-nav__link">
         
@@ -438,6 +452,7 @@
             
               
                 
+  
   
   
   
@@ -461,6 +476,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
         
@@ -478,6 +494,7 @@
             
               
                 
+  
   
   
   
@@ -501,6 +518,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Authorization_Cheat_Sheet.html" class="md-nav__link">
         
@@ -518,6 +536,7 @@
             
               
                 
+  
   
   
   
@@ -541,6 +560,28 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Automotive_Security.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automotive Security.md
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Bean_Validation_Cheat_Sheet.html" class="md-nav__link">
         
@@ -558,6 +599,28 @@
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Browser_Extension_Vulnerabilities_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Browser Extension Vulnerabilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -581,6 +644,28 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="CI_CD_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI CD Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Choosing_and_Using_Security_Questions_Cheat_Sheet.html" class="md-nav__link">
         
@@ -598,6 +683,7 @@
             
               
                 
+  
   
   
   
@@ -621,6 +707,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Content_Security_Policy_Cheat_Sheet.html" class="md-nav__link">
         
@@ -638,6 +725,28 @@
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Cookie_Theft_Mitigation_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cookie Theft Mitigation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -661,6 +770,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -678,6 +788,7 @@
             
               
                 
+  
   
   
   
@@ -701,6 +812,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Cryptographic_Storage_Cheat_Sheet.html" class="md-nav__link">
         
@@ -718,6 +830,7 @@
             
               
                 
+  
   
   
   
@@ -741,6 +854,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -758,6 +872,7 @@
             
               
                 
+  
   
   
   
@@ -781,6 +896,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Denial_of_Service_Cheat_Sheet.html" class="md-nav__link">
         
@@ -798,6 +914,7 @@
             
               
                 
+  
   
   
   
@@ -821,6 +938,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Django_REST_Framework_Cheat_Sheet.html" class="md-nav__link">
         
@@ -838,6 +956,28 @@
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Django_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -861,6 +1001,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="DotNet_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -878,6 +1019,28 @@
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Drone_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drone Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -901,6 +1064,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="File_Upload_Cheat_Sheet.html" class="md-nav__link">
         
@@ -918,6 +1082,7 @@
             
               
                 
+  
   
   
   
@@ -941,6 +1106,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="GraphQL_Cheat_Sheet.html" class="md-nav__link">
         
@@ -958,6 +1124,7 @@
             
               
                 
+  
   
   
   
@@ -981,6 +1148,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="HTTP_Headers_Cheat_Sheet.html" class="md-nav__link">
         
@@ -998,6 +1166,7 @@
             
               
                 
+  
   
   
   
@@ -1021,6 +1190,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Infrastructure_as_Code_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1038,6 +1208,7 @@
             
               
                 
+  
   
   
   
@@ -1061,6 +1232,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Injection_Prevention_in_Java_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1078,6 +1250,7 @@
             
               
                 
+  
   
   
   
@@ -1101,6 +1274,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1118,6 +1292,7 @@
             
               
                 
+  
   
   
   
@@ -1141,6 +1316,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1158,6 +1334,7 @@
             
               
                 
+  
   
   
   
@@ -1181,6 +1358,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Key_Management_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1198,6 +1376,7 @@
             
               
                 
+  
   
   
   
@@ -1221,6 +1400,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="LDAP_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1238,6 +1418,28 @@
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="LLM_Prompt_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM Prompt Injection Prevention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -1261,6 +1463,28 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Legacy_Application_Management_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Legacy Application Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Logging_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1278,6 +1502,7 @@
             
               
                 
+  
   
   
   
@@ -1301,6 +1526,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Mass_Assignment_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1318,6 +1544,7 @@
             
               
                 
+  
   
   
   
@@ -1341,6 +1568,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Microservices_based_Security_Arch_Doc_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1358,6 +1586,28 @@
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Mobile_Application_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mobile Application Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -1381,6 +1631,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="NPM_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1398,6 +1649,7 @@
             
               
                 
+  
   
   
   
@@ -1421,6 +1673,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="NodeJS_Docker_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1438,6 +1691,7 @@
             
               
                 
+  
   
   
   
@@ -1461,6 +1715,28 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="OAuth2_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1478,6 +1754,7 @@
             
               
                 
+  
   
   
   
@@ -1501,6 +1778,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Password_Storage_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1518,6 +1796,7 @@
             
               
                 
+  
   
   
   
@@ -1541,6 +1820,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Prototype_Pollution_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1558,6 +1838,7 @@
             
               
                 
+  
   
   
   
@@ -1581,6 +1862,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="REST_Assessment_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1598,6 +1880,7 @@
             
               
                 
+  
   
   
   
@@ -1621,6 +1904,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Ruby_on_Rails_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1638,6 +1922,7 @@
             
               
                 
+  
   
   
   
@@ -1661,6 +1946,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="SQL_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1678,6 +1964,7 @@
             
               
                 
+  
   
   
   
@@ -1701,6 +1988,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Secure_Cloud_Architecture_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1718,6 +2006,7 @@
             
               
                 
+  
   
   
   
@@ -1741,6 +2030,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Securing_Cascading_Style_Sheets_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1758,6 +2048,7 @@
             
               
                 
+  
   
   
   
@@ -1781,6 +2072,7 @@
   
   
     
+  
   
   
     <li class="md-nav__item md-nav__item--active">
@@ -1829,14 +2121,18 @@
       
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
-    Introduction
+    <span class="md-ellipsis">
+      Introduction
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#session-id-properties" class="md-nav__link">
-    Session ID Properties
+    <span class="md-ellipsis">
+      Session ID Properties
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Session ID Properties">
@@ -1844,28 +2140,36 @@
         
           <li class="md-nav__item">
   <a href="#session-id-name-fingerprinting" class="md-nav__link">
-    Session ID Name Fingerprinting
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#session-id-length" class="md-nav__link">
-    Session ID Length
+    <span class="md-ellipsis">
+      Session ID Name Fingerprinting
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#session-id-entropy" class="md-nav__link">
-    Session ID Entropy
+    <span class="md-ellipsis">
+      Session ID Entropy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-id-length" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session ID Length
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#session-id-content-or-value" class="md-nav__link">
-    Session ID Content (or Value)
+    <span class="md-ellipsis">
+      Session ID Content (or Value)
+    </span>
   </a>
   
 </li>
@@ -1877,7 +2181,9 @@
       
         <li class="md-nav__item">
   <a href="#session-management-implementation" class="md-nav__link">
-    Session Management Implementation
+    <span class="md-ellipsis">
+      Session Management Implementation
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Session Management Implementation">
@@ -1885,21 +2191,27 @@
         
           <li class="md-nav__item">
   <a href="#built-in-session-management-implementations" class="md-nav__link">
-    Built-in Session Management Implementations
+    <span class="md-ellipsis">
+      Built-in Session Management Implementations
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#used-vs-accepted-session-id-exchange-mechanisms" class="md-nav__link">
-    Used vs. Accepted Session ID Exchange Mechanisms
+    <span class="md-ellipsis">
+      Used vs. Accepted Session ID Exchange Mechanisms
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#transport-layer-security" class="md-nav__link">
-    Transport Layer Security
+    <span class="md-ellipsis">
+      Transport Layer Security
+    </span>
   </a>
   
 </li>
@@ -1911,7 +2223,9 @@
       
         <li class="md-nav__item">
   <a href="#cookies" class="md-nav__link">
-    Cookies
+    <span class="md-ellipsis">
+      Cookies
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Cookies">
@@ -1919,35 +2233,45 @@
         
           <li class="md-nav__item">
   <a href="#secure-attribute" class="md-nav__link">
-    Secure Attribute
+    <span class="md-ellipsis">
+      Secure Attribute
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#httponly-attribute" class="md-nav__link">
-    HttpOnly Attribute
+    <span class="md-ellipsis">
+      HttpOnly Attribute
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#samesite-attribute" class="md-nav__link">
-    SameSite Attribute
+    <span class="md-ellipsis">
+      SameSite Attribute
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#domain-and-path-attributes" class="md-nav__link">
-    Domain and Path Attributes
+    <span class="md-ellipsis">
+      Domain and Path Attributes
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#expire-and-max-age-attributes" class="md-nav__link">
-    Expire and Max-Age Attributes
+    <span class="md-ellipsis">
+      Expire and Max-Age Attributes
+    </span>
   </a>
   
 </li>
@@ -1959,7 +2283,9 @@
       
         <li class="md-nav__item">
   <a href="#html5-web-storage-api" class="md-nav__link">
-    HTML5 Web Storage API
+    <span class="md-ellipsis">
+      HTML5 Web Storage API
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="HTML5 Web Storage API">
@@ -1967,7 +2293,9 @@
         
           <li class="md-nav__item">
   <a href="#the-localstorage-api" class="md-nav__link">
-    The localStorage API
+    <span class="md-ellipsis">
+      The localStorage API
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="The localStorage API">
@@ -1975,28 +2303,36 @@
         
           <li class="md-nav__item">
   <a href="#scope" class="md-nav__link">
-    Scope
+    <span class="md-ellipsis">
+      Scope
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#duration" class="md-nav__link">
-    Duration
+    <span class="md-ellipsis">
+      Duration
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#offline-access" class="md-nav__link">
-    Offline Access
+    <span class="md-ellipsis">
+      Offline Access
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#use-case" class="md-nav__link">
-    Use Case
+    <span class="md-ellipsis">
+      Use Case
+    </span>
   </a>
   
 </li>
@@ -2008,7 +2344,9 @@
         
           <li class="md-nav__item">
   <a href="#the-sessionstorage-api" class="md-nav__link">
-    The sessionStorage API
+    <span class="md-ellipsis">
+      The sessionStorage API
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="The sessionStorage API">
@@ -2016,28 +2354,36 @@
         
           <li class="md-nav__item">
   <a href="#scope_1" class="md-nav__link">
-    Scope
+    <span class="md-ellipsis">
+      Scope
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#duration_1" class="md-nav__link">
-    Duration
+    <span class="md-ellipsis">
+      Duration
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#offline-access_1" class="md-nav__link">
-    Offline Access
+    <span class="md-ellipsis">
+      Offline Access
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#use-case_1" class="md-nav__link">
-    Use Case
+    <span class="md-ellipsis">
+      Use Case
+    </span>
   </a>
   
 </li>
@@ -2049,7 +2395,9 @@
         
           <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
-    References
+    <span class="md-ellipsis">
+      References
+    </span>
   </a>
   
 </li>
@@ -2061,7 +2409,9 @@
       
         <li class="md-nav__item">
   <a href="#web-workers" class="md-nav__link">
-    Web Workers
+    <span class="md-ellipsis">
+      Web Workers
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Web Workers">
@@ -2069,7 +2419,9 @@
         
           <li class="md-nav__item">
   <a href="#use-case_2" class="md-nav__link">
-    Use Case
+    <span class="md-ellipsis">
+      Use Case
+    </span>
   </a>
   
 </li>
@@ -2081,7 +2433,9 @@
       
         <li class="md-nav__item">
   <a href="#session-id-life-cycle" class="md-nav__link">
-    Session ID Life Cycle
+    <span class="md-ellipsis">
+      Session ID Life Cycle
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Session ID Life Cycle">
@@ -2089,28 +2443,36 @@
         
           <li class="md-nav__item">
   <a href="#session-id-generation-and-verification-permissive-and-strict-session-management" class="md-nav__link">
-    Session ID Generation and Verification: Permissive and Strict Session Management
+    <span class="md-ellipsis">
+      Session ID Generation and Verification: Permissive and Strict Session Management
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#manage-session-id-as-any-other-user-input" class="md-nav__link">
-    Manage Session ID as Any Other User Input
+    <span class="md-ellipsis">
+      Manage Session ID as Any Other User Input
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#renew-the-session-id-after-any-privilege-level-change" class="md-nav__link">
-    Renew the Session ID After Any Privilege Level Change
+    <span class="md-ellipsis">
+      Renew the Session ID After Any Privilege Level Change
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#considerations-when-using-multiple-cookies" class="md-nav__link">
-    Considerations When Using Multiple Cookies
+    <span class="md-ellipsis">
+      Considerations When Using Multiple Cookies
+    </span>
   </a>
   
 </li>
@@ -2122,7 +2484,9 @@
       
         <li class="md-nav__item">
   <a href="#session-expiration" class="md-nav__link">
-    Session Expiration
+    <span class="md-ellipsis">
+      Session Expiration
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Session Expiration">
@@ -2130,7 +2494,9 @@
         
           <li class="md-nav__item">
   <a href="#automatic-session-expiration" class="md-nav__link">
-    Automatic Session Expiration
+    <span class="md-ellipsis">
+      Automatic Session Expiration
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Automatic Session Expiration">
@@ -2138,21 +2504,27 @@
         
           <li class="md-nav__item">
   <a href="#idle-timeout" class="md-nav__link">
-    Idle Timeout
+    <span class="md-ellipsis">
+      Idle Timeout
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#absolute-timeout" class="md-nav__link">
-    Absolute Timeout
+    <span class="md-ellipsis">
+      Absolute Timeout
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#renewal-timeout" class="md-nav__link">
-    Renewal Timeout
+    <span class="md-ellipsis">
+      Renewal Timeout
+    </span>
   </a>
   
 </li>
@@ -2164,7 +2536,9 @@
         
           <li class="md-nav__item">
   <a href="#manual-session-expiration" class="md-nav__link">
-    Manual Session Expiration
+    <span class="md-ellipsis">
+      Manual Session Expiration
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Manual Session Expiration">
@@ -2172,7 +2546,9 @@
         
           <li class="md-nav__item">
   <a href="#logout-button" class="md-nav__link">
-    Logout Button
+    <span class="md-ellipsis">
+      Logout Button
+    </span>
   </a>
   
 </li>
@@ -2184,7 +2560,9 @@
         
           <li class="md-nav__item">
   <a href="#web-content-caching" class="md-nav__link">
-    Web Content Caching
+    <span class="md-ellipsis">
+      Web Content Caching
+    </span>
   </a>
   
 </li>
@@ -2195,8 +2573,19 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#reauthentication-after-risk-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reauthentication After Risk Events
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#additional-client-side-defenses-for-session-management" class="md-nav__link">
-    Additional Client-Side Defenses for Session Management
+    <span class="md-ellipsis">
+      Additional Client-Side Defenses for Session Management
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Additional Client-Side Defenses for Session Management">
@@ -2204,28 +2593,36 @@
         
           <li class="md-nav__item">
   <a href="#initial-login-timeout" class="md-nav__link">
-    Initial Login Timeout
+    <span class="md-ellipsis">
+      Initial Login Timeout
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#force-session-logout-on-web-browser-window-close-events" class="md-nav__link">
-    Force Session Logout On Web Browser Window Close Events
+    <span class="md-ellipsis">
+      Force Session Logout On Web Browser Window Close Events
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#disable-web-browser-cross-tab-sessions" class="md-nav__link">
-    Disable Web Browser Cross-Tab Sessions
+    <span class="md-ellipsis">
+      Disable Web Browser Cross-Tab Sessions
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#automatic-client-logout" class="md-nav__link">
-    Automatic Client Logout
+    <span class="md-ellipsis">
+      Automatic Client Logout
+    </span>
   </a>
   
 </li>
@@ -2237,7 +2634,9 @@
       
         <li class="md-nav__item">
   <a href="#session-attacks-detection" class="md-nav__link">
-    Session Attacks Detection
+    <span class="md-ellipsis">
+      Session Attacks Detection
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Session Attacks Detection">
@@ -2245,35 +2644,45 @@
         
           <li class="md-nav__item">
   <a href="#session-id-guessing-and-brute-force-detection" class="md-nav__link">
-    Session ID Guessing and Brute Force Detection
+    <span class="md-ellipsis">
+      Session ID Guessing and Brute Force Detection
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#detecting-session-id-anomalies" class="md-nav__link">
-    Detecting Session ID Anomalies
+    <span class="md-ellipsis">
+      Detecting Session ID Anomalies
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#binding-the-session-id-to-other-user-properties" class="md-nav__link">
-    Binding the Session ID to Other User Properties
+    <span class="md-ellipsis">
+      Binding the Session ID to Other User Properties
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#logging-sessions-life-cycle-monitoring-creation-usage-and-destruction-of-session-ids" class="md-nav__link">
-    Logging Sessions Life Cycle: Monitoring Creation, Usage, and Destruction of Session IDs
+    <span class="md-ellipsis">
+      Logging Sessions Life Cycle: Monitoring Creation, Usage, and Destruction of Session IDs
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#simultaneous-session-logons" class="md-nav__link">
-    Simultaneous Session Logons
+    <span class="md-ellipsis">
+      Simultaneous Session Logons
+    </span>
   </a>
   
 </li>
@@ -2285,7 +2694,9 @@
       
         <li class="md-nav__item">
   <a href="#session-management-waf-protections" class="md-nav__link">
-    Session Management WAF Protections
+    <span class="md-ellipsis">
+      Session Management WAF Protections
+    </span>
   </a>
   
 </li>
@@ -2301,6 +2712,49 @@
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Software_Supply_Chain_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Supply Chain Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Symfony_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Symfony
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -2324,6 +2778,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Third_Party_Javascript_Management_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2341,6 +2796,7 @@
             
               
                 
+  
   
   
   
@@ -2364,6 +2820,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Transaction_Authorization_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2381,6 +2838,7 @@
             
               
                 
+  
   
   
   
@@ -2404,6 +2862,28 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Transport_Layer_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transport Layer Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2421,6 +2901,7 @@
             
               
                 
+  
   
   
   
@@ -2444,6 +2925,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Virtual_Patching_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2461,6 +2943,7 @@
             
               
                 
+  
   
   
   
@@ -2484,6 +2967,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Vulnerable_Dependency_Management_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2501,6 +2985,7 @@
             
               
                 
+  
   
   
   
@@ -2524,6 +3009,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="XML_External_Entity_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2541,6 +3027,7 @@
             
               
                 
+  
   
   
   
@@ -2564,6 +3051,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="XSS_Filter_Evasion_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2584,12 +3072,34 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="XS_Leaks_Cheat_Sheet.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     XS Leaks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Zero_Trust_Architecture_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zero Trust Architecture
   </span>
   
 
@@ -2634,14 +3144,18 @@
       
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
-    Introduction
+    <span class="md-ellipsis">
+      Introduction
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#session-id-properties" class="md-nav__link">
-    Session ID Properties
+    <span class="md-ellipsis">
+      Session ID Properties
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Session ID Properties">
@@ -2649,28 +3163,36 @@
         
           <li class="md-nav__item">
   <a href="#session-id-name-fingerprinting" class="md-nav__link">
-    Session ID Name Fingerprinting
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#session-id-length" class="md-nav__link">
-    Session ID Length
+    <span class="md-ellipsis">
+      Session ID Name Fingerprinting
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#session-id-entropy" class="md-nav__link">
-    Session ID Entropy
+    <span class="md-ellipsis">
+      Session ID Entropy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-id-length" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session ID Length
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#session-id-content-or-value" class="md-nav__link">
-    Session ID Content (or Value)
+    <span class="md-ellipsis">
+      Session ID Content (or Value)
+    </span>
   </a>
   
 </li>
@@ -2682,7 +3204,9 @@
       
         <li class="md-nav__item">
   <a href="#session-management-implementation" class="md-nav__link">
-    Session Management Implementation
+    <span class="md-ellipsis">
+      Session Management Implementation
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Session Management Implementation">
@@ -2690,21 +3214,27 @@
         
           <li class="md-nav__item">
   <a href="#built-in-session-management-implementations" class="md-nav__link">
-    Built-in Session Management Implementations
+    <span class="md-ellipsis">
+      Built-in Session Management Implementations
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#used-vs-accepted-session-id-exchange-mechanisms" class="md-nav__link">
-    Used vs. Accepted Session ID Exchange Mechanisms
+    <span class="md-ellipsis">
+      Used vs. Accepted Session ID Exchange Mechanisms
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#transport-layer-security" class="md-nav__link">
-    Transport Layer Security
+    <span class="md-ellipsis">
+      Transport Layer Security
+    </span>
   </a>
   
 </li>
@@ -2716,7 +3246,9 @@
       
         <li class="md-nav__item">
   <a href="#cookies" class="md-nav__link">
-    Cookies
+    <span class="md-ellipsis">
+      Cookies
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Cookies">
@@ -2724,35 +3256,45 @@
         
           <li class="md-nav__item">
   <a href="#secure-attribute" class="md-nav__link">
-    Secure Attribute
+    <span class="md-ellipsis">
+      Secure Attribute
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#httponly-attribute" class="md-nav__link">
-    HttpOnly Attribute
+    <span class="md-ellipsis">
+      HttpOnly Attribute
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#samesite-attribute" class="md-nav__link">
-    SameSite Attribute
+    <span class="md-ellipsis">
+      SameSite Attribute
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#domain-and-path-attributes" class="md-nav__link">
-    Domain and Path Attributes
+    <span class="md-ellipsis">
+      Domain and Path Attributes
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#expire-and-max-age-attributes" class="md-nav__link">
-    Expire and Max-Age Attributes
+    <span class="md-ellipsis">
+      Expire and Max-Age Attributes
+    </span>
   </a>
   
 </li>
@@ -2764,7 +3306,9 @@
       
         <li class="md-nav__item">
   <a href="#html5-web-storage-api" class="md-nav__link">
-    HTML5 Web Storage API
+    <span class="md-ellipsis">
+      HTML5 Web Storage API
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="HTML5 Web Storage API">
@@ -2772,7 +3316,9 @@
         
           <li class="md-nav__item">
   <a href="#the-localstorage-api" class="md-nav__link">
-    The localStorage API
+    <span class="md-ellipsis">
+      The localStorage API
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="The localStorage API">
@@ -2780,28 +3326,36 @@
         
           <li class="md-nav__item">
   <a href="#scope" class="md-nav__link">
-    Scope
+    <span class="md-ellipsis">
+      Scope
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#duration" class="md-nav__link">
-    Duration
+    <span class="md-ellipsis">
+      Duration
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#offline-access" class="md-nav__link">
-    Offline Access
+    <span class="md-ellipsis">
+      Offline Access
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#use-case" class="md-nav__link">
-    Use Case
+    <span class="md-ellipsis">
+      Use Case
+    </span>
   </a>
   
 </li>
@@ -2813,7 +3367,9 @@
         
           <li class="md-nav__item">
   <a href="#the-sessionstorage-api" class="md-nav__link">
-    The sessionStorage API
+    <span class="md-ellipsis">
+      The sessionStorage API
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="The sessionStorage API">
@@ -2821,28 +3377,36 @@
         
           <li class="md-nav__item">
   <a href="#scope_1" class="md-nav__link">
-    Scope
+    <span class="md-ellipsis">
+      Scope
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#duration_1" class="md-nav__link">
-    Duration
+    <span class="md-ellipsis">
+      Duration
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#offline-access_1" class="md-nav__link">
-    Offline Access
+    <span class="md-ellipsis">
+      Offline Access
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#use-case_1" class="md-nav__link">
-    Use Case
+    <span class="md-ellipsis">
+      Use Case
+    </span>
   </a>
   
 </li>
@@ -2854,7 +3418,9 @@
         
           <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
-    References
+    <span class="md-ellipsis">
+      References
+    </span>
   </a>
   
 </li>
@@ -2866,7 +3432,9 @@
       
         <li class="md-nav__item">
   <a href="#web-workers" class="md-nav__link">
-    Web Workers
+    <span class="md-ellipsis">
+      Web Workers
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Web Workers">
@@ -2874,7 +3442,9 @@
         
           <li class="md-nav__item">
   <a href="#use-case_2" class="md-nav__link">
-    Use Case
+    <span class="md-ellipsis">
+      Use Case
+    </span>
   </a>
   
 </li>
@@ -2886,7 +3456,9 @@
       
         <li class="md-nav__item">
   <a href="#session-id-life-cycle" class="md-nav__link">
-    Session ID Life Cycle
+    <span class="md-ellipsis">
+      Session ID Life Cycle
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Session ID Life Cycle">
@@ -2894,28 +3466,36 @@
         
           <li class="md-nav__item">
   <a href="#session-id-generation-and-verification-permissive-and-strict-session-management" class="md-nav__link">
-    Session ID Generation and Verification: Permissive and Strict Session Management
+    <span class="md-ellipsis">
+      Session ID Generation and Verification: Permissive and Strict Session Management
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#manage-session-id-as-any-other-user-input" class="md-nav__link">
-    Manage Session ID as Any Other User Input
+    <span class="md-ellipsis">
+      Manage Session ID as Any Other User Input
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#renew-the-session-id-after-any-privilege-level-change" class="md-nav__link">
-    Renew the Session ID After Any Privilege Level Change
+    <span class="md-ellipsis">
+      Renew the Session ID After Any Privilege Level Change
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#considerations-when-using-multiple-cookies" class="md-nav__link">
-    Considerations When Using Multiple Cookies
+    <span class="md-ellipsis">
+      Considerations When Using Multiple Cookies
+    </span>
   </a>
   
 </li>
@@ -2927,7 +3507,9 @@
       
         <li class="md-nav__item">
   <a href="#session-expiration" class="md-nav__link">
-    Session Expiration
+    <span class="md-ellipsis">
+      Session Expiration
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Session Expiration">
@@ -2935,7 +3517,9 @@
         
           <li class="md-nav__item">
   <a href="#automatic-session-expiration" class="md-nav__link">
-    Automatic Session Expiration
+    <span class="md-ellipsis">
+      Automatic Session Expiration
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Automatic Session Expiration">
@@ -2943,21 +3527,27 @@
         
           <li class="md-nav__item">
   <a href="#idle-timeout" class="md-nav__link">
-    Idle Timeout
+    <span class="md-ellipsis">
+      Idle Timeout
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#absolute-timeout" class="md-nav__link">
-    Absolute Timeout
+    <span class="md-ellipsis">
+      Absolute Timeout
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#renewal-timeout" class="md-nav__link">
-    Renewal Timeout
+    <span class="md-ellipsis">
+      Renewal Timeout
+    </span>
   </a>
   
 </li>
@@ -2969,7 +3559,9 @@
         
           <li class="md-nav__item">
   <a href="#manual-session-expiration" class="md-nav__link">
-    Manual Session Expiration
+    <span class="md-ellipsis">
+      Manual Session Expiration
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Manual Session Expiration">
@@ -2977,7 +3569,9 @@
         
           <li class="md-nav__item">
   <a href="#logout-button" class="md-nav__link">
-    Logout Button
+    <span class="md-ellipsis">
+      Logout Button
+    </span>
   </a>
   
 </li>
@@ -2989,7 +3583,9 @@
         
           <li class="md-nav__item">
   <a href="#web-content-caching" class="md-nav__link">
-    Web Content Caching
+    <span class="md-ellipsis">
+      Web Content Caching
+    </span>
   </a>
   
 </li>
@@ -3000,8 +3596,19 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#reauthentication-after-risk-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reauthentication After Risk Events
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#additional-client-side-defenses-for-session-management" class="md-nav__link">
-    Additional Client-Side Defenses for Session Management
+    <span class="md-ellipsis">
+      Additional Client-Side Defenses for Session Management
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Additional Client-Side Defenses for Session Management">
@@ -3009,28 +3616,36 @@
         
           <li class="md-nav__item">
   <a href="#initial-login-timeout" class="md-nav__link">
-    Initial Login Timeout
+    <span class="md-ellipsis">
+      Initial Login Timeout
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#force-session-logout-on-web-browser-window-close-events" class="md-nav__link">
-    Force Session Logout On Web Browser Window Close Events
+    <span class="md-ellipsis">
+      Force Session Logout On Web Browser Window Close Events
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#disable-web-browser-cross-tab-sessions" class="md-nav__link">
-    Disable Web Browser Cross-Tab Sessions
+    <span class="md-ellipsis">
+      Disable Web Browser Cross-Tab Sessions
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#automatic-client-logout" class="md-nav__link">
-    Automatic Client Logout
+    <span class="md-ellipsis">
+      Automatic Client Logout
+    </span>
   </a>
   
 </li>
@@ -3042,7 +3657,9 @@
       
         <li class="md-nav__item">
   <a href="#session-attacks-detection" class="md-nav__link">
-    Session Attacks Detection
+    <span class="md-ellipsis">
+      Session Attacks Detection
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Session Attacks Detection">
@@ -3050,35 +3667,45 @@
         
           <li class="md-nav__item">
   <a href="#session-id-guessing-and-brute-force-detection" class="md-nav__link">
-    Session ID Guessing and Brute Force Detection
+    <span class="md-ellipsis">
+      Session ID Guessing and Brute Force Detection
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#detecting-session-id-anomalies" class="md-nav__link">
-    Detecting Session ID Anomalies
+    <span class="md-ellipsis">
+      Detecting Session ID Anomalies
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#binding-the-session-id-to-other-user-properties" class="md-nav__link">
-    Binding the Session ID to Other User Properties
+    <span class="md-ellipsis">
+      Binding the Session ID to Other User Properties
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#logging-sessions-life-cycle-monitoring-creation-usage-and-destruction-of-session-ids" class="md-nav__link">
-    Logging Sessions Life Cycle: Monitoring Creation, Usage, and Destruction of Session IDs
+    <span class="md-ellipsis">
+      Logging Sessions Life Cycle: Monitoring Creation, Usage, and Destruction of Session IDs
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#simultaneous-session-logons" class="md-nav__link">
-    Simultaneous Session Logons
+    <span class="md-ellipsis">
+      Simultaneous Session Logons
+    </span>
   </a>
   
 </li>
@@ -3090,7 +3717,9 @@
       
         <li class="md-nav__item">
   <a href="#session-management-waf-protections" class="md-nav__link">
-    Session Management WAF Protections
+    <span class="md-ellipsis">
+      Session Management WAF Protections
+    </span>
   </a>
   
 </li>
@@ -3130,30 +3759,28 @@
 <p>The name used by the session ID should not be extremely descriptive nor offer unnecessary details about the purpose and meaning of the ID.</p>
 <p>The session ID names used by the most common web application development frameworks <a href="https://wiki.owasp.org/index.php/Category:OWASP_Cookies_Database">can be easily fingerprinted</a>, such as <code>PHPSESSID</code> (PHP), <code>JSESSIONID</code> (J2EE), <code>CFID</code> &amp; <code>CFTOKEN</code> (ColdFusion), <code>ASP.NET_SessionId</code> (ASP .NET), etc. Therefore, the session ID name can disclose the technologies and programming languages used by the web application.</p>
 <p>It is recommended to change the default session ID name of the web development framework to a generic name, such as <code>id</code>.</p>
-<h3 id="session-id-length">Session ID Length<a class="headerlink" href="#session-id-length" title="Permanent link">&para;</a></h3>
-<p>The session ID must be long enough to prevent brute force attacks, where an attacker can go through the whole range of ID values and verify the existence of valid sessions.</p>
-<p>The session ID length must be at least <code>128 bits (16 bytes)</code>.</p>
-<p><strong>NOTE</strong>:</p>
-<ul>
-<li>The session ID length of 128 bits is provided as a reference based on the assumptions made on the next section <em>Session ID Entropy</em>. However, this number should not be considered as an absolute minimum value, as other implementation factors might influence its strength.</li>
-<li>For example, there are well-known implementations, such as <a href="https://docs.microsoft.com/en-us/dotnet/api/system.web.sessionstate.sessionidmanager?redirectedfrom=MSDN&amp;view=netframework-4.7.2">Microsoft ASP.NET session IDs</a>: "<em>The ASP .NET session identifier is a randomly generated number encoded into a 24-character string consisting of lowercase characters from a to z and numbers from 0 to 5</em>".</li>
-<li>It can provide a very good effective entropy, and as a result, can be considered long enough to avoid guessing or brute force attacks.</li>
-</ul>
 <h3 id="session-id-entropy">Session ID Entropy<a class="headerlink" href="#session-id-entropy" title="Permanent link">&para;</a></h3>
-<p>The session ID must be unpredictable (random enough) to prevent guessing attacks, where an attacker is able to guess or predict the ID of a valid session through statistical analysis techniques. For this purpose, a good <a href="https://en.wikipedia.org/wiki/Cryptographically_secure_pseudorandom_number_generator">CSPRNG</a> (Cryptographically Secure Pseudorandom Number Generator) must be used.</p>
-<p>The session ID value must provide at least <code>64 bits</code> of entropy (if a good <a href="https://en.wikipedia.org/wiki/Pseudorandom_number_generator">PRNG</a> is used, this value is estimated to be half the length of the session ID).</p>
-<p>Additionally, a random session ID is not enough; it must also be unique to avoid duplicated IDs. A random session ID must not already exist in the current session ID space.</p>
+<p>Session identifiers must have at least <code>64 bits</code> of entropy to prevent brute-force session guessing attacks. Entropy refers to the amount of randomness or unpredictability in a value. Each “bit” of entropy doubles the number of possible outcomes, meaning a session ID with 64 bits of entropy can have <code>2^64</code> possible values.</p>
+<p>A strong <a href="https://en.wikipedia.org/wiki/Cryptographically_secure_pseudorandom_number_generator">CSPRNG</a> (Cryptographically Secure Pseudorandom Number Generator) must be used to generate session IDs. This ensures the generated values are evenly distributed among all possible values. Otherwise, attackers may be able to use statistisical analysis techniques to identify patterns in how the session IDs are created, effectively reducing the entropy and allowing the attacker to guess or predict valid session IDs more easily.</p>
 <p><strong>NOTE</strong>:</p>
 <ul>
-<li>The session ID entropy is really affected by other external and difficult to measure factors, such as the number of concurrent active sessions the web application commonly has, the absolute session expiration timeout, the amount of session ID guesses per second the attacker can make and the target web application can support, etc.</li>
-<li>If a session ID with an entropy of <code>64 bits</code> is used, an attacker can expect to spend more than 292 years to successfully guess a valid session ID, assuming the attacker can try 10,000 guesses per second with 100,000 valid simultaneous sessions available in the web application.</li>
-<li>More information <a href="https://owasp.org/www-community/vulnerabilities/Insufficient_Session-ID_Length">here</a>.</li>
+<li>The expected time for an attacker to brute-force a valid session ID depends on factors such as the number of bits of entropy, the number of active sessions, session expiration times, and the attacker's guessing rate.</li>
+<li>If a web application generates session IDs with 64 bits of entropy, an attacker can expect to spend approximately 585 years to successfully guess a valid session ID, assuming the attacker can try 10,000 guesses per second with 100,000 valid simultaneous sessions available in the application.</li>
+<li>Further analysis of the expected time for an attacker to brute-force session identifiers is available <a href="https://owasp.org/www-community/vulnerabilities/Insufficient_Session-ID_Length#estimating-attack-time">here</a>.</li>
+</ul>
+<h3 id="session-id-length">Session ID Length<a class="headerlink" href="#session-id-length" title="Permanent link">&para;</a></h3>
+<p>As mentioned in the previous <em>Session ID Entropy</em> section, a primary security requirement for session IDs is that they contain at least <code>64 bits</code> of entropy to prevent brute-force guessing attacks. Although session ID length matters, it's the entropy that ensures security. The session ID must be long enough to encode sufficient entropy, preventing brute force attacks where an attacker guesses valid session IDs.</p>
+<p>Different encoding methods can result in different lengths for the same amount of entropy. Session IDs are often represented using hexadecimal encoding. When using hexadecimal encoding, a session ID must be at least 16 hexadecimal characters long to achieve the required 64 bits of entropy.  When using different encodings (e.g. Base64 or <a href="https://docs.microsoft.com/en-us/dotnet/api/system.web.sessionstate.sessionidmanager?redirectedfrom=MSDN&amp;view=netframework-4.7.2">Microsoft's encoding for ASP.NET session IDs</a>) a different number of characters may be required to represent the minimum 64 bits of entropy.</p>
+<p>It’s important to note that if any part of the session ID is fixed or predictable, the effective entropy is reduced, and the length may need to be increased to compensate. For example, if half of a 16-character hexadecimal session ID is fixed, only the remaining 8 characters are random, providing just 32 bits of entropy — which is insufficient for strong security. To maintain security, ensure that the entire session ID is randomly generated and unpredictable, or increase the overall length if parts of the ID are not random.</p>
+<p><strong>NOTE</strong>:</p>
+<ul>
+<li>More information about the relationship between Session ID Length and Session ID Entropy is available <a href="https://owasp.org/www-community/vulnerabilities/Insufficient_Session-ID_Length#session-id-length-and-entropy-relationship">here</a>.</li>
 </ul>
 <h3 id="session-id-content-or-value">Session ID Content (or Value)<a class="headerlink" href="#session-id-content-or-value" title="Permanent link">&para;</a></h3>
 <p>The session ID content (or value) must be meaningless to prevent information disclosure attacks, where an attacker is able to decode the contents of the ID and extract details of the user, the session, or the inner workings of the web application.</p>
-<p>The session ID must simply be an identifier on the client side, and its value must never include sensitive information (or <a href="https://en.wikipedia.org/wiki/Personally_identifiable_information">PII</a>).</p>
+<p>The session ID must simply be an identifier on the client side, and its value must never include sensitive information or Personally Identifiable Information (PII). To read more about PII, refer to <a href="https://en.wikipedia.org/wiki/Personally_identifiable_information">Wikipedia</a> or this <a href="https://www.idshield.com/blog/identity-theft/what-pii-and-why-should-i-care/">post</a>.</p>
 <p>The meaning and business or application logic associated with the session ID must be stored on the server side, and specifically, in session objects or in a session management database or repository.</p>
-<p>The stored information can include the client IP address, User-Agent, e-mail, username, user ID, role, privilege level, access rights, language preferences, account ID, current state, last login, session timeouts, and other internal session details. If the session objects and properties contain sensitive information, such as credit card numbers, it is required to duly encrypt and protect the session management repository.</p>
+<p>The stored information can include the client IP address, User-Agent, email, username, user ID, role, privilege level, access rights, language preferences, account ID, current state, last login, session timeouts, and other internal session details. If the session objects and properties contain sensitive information, such as credit card numbers, it is required to duly encrypt and protect the session management repository.</p>
 <p>It is recommended to use the session ID created by your language or framework. If you need to create your own sessionID, use a cryptographically secure pseudorandom number generator (CSPRNG) with a size of at least 128 bits and ensure that each sessionID is unique.</p>
 <h2 id="session-management-implementation">Session Management Implementation<a class="headerlink" href="#session-management-implementation" title="Permanent link">&para;</a></h2>
 <p>The session management implementation defines the exchange mechanism that will be used between the user and the web application to share and continuously exchange the session ID. There are multiple mechanisms available in HTTP to maintain session state within web applications, such as cookies (standard HTTP header), URL parameters (URL rewriting – <a href="https://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>), URL arguments on GET requests, body arguments on POST requests, such as hidden form fields (HTML forms), or proprietary HTTP headers.</p>
@@ -3173,7 +3800,7 @@
 </ul>
 <h3 id="transport-layer-security">Transport Layer Security<a class="headerlink" href="#transport-layer-security" title="Permanent link">&para;</a></h3>
 <p>In order to protect the session ID exchange from active eavesdropping and passive disclosure in the network traffic, it is essential to use an encrypted HTTPS (TLS) connection for the entire web session, not only for the authentication process where the user credentials are exchanged. This may be mitigated by <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html">HTTP Strict Transport Security (HSTS)</a> for a client that supports it.</p>
-<p>Additionally, the <code>Secure</code> <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Secure_and_HttpOnly_cookies">cookie attribute</a> must be used to ensure the session ID is only exchanged through an encrypted channel. The usage of an encrypted communication channel also protects the session against some session fixation attacks where the attacker is able to intercept and manipulate the web traffic to inject (or fix) the session ID on the victim's web browser (see <a href="https://media.blackhat.com/bh-eu-11/Raul_Siles/BlackHat_EU_2011_Siles_SAP_Session-Slides.pdf">here</a> and <a href="https://media.blackhat.com/bh-eu-11/Raul_Siles/BlackHat_EU_2011_Siles_SAP_Session-WP.pdf">here</a>).</p>
+<p>Additionally, the <code>Secure</code> <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Secure_and_HttpOnly_cookies">cookie attribute</a> must be used to ensure the session ID is only exchanged through an encrypted channel. The usage of an encrypted communication channel also protects the session against some session fixation attacks where the attacker is able to intercept and manipulate the web traffic to inject (or fix) the session ID on the victim's web browser.</p>
 <p>The following set of best practices are focused on protecting the session ID (specifically when cookies are used) and helping with the integration of HTTPS within the web application:</p>
 <ul>
 <li>Do not switch a given session from HTTP to HTTPS, or vice-versa, as this will disclose the session ID in the clear through the network.<ul>
@@ -3184,7 +3811,7 @@
 <li>Where possible, avoid offering public unencrypted contents and private encrypted contents from the same host. Where insecure content is required, consider hosting this on a separate insecure domain.</li>
 <li>Implement <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html">HTTP Strict Transport Security (HSTS)</a> to enforce HTTPS connections.</li>
 </ul>
-<p>See the OWASP <a href="Transport_Layer_Protection_Cheat_Sheet.html">Transport Layer Protection Cheat Sheet</a> for more general guidance on implementing TLS securely.</p>
+<p>See the OWASP <a href="Transport_Layer_Security_Cheat_Sheet.html">Transport Layer Security Cheat Sheet</a> for more general guidance on implementing TLS securely.</p>
 <p>It is important to emphasize that TLS does not protect against session ID prediction, brute force, client-side tampering or fixation; however, it does provide effective protection against an attacker intercepting or stealing session IDs through a man in the middle attack.</p>
 <h2 id="cookies">Cookies<a class="headerlink" href="#cookies" title="Permanent link">&para;</a></h2>
 <p>The session ID exchange mechanism based on cookies provides multiple security features in the form of cookie attributes that can be used to protect the exchange of the session ID:</p>
@@ -3272,7 +3899,7 @@ This provides similar access to this data as would be achieved by using the <cod
 <p>Web applications should try to avoid the same cookie name for different paths or domain scopes within the same web application, as this increases the complexity of the solution and potentially introduces scoping issues.</p>
 <h2 id="session-expiration">Session Expiration<a class="headerlink" href="#session-expiration" title="Permanent link">&para;</a></h2>
 <p>In order to minimize the time period an attacker can launch attacks over active sessions and hijack them, it is mandatory to set expiration timeouts for every session, establishing the amount of time a session will remain active. Insufficient session expiration by the web application increases the exposure of other session-based attacks, as for the attacker to be able to reuse a valid session ID and hijack the associated session, it must still be active.</p>
-<p>The shorter the session interval is, the lesser the time an attacker has to use the valid session ID. The session expiration timeout values must be set accordingly with the purpose and nature of the web application, and balance security and usability, so that the user can comfortably complete the operations within the web application without his session frequently expiring.</p>
+<p>The shorter the session interval is, the lesser the time an attacker has to use the valid session ID. The session expiration timeout values must be set accordingly with the purpose and nature of the web application, and balance security and usability, so that the user can comfortably complete the operations within the web application without the session frequently expiring.</p>
 <p>Both the idle and absolute timeout values are highly dependent on how critical the web application and its data are. Common idle timeouts ranges are 2-5 minutes for high-value applications and 15-30 minutes for low risk applications. Absolute timeouts depend on how long a user usually uses the application. If the application is intended to be used by an office worker for a full day, an appropriate absolute timeout range could be between 4 and 8 hours.</p>
 <p>When a session expires, the web application must take active actions to invalidate the session on both sides, client and server. The latter is the most relevant and mandatory from a security perspective.</p>
 <p>For most session exchange mechanisms, client side actions to invalidate the session ID are based on clearing out the token value. For example, to invalidate a cookie it is recommended to provide an empty (or invalid) value for the session ID, and set the <code>Expires</code> (or <code>Max-Age</code>) attribute to a date from the past (in case a persistent cookie is being used): <code>Set-Cookie: id=; Expires=Friday, 17-May-03 18:45:00 GMT</code></p>
@@ -3289,15 +3916,32 @@ This provides similar access to this data as would be achieved by using the <cod
 <p>Alternatively, the web application can implement an additional renewal timeout after which the session ID is automatically renewed, in the middle of the user session, and independently of the session activity and, therefore, of the idle timeout.</p>
 <p>After a specific amount of time since the session was initially created, the web application can regenerate a new ID for the user session and try to set it, or renew it, on the client. The previous session ID value would still be valid for some time, accommodating a safety interval, before the client is aware of the new ID and starts using it. At that time, when the client switches to the new ID inside the current session, the application invalidates the previous ID.</p>
 <p>This scenario minimizes the amount of time a given session ID value, potentially obtained by an attacker, can be reused to hijack the user session, even when the victim user session is still active. The user session remains alive and open on the legitimate client, although its associated session ID value is transparently renewed periodically during the session duration, every time the renewal timeout expires. Therefore, the renewal timeout complements the idle and absolute timeouts, specially when the absolute timeout value extends significantly over time (e.g. it is an application requirement to keep the user sessions open for long periods of time).</p>
-<p>Depending on the implementation, potentially there could be a race condition where the attacker with a still valid previous session ID sends a request before the victim user, right after the renewal timeout has just expired, and obtains first the value for the renewed session ID. At least in this scenario, the victim user might be aware of the attack as her session will be suddenly terminated because her associated session ID is not valid anymore.</p>
+<p>Depending on the implementation, potentially there could be a race condition where the attacker with a still valid previous session ID sends a request before the victim user, right after the renewal timeout has just expired, and obtains first the value for the renewed session ID. At least in this scenario, the victim user might be aware of the attack as the session will be suddenly terminated because the associated session ID is not valid anymore.</p>
 <h3 id="manual-session-expiration">Manual Session Expiration<a class="headerlink" href="#manual-session-expiration" title="Permanent link">&para;</a></h3>
 <p>Web applications should provide mechanisms that allow security aware users to actively close their session once they have finished using the web application.</p>
 <h4 id="logout-button">Logout Button<a class="headerlink" href="#logout-button" title="Permanent link">&para;</a></h4>
 <p>Web applications must provide a visible and easily accessible logout (logoff, exit, or close session) button that is available on the web application header or menu and reachable from every web application resource and page, so that the user can manually close the session at any time. As described in <em>Session_Expiration</em> section, the web application must invalidate the session at least on server side.</p>
 <p><strong>NOTE</strong>: Unfortunately, not all web applications facilitate users to close their current session. Thus, client-side enhancements allow conscientious users to protect their sessions by helping to close them diligently.</p>
 <h3 id="web-content-caching">Web Content Caching<a class="headerlink" href="#web-content-caching" title="Permanent link">&para;</a></h3>
-<p>Even after the session has been closed, it might be possible to access the private or sensitive data exchanged within the session through the web browser cache. Therefore, web applications must use restrictive cache directives for all the web traffic exchanged through HTTP and HTTPS, such as the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control"><code>Cache-Control</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma"><code>Pragma</code></a> HTTP headers, and/or equivalent META tags on all or (at least) sensitive web pages.</p>
-<p>Independently of the cache policy defined by the web application, if caching web application contents is allowed, the session IDs must never be cached, so it is highly recommended to use the <code>Cache-Control: no-cache="Set-Cookie, Set-Cookie2"</code> directive, to allow web clients to cache everything except the session ID (see <a href="https://stackoverflow.com/a/41352418">here</a>).</p>
+<p>Even after the session has ended, private or sensitive data exchanged during the session may still be accessible through the web browser's cache. To mitigate this, web applications must use restrictive cache directives for all HTTP and HTTPS traffic. This includes the use of HTTP headers such as <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control"><code>Cache-Control</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma"><code>Pragma</code></a>, or equivalent <code>&lt;meta&gt;</code> tags on all pages—especially those displaying sensitive content.</p>
+<p>Session identifiers must never be cached. To prevent this, it is highly recommended to include the <code>Cache-Control: no-store</code> directive in responses containing session IDs. Unlike <code>no-cache</code>, which allows caching but requires revalidation, <code>no-store</code> ensures that the response (including headers like <code>Set-Cookie</code>) is never stored in any cache.</p>
+<blockquote>
+<p><strong>Note:</strong> The directive <code>Cache-Control: no-cache="Set-Cookie, Set-Cookie2"</code> is sometimes suggested to prevent session ID caching. However, this syntax is not widely supported and may lead to unintended behavior. Instead, use <code>Cache-Control: no-store</code> for stronger protection.
+<strong>Reference:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">MDN - Cache-Control</a></p>
+</blockquote>
+<h2 id="reauthentication-after-risk-events">Reauthentication After Risk Events<a class="headerlink" href="#reauthentication-after-risk-events" title="Permanent link">&para;</a></h2>
+<p>To ensure session integrity and account protection, applications should require reauthentication when specific high-risk events are detected. These may include:</p>
+<ul>
+<li>Attempted or completed password changes</li>
+<li>Login from a new or suspicious IP address or device</li>
+<li>Completion of account recovery or challenge flows (e.g., hacked-lock scenarios)</li>
+</ul>
+<p>Requiring reauthentication helps mitigate session hijacking and unauthorized access—especially when long-lived sessions or external identity providers are in use.</p>
+<p><strong>Recommended Practices:</strong></p>
+<ul>
+<li>Prompt users for primary credentials (e.g., password) or enforce MFA</li>
+<li>Provide clear messaging explaining the need to reauthenticate</li>
+</ul>
 <h2 id="additional-client-side-defenses-for-session-management">Additional Client-Side Defenses for Session Management<a class="headerlink" href="#additional-client-side-defenses-for-session-management" title="Permanent link">&para;</a></h2>
 <p>Web applications can complement the previously described session management defenses with additional countermeasures on the client side. Client-side protections, typically in the form of JavaScript checks and verifications, are not bullet proof and can easily be defeated by a skilled attacker, but can introduce another layer of defense that has to be bypassed by intruders.</p>
 <h3 id="initial-login-timeout">Initial Login Timeout<a class="headerlink" href="#initial-login-timeout" title="Permanent link">&para;</a></h3>
@@ -3319,7 +3963,7 @@ This provides similar access to this data as would be achieved by using the <cod
 <p>Web applications should focus on detecting anomalies associated to the session ID, such as its manipulation. The OWASP <a href="https://owasp.org/www-project-appsensor/">AppSensor Project</a> provides a framework and methodology to implement built-in intrusion detection capabilities within web applications focused on the detection of anomalies and unexpected behaviors, in the form of detection points and response actions. Instead of using external protection layers, sometimes the business logic details and advanced intelligence are only available from inside the web application, where it is possible to establish multiple session related detection points, such as when an existing cookie is modified or deleted, a new cookie is added, the session ID from another user is reused, or when the user location or User-Agent changes in the middle of a session.</p>
 <h3 id="binding-the-session-id-to-other-user-properties">Binding the Session ID to Other User Properties<a class="headerlink" href="#binding-the-session-id-to-other-user-properties" title="Permanent link">&para;</a></h3>
 <p>With the goal of detecting (and, in some scenarios, protecting against) user misbehaviors and session hijacking, it is highly recommended to bind the session ID to other user or client properties, such as the client IP address, User-Agent, or client-based digital certificate. If the web application detects any change or anomaly between these different properties in the middle of an established session, this is a very good indicator of session manipulation and hijacking attempts, and this simple fact can be used to alert and/or terminate the suspicious session.</p>
-<p>Although these properties cannot be used by web applications to trustingly defend against session attacks, they significantly increase the web application detection (and protection) capabilities. However, a skilled attacker can bypass these controls by reusing the same IP address assigned to the victim user by sharing the same network (very common in NAT environments, like Wi-Fi hotspots) or by using the same outbound web proxy (very common in corporate environments), or by manually modifying his User-Agent to look exactly as the victim users does.</p>
+<p>Although these properties cannot be used by web applications to trustingly defend against session attacks, they significantly increase the web application detection (and protection) capabilities. However, a skilled attacker can bypass these controls by reusing the same IP address assigned to the victim user by sharing the same network (very common in NAT environments, like Wi-Fi hotspots) or by using the same outbound web proxy (very common in corporate environments), or by manually modifying the User-Agent to look exactly like the victim user's.</p>
 <h3 id="logging-sessions-life-cycle-monitoring-creation-usage-and-destruction-of-session-ids">Logging Sessions Life Cycle: Monitoring Creation, Usage, and Destruction of Session IDs<a class="headerlink" href="#logging-sessions-life-cycle-monitoring-creation-usage-and-destruction-of-session-ids" title="Permanent link">&para;</a></h3>
 <p>Web applications should increase their logging capabilities by including information regarding the full life cycle of sessions. In particular, it is recommended to record session related events, such as the creation, renewal, and destruction of session IDs, as well as details about its usage within login and logout operations, privilege level changes within the session, timeout expiration, invalid session activities (when detected), and critical business operations during the session.</p>
 <p>The log details might include a timestamp, source IP address, web target resource requested (and involved in a session operation), HTTP headers (including the User-Agent and Referer), GET and POST parameters, error codes and messages, username (or user ID), plus the session ID (cookies, URL, GET, POST…).</p>
@@ -3340,11 +3984,22 @@ This provides similar access to this data as would be achieved by using the <cod
 
 
 
+
+
+  
+  
+
+
+
+
+
+
                 
               </article>
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
@@ -3356,7 +4011,7 @@ This provides similar access to this data as would be achieved by using the <cod
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+      ©Copyright <script>document.write(new Date().getFullYear())</script> - Cheat Sheets Series Team - This work is licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
     </div>
   
   
@@ -3376,10 +4031,11 @@ This provides similar access to this data as would be achieved by using the <cod
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>

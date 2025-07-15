@@ -16,11 +16,11 @@
         <link rel="prev" href="Kubernetes_Security_Cheat_Sheet.html">
       
       
-        <link rel="next" href="Laravel_Cheat_Sheet.html">
+        <link rel="next" href="LLM_Prompt_Injection_Prevention_Cheat_Sheet.html">
       
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -28,10 +28,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,9 +69,6 @@
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -97,12 +94,12 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -127,20 +124,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -148,10 +145,13 @@
       
     
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -160,21 +160,21 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -191,7 +191,7 @@
         <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -226,7 +226,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     OWASP Cheat Sheet Series
@@ -236,7 +236,7 @@
       <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -248,6 +248,7 @@
     
       
       
+  
   
   
   
@@ -270,6 +271,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../Glossary.html" class="md-nav__link">
         
@@ -286,6 +288,7 @@
     
       
       
+  
   
   
   
@@ -308,6 +311,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../IndexMASVS.html" class="md-nav__link">
         
@@ -327,6 +331,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../IndexProactiveControls.html" class="md-nav__link">
         
@@ -343,6 +348,7 @@
     
       
       
+  
   
   
   
@@ -367,18 +373,24 @@
     
   
   
+  
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -398,6 +410,7 @@
             
               
                 
+  
   
   
   
@@ -421,6 +434,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Abuse_Case_Cheat_Sheet.html" class="md-nav__link">
         
@@ -438,6 +452,7 @@
             
               
                 
+  
   
   
   
@@ -461,6 +476,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
         
@@ -478,6 +494,7 @@
             
               
                 
+  
   
   
   
@@ -501,6 +518,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Authorization_Cheat_Sheet.html" class="md-nav__link">
         
@@ -518,6 +536,7 @@
             
               
                 
+  
   
   
   
@@ -541,6 +560,28 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Automotive_Security.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automotive Security.md
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Bean_Validation_Cheat_Sheet.html" class="md-nav__link">
         
@@ -558,6 +599,28 @@
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Browser_Extension_Vulnerabilities_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Browser Extension Vulnerabilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -581,6 +644,28 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="CI_CD_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI CD Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Choosing_and_Using_Security_Questions_Cheat_Sheet.html" class="md-nav__link">
         
@@ -598,6 +683,7 @@
             
               
                 
+  
   
   
   
@@ -621,6 +707,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Content_Security_Policy_Cheat_Sheet.html" class="md-nav__link">
         
@@ -638,6 +725,28 @@
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Cookie_Theft_Mitigation_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cookie Theft Mitigation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -661,6 +770,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -678,6 +788,7 @@
             
               
                 
+  
   
   
   
@@ -701,6 +812,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Cryptographic_Storage_Cheat_Sheet.html" class="md-nav__link">
         
@@ -718,6 +830,7 @@
             
               
                 
+  
   
   
   
@@ -741,6 +854,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -758,6 +872,7 @@
             
               
                 
+  
   
   
   
@@ -781,6 +896,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Denial_of_Service_Cheat_Sheet.html" class="md-nav__link">
         
@@ -798,6 +914,7 @@
             
               
                 
+  
   
   
   
@@ -821,6 +938,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Django_REST_Framework_Cheat_Sheet.html" class="md-nav__link">
         
@@ -838,6 +956,28 @@
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Django_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -861,6 +1001,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="DotNet_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -878,6 +1019,28 @@
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Drone_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drone Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -901,6 +1064,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="File_Upload_Cheat_Sheet.html" class="md-nav__link">
         
@@ -918,6 +1082,7 @@
             
               
                 
+  
   
   
   
@@ -941,6 +1106,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="GraphQL_Cheat_Sheet.html" class="md-nav__link">
         
@@ -958,6 +1124,7 @@
             
               
                 
+  
   
   
   
@@ -981,6 +1148,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="HTTP_Headers_Cheat_Sheet.html" class="md-nav__link">
         
@@ -998,6 +1166,7 @@
             
               
                 
+  
   
   
   
@@ -1021,6 +1190,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Infrastructure_as_Code_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1038,6 +1208,7 @@
             
               
                 
+  
   
   
   
@@ -1061,6 +1232,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Injection_Prevention_in_Java_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1078,6 +1250,7 @@
             
               
                 
+  
   
   
   
@@ -1101,6 +1274,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1118,6 +1292,7 @@
             
               
                 
+  
   
   
   
@@ -1141,6 +1316,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1158,6 +1334,7 @@
             
               
                 
+  
   
   
   
@@ -1181,6 +1358,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Key_Management_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1198,6 +1376,7 @@
             
               
                 
+  
   
   
   
@@ -1221,6 +1400,7 @@
   
   
     
+  
   
   
     <li class="md-nav__item md-nav__item--active">
@@ -1269,14 +1449,18 @@
       
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
-    Introduction
+    <span class="md-ellipsis">
+      Introduction
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#primary-defenses" class="md-nav__link">
-    Primary Defenses
+    <span class="md-ellipsis">
+      Primary Defenses
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Primary Defenses">
@@ -1284,7 +1468,9 @@
         
           <li class="md-nav__item">
   <a href="#defense-option-1-escape-all-variables-using-the-right-ldap-encoding-function" class="md-nav__link">
-    Defense Option 1: Escape all variables using the right LDAP encoding function
+    <span class="md-ellipsis">
+      Defense Option 1: Escape all variables using the right LDAP encoding function
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Defense Option 1: Escape all variables using the right LDAP encoding function">
@@ -1292,28 +1478,36 @@
         
           <li class="md-nav__item">
   <a href="#distinguished-name-escaping" class="md-nav__link">
-    Distinguished Name Escaping
+    <span class="md-ellipsis">
+      Distinguished Name Escaping
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#search-filter-escaping" class="md-nav__link">
-    Search Filter Escaping
+    <span class="md-ellipsis">
+      Search Filter Escaping
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#safe-java-escaping-example" class="md-nav__link">
-    Safe Java Escaping Example
+    <span class="md-ellipsis">
+      Safe Java Escaping Example
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#safe-c-sharp-net-tba-example" class="md-nav__link">
-    Safe C Sharp .NET TBA Example
+    <span class="md-ellipsis">
+      Safe C Sharp .NET TBA Example
+    </span>
   </a>
   
 </li>
@@ -1325,36 +1519,19 @@
         
           <li class="md-nav__item">
   <a href="#defense-option-2-use-frameworks-that-automatically-protect-from-ldap-injection" class="md-nav__link">
-    Defense Option 2: Use Frameworks that Automatically Protect from LDAP Injection
+    <span class="md-ellipsis">
+      Defense Option 2: Use Frameworks that Automatically Protect from LDAP Injection
+    </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#defense-option-3-additional-defenses" class="md-nav__link">
-    Defense Option 3: Additional Defenses
-  </a>
-  
-    <nav class="md-nav" aria-label="Defense Option 3: Additional Defenses">
+    <nav class="md-nav" aria-label="Defense Option 2: Use Frameworks that Automatically Protect from LDAP Injection">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#least-privilege" class="md-nav__link">
-    Least Privilege
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enabling-bind-authentication" class="md-nav__link">
-    Enabling Bind Authentication
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#allow-list-input-validation" class="md-nav__link">
-    Allow-List Input Validation
+  <a href="#safe-net-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Safe .NET Example
+    </span>
   </a>
   
 </li>
@@ -1370,8 +1547,52 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#additional-defenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Defenses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Defenses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#least-privilege" class="md-nav__link">
+    <span class="md-ellipsis">
+      Least Privilege
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-bind-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling Bind Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allow-list-input-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allow-List Input Validation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#related-articles" class="md-nav__link">
-    Related Articles
+    <span class="md-ellipsis">
+      Related Articles
+    </span>
   </a>
   
 </li>
@@ -1387,6 +1608,28 @@
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="LLM_Prompt_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM Prompt Injection Prevention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -1410,6 +1653,28 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Legacy_Application_Management_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Legacy Application Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Logging_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1427,6 +1692,7 @@
             
               
                 
+  
   
   
   
@@ -1450,6 +1716,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Mass_Assignment_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1467,6 +1734,7 @@
             
               
                 
+  
   
   
   
@@ -1490,6 +1758,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Microservices_based_Security_Arch_Doc_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1507,6 +1776,28 @@
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Mobile_Application_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mobile Application Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -1530,6 +1821,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="NPM_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1547,6 +1839,7 @@
             
               
                 
+  
   
   
   
@@ -1570,6 +1863,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="NodeJS_Docker_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1587,6 +1881,7 @@
             
               
                 
+  
   
   
   
@@ -1610,6 +1905,28 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="OAuth2_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1627,6 +1944,7 @@
             
               
                 
+  
   
   
   
@@ -1650,6 +1968,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Password_Storage_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1667,6 +1986,7 @@
             
               
                 
+  
   
   
   
@@ -1690,6 +2010,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Prototype_Pollution_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1707,6 +2028,7 @@
             
               
                 
+  
   
   
   
@@ -1730,6 +2052,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="REST_Assessment_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1747,6 +2070,7 @@
             
               
                 
+  
   
   
   
@@ -1770,6 +2094,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Ruby_on_Rails_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1787,6 +2112,7 @@
             
               
                 
+  
   
   
   
@@ -1810,6 +2136,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="SQL_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1827,6 +2154,7 @@
             
               
                 
+  
   
   
   
@@ -1850,6 +2178,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Secure_Cloud_Architecture_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1867,6 +2196,7 @@
             
               
                 
+  
   
   
   
@@ -1890,6 +2220,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Securing_Cascading_Style_Sheets_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1907,6 +2238,7 @@
             
               
                 
+  
   
   
   
@@ -1930,6 +2262,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Session_Management_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1947,6 +2280,49 @@
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Software_Supply_Chain_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Supply Chain Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Symfony_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Symfony
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -1970,6 +2346,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Third_Party_Javascript_Management_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1987,6 +2364,7 @@
             
               
                 
+  
   
   
   
@@ -2010,6 +2388,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Transaction_Authorization_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2027,6 +2406,7 @@
             
               
                 
+  
   
   
   
@@ -2050,6 +2430,28 @@
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Transport_Layer_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transport Layer Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2067,6 +2469,7 @@
             
               
                 
+  
   
   
   
@@ -2090,6 +2493,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Virtual_Patching_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2107,6 +2511,7 @@
             
               
                 
+  
   
   
   
@@ -2130,6 +2535,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="Vulnerable_Dependency_Management_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2147,6 +2553,7 @@
             
               
                 
+  
   
   
   
@@ -2170,6 +2577,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="XML_External_Entity_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2187,6 +2595,7 @@
             
               
                 
+  
   
   
   
@@ -2210,6 +2619,7 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="XSS_Filter_Evasion_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2230,12 +2640,34 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="XS_Leaks_Cheat_Sheet.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     XS Leaks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Zero_Trust_Architecture_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zero Trust Architecture
   </span>
   
 
@@ -2280,14 +2712,18 @@
       
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
-    Introduction
+    <span class="md-ellipsis">
+      Introduction
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#primary-defenses" class="md-nav__link">
-    Primary Defenses
+    <span class="md-ellipsis">
+      Primary Defenses
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Primary Defenses">
@@ -2295,7 +2731,9 @@
         
           <li class="md-nav__item">
   <a href="#defense-option-1-escape-all-variables-using-the-right-ldap-encoding-function" class="md-nav__link">
-    Defense Option 1: Escape all variables using the right LDAP encoding function
+    <span class="md-ellipsis">
+      Defense Option 1: Escape all variables using the right LDAP encoding function
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Defense Option 1: Escape all variables using the right LDAP encoding function">
@@ -2303,28 +2741,36 @@
         
           <li class="md-nav__item">
   <a href="#distinguished-name-escaping" class="md-nav__link">
-    Distinguished Name Escaping
+    <span class="md-ellipsis">
+      Distinguished Name Escaping
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#search-filter-escaping" class="md-nav__link">
-    Search Filter Escaping
+    <span class="md-ellipsis">
+      Search Filter Escaping
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#safe-java-escaping-example" class="md-nav__link">
-    Safe Java Escaping Example
+    <span class="md-ellipsis">
+      Safe Java Escaping Example
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#safe-c-sharp-net-tba-example" class="md-nav__link">
-    Safe C Sharp .NET TBA Example
+    <span class="md-ellipsis">
+      Safe C Sharp .NET TBA Example
+    </span>
   </a>
   
 </li>
@@ -2336,36 +2782,19 @@
         
           <li class="md-nav__item">
   <a href="#defense-option-2-use-frameworks-that-automatically-protect-from-ldap-injection" class="md-nav__link">
-    Defense Option 2: Use Frameworks that Automatically Protect from LDAP Injection
+    <span class="md-ellipsis">
+      Defense Option 2: Use Frameworks that Automatically Protect from LDAP Injection
+    </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#defense-option-3-additional-defenses" class="md-nav__link">
-    Defense Option 3: Additional Defenses
-  </a>
-  
-    <nav class="md-nav" aria-label="Defense Option 3: Additional Defenses">
+    <nav class="md-nav" aria-label="Defense Option 2: Use Frameworks that Automatically Protect from LDAP Injection">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#least-privilege" class="md-nav__link">
-    Least Privilege
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enabling-bind-authentication" class="md-nav__link">
-    Enabling Bind Authentication
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#allow-list-input-validation" class="md-nav__link">
-    Allow-List Input Validation
+  <a href="#safe-net-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Safe .NET Example
+    </span>
   </a>
   
 </li>
@@ -2381,8 +2810,52 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#additional-defenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Defenses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Defenses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#least-privilege" class="md-nav__link">
+    <span class="md-ellipsis">
+      Least Privilege
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-bind-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling Bind Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allow-list-input-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allow-List Input Validation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#related-articles" class="md-nav__link">
-    Related Articles
+    <span class="md-ellipsis">
+      Related Articles
+    </span>
   </a>
   
 </li>
@@ -2407,22 +2880,25 @@
 
 <h1 id="ldap-injection-prevention-cheat-sheet">LDAP Injection Prevention Cheat Sheet<a class="headerlink" href="#ldap-injection-prevention-cheat-sheet" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>This cheatsheet is focused on providing clear, simple, actionable guidance for preventing LDAP Injection flaws in your applications.</p>
+<p>The Lightweight Directory Access Protocol (LDAP) allows an application to remotely perform operations such as searching and modifying records in
+directories. LDAP injection results from inadequate input sanitization and validation and allows malicious users to glean restricted information using the
+directory service. For general information about LDAP please visit <a href="https://www.redhat.com/en/topics/security/what-is-ldap-authentication">lightweight directory access protocol (LDAP)</a>.</p>
 <p>LDAP Injection is an attack used to exploit web based applications that construct LDAP statements based on user input. When an application fails to properly sanitize user input, it's possible to modify LDAP statements through techniques similar to <a href="https://owasp.org/www-community/attacks/SQL_Injection">SQL Injection</a>.</p>
-<p>LDAP injection attacks could result in the granting of permissions to unauthorized queries, and content modification inside the LDAP tree.</p>
-<p>For more information on LDAP Injection attacks, visit <a href="https://owasp.org/www-community/attacks/LDAP_Injection">LDAP injection</a>.</p>
-<p><a href="https://owasp.org/www-community/attacks/LDAP_Injection">LDAP injection</a> attacks are common due to two factors:</p>
+<p>This cheatsheet is focused on providing clear, simple, actionable guidance for preventing LDAP Injection flaws in your applications. <a href="https://owasp.org/www-community/attacks/LDAP_Injection">LDAP injection</a> attacks are common due to two factors:</p>
 <ol>
 <li>The lack of safer, parameterized LDAP query interfaces</li>
 <li>The widespread use of LDAP to authenticate users to systems.</li>
 </ol>
+<p>LDAP injection attacks could result in the granting of permissions to unauthorized queries, and content modification inside the LDAP tree.</p>
 <p>Primary Defenses:</p>
 <ul>
 <li>Escape all variables using the right LDAP encoding function</li>
+<li>Use a framework that escapes automatically.</li>
 </ul>
 <p>Additional Defenses:</p>
 <ul>
-<li>Use a framework (like <a href="https://www.nuget.org/packages/LinqToLdap/">LINQtoLDAP</a> that escapes automatically.</li>
+<li>Least Privilege</li>
+<li>Allow-List Input Validation</li>
 </ul>
 <h2 id="primary-defenses">Primary Defenses<a class="headerlink" href="#primary-defenses" title="Permanent link">&para;</a></h2>
 <h3 id="defense-option-1-escape-all-variables-using-the-right-ldap-encoding-function">Defense Option 1: Escape all variables using the right LDAP encoding function<a class="headerlink" href="#defense-option-1-escape-all-variables-using-the-right-ldap-encoding-function" title="Permanent link">&para;</a></h3>
@@ -2432,13 +2908,14 @@
 <p><code>cn=Richard Feynman, ou=Physics Department, dc=Caltech, dc=edu</code></p>
 <p>or</p>
 <p><code>uid=inewton, ou=Mathematics Department, dc=Cambridge, dc=com</code></p>
-<p>There are certain characters that are considered special characters in a DN.</p>
-<p>The <a href="https://ldapwiki.com/wiki/DN%20Escape%20Values">exhaustive list</a> is the following: <code>\ # + &lt; &gt; , ; " =</code> and leading or trailing spaces.</p>
+<p>An allowlist can be used to restrict input to a list of valid characters. Characters and character sequences that must be excluded from allowlists — including
+Java Naming and Directory Interface (JNDI) metacharacters and LDAP special characters — are listed in the following list.</p>
+<p>The <a href="https://ldapwiki.com/wiki/Wiki.jsp?page=DN%20Escape%20Values">exhaustive list</a> is the following: <code>\ # + &lt; &gt; , ; " =</code> and leading or trailing spaces.</p>
 <p>Some "special" characters that are allowed in Distinguished Names and do not need to be escaped include:</p>
 <div class="highlight"><pre><span></span><code>* ( ) . &amp; - _ [ ] ` ~ | @ $ % ^ ? : { } ! &#39;
 </code></pre></div>
 <h4 id="search-filter-escaping">Search Filter Escaping<a class="headerlink" href="#search-filter-escaping" title="Permanent link">&para;</a></h4>
-<p>Each DN points to exactly 1 entry, which can be thought of sort of like a row in a RDBMS. For each entry, there will be 1 or more attributes which are analogous to RDBMS columns. If you are interested in searching through LDAP for users will certain attributes, you may do so with search filters.</p>
+<p>Each DN points to exactly 1 entry, which can be thought of sort of like a row in a RDBMS. For each entry, there will be 1 or more attributes which are analogous to RDBMS columns. If you are interested in searching through LDAP for users with certain attributes, you may do so with search filters.</p>
 <p>In a search filter, you can use standard boolean logic to get a list of users matching an arbitrary constraint. Search filters are written in Polish notation AKA prefix notation.</p>
 <p>Example:</p>
 <div class="highlight"><pre><span></span><code>(&amp;(ou=Physics)(|
@@ -2452,31 +2929,49 @@
 </code></pre></div>
 <p>For more information on search filter escaping visit <a href="https://datatracker.ietf.org/doc/html/rfc4515#section-3">RFC4515</a>.</p>
 <h4 id="safe-java-escaping-example">Safe Java Escaping Example<a class="headerlink" href="#safe-java-escaping-example" title="Permanent link">&para;</a></h4>
-<ul>
-<li><a href="https://wiki.sei.cmu.edu/confluence/spaces/flyingpdf/pdfpageexport.action?pageId=88487534">Prevent LDAP injection</a>.</li>
-<li><a href="https://github.com/ESAPI/esapi-java-legacy/blob/develop/src/main/java/org/owasp/esapi/reference/DefaultEncoder.java">Legacy OWASP ESAPI for Java DefaultEncoder which includes encodeForLDAP(String) and encodeForDN(String)</a>.</li>
-</ul>
+<p>The following solution uses an allowlist to sanitize user input so that the filter string contains only valid characters. In this code, userSN may contain
+only letters and spaces, whereas a password may contain only alphanumeric characters:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// String userSN = &quot;Sherlock Holmes&quot;; // Valid</span>
+<span class="c1">// String userPassword = &quot;secret2&quot;; // Valid</span>
+<span class="c1">// ... beginning of LDAPInjection.searchRecord()...</span>
+<span class="n">sc</span><span class="p">.</span><span class="na">setSearchScope</span><span class="p">(</span><span class="n">SearchControls</span><span class="p">.</span><span class="na">SUBTREE_SCOPE</span><span class="p">);</span>
+<span class="n">String</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;dc=example,dc=com&quot;</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">userSN</span><span class="p">.</span><span class="na">matches</span><span class="p">(</span><span class="s">&quot;[\\w\\s]*&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">userPassword</span><span class="p">.</span><span class="na">matches</span><span class="p">(</span><span class="s">&quot;[\\w]*&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Invalid input&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">String</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;(&amp;(sn = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">userSN</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;)(userPassword=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">userPassword</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;))&quot;</span><span class="p">;</span>
+<span class="c1">// ... remainder of LDAPInjection.searchRecord()... </span>
+</code></pre></div>
+<p>When a database field such as a password must include special characters, it is critical to ensure that the authentic data is stored in sanitized form in the
+database and also that any user input is normalized before the validation or comparison takes place. Using characters that have special meanings in JNDI
+and LDAP in the absence of a comprehensive normalization and allowlisting-based routine is discouraged. Special characters must be transformed to
+sanitized, safe values before they are added to the allowlist expression against which input will be validated. Likewise, normalization of user input should
+occur before the validation step (source: <a href="https://wiki.sei.cmu.edu/confluence/spaces/flyingpdf/pdfpageexport.action?pageId=88487534">Prevent LDAP injection</a>).</p>
+<p>For further information visit <a href="https://owasp.org/www-project-java-encoder/">OWASP ESAPI Java Encoder Project which includes encodeForLDAP(String) and encodeForDN(String)</a>.</p>
 <h4 id="safe-c-sharp-net-tba-example">Safe C Sharp .NET TBA Example<a class="headerlink" href="#safe-c-sharp-net-tba-example" title="Permanent link">&para;</a></h4>
 <p><a href="https://blogs.msdn.microsoft.com/securitytools/2010/09/30/antixss-4-0-released/">.NET AntiXSS</a> (now the Encoder class) has LDAP encoding functions including <code>Encoder.LdapFilterEncode(string)</code>, <code>Encoder.LdapDistinguishedNameEncode(string)</code> and <code>Encoder.LdapDistinguishedNameEncode(string, bool, bool)</code>.</p>
 <p><code>Encoder.LdapFilterEncode</code> encodes input according to <a href="https://tools.ietf.org/search/rfc4515">RFC4515</a> where unsafe values are converted to <code>\XX</code> where <code>XX</code> is the representation of the unsafe character.</p>
 <p><code>Encoder.LdapDistinguishedNameEncode</code> encodes input according to <a href="https://tools.ietf.org/html/rfc2253">RFC2253</a> where unsafe characters are converted to <code>#XX</code> where <code>XX</code> is the representation of the unsafe character and the comma, plus, quote, slash, less than and great than signs are escaped using slash notation (<code>\X</code>). In addition to this a space or octothorpe (<code>#</code>) at the beginning of the input string is <code>\</code> escaped as is a space at the end of a string.</p>
 <p><code>LdapDistinguishedNameEncode(string, bool, bool)</code> is also provided so you may turn off the initial or final character escaping rules, for example if you are concatenating the escaped distinguished name fragment into the midst of a complete distinguished name.</p>
 <h3 id="defense-option-2-use-frameworks-that-automatically-protect-from-ldap-injection">Defense Option 2: Use Frameworks that Automatically Protect from LDAP Injection<a class="headerlink" href="#defense-option-2-use-frameworks-that-automatically-protect-from-ldap-injection" title="Permanent link">&para;</a></h3>
-<p>Safe NET Example</p>
-<p><a href="https://linqtoad.codeplex.com">LINQ to Active Directory</a> provides automatic LDAP encoding when building LDAP queries.</p>
-<h3 id="defense-option-3-additional-defenses">Defense Option 3: Additional Defenses<a class="headerlink" href="#defense-option-3-additional-defenses" title="Permanent link">&para;</a></h3>
+<h4 id="safe-net-example">Safe .NET Example<a class="headerlink" href="#safe-net-example" title="Permanent link">&para;</a></h4>
+<p>We recommend using <a href="https://www.nuget.org/packages/LinqToLdap/">LINQ to LDAP</a> (for .NET Framework 4.5 or lower <a href="https://github.com/madhatter22/LinqToLdap/issues/31">until it has been updated</a>) in DotNet. It provides automatic LDAP encoding when building LDAP queries.
+Contact the <a href="https://github.com/madhatter22/LinqToLdap/blob/master/README.md">Readme file</a> in the project repository.</p>
+<h2 id="additional-defenses">Additional Defenses<a class="headerlink" href="#additional-defenses" title="Permanent link">&para;</a></h2>
 <p>Beyond adopting one of the two primary defenses, we also recommend adopting all of these additional defenses in order to provide defense in depth. These additional defenses are:</p>
 <ul>
 <li><strong>Least Privilege</strong></li>
 <li><strong>Allow-List Input Validation</strong></li>
 </ul>
-<h4 id="least-privilege">Least Privilege<a class="headerlink" href="#least-privilege" title="Permanent link">&para;</a></h4>
+<h3 id="least-privilege">Least Privilege<a class="headerlink" href="#least-privilege" title="Permanent link">&para;</a></h3>
 <p>To minimize the potential damage of a successful LDAP injection attack, you should minimize the privileges assigned to the LDAP binding account in your environment.</p>
-<h4 id="enabling-bind-authentication">Enabling Bind Authentication<a class="headerlink" href="#enabling-bind-authentication" title="Permanent link">&para;</a></h4>
+<h3 id="enabling-bind-authentication">Enabling Bind Authentication<a class="headerlink" href="#enabling-bind-authentication" title="Permanent link">&para;</a></h3>
 <p>If LDAP protocol is configured with bind Authentication, attackers would not be able to perform LDAP injection attacks because of verification
 and authorization checks that are performed against valid credentials passed by the user.
 An attacker can still bypass bind authentication through an anonymous connection or by exploiting the use of unauthenticated bind: Anonymous Bind (LDAP) and Unauthenticated Bind (LDAP).</p>
-<h4 id="allow-list-input-validation">Allow-List Input Validation<a class="headerlink" href="#allow-list-input-validation" title="Permanent link">&para;</a></h4>
+<h3 id="allow-list-input-validation">Allow-List Input Validation<a class="headerlink" href="#allow-list-input-validation" title="Permanent link">&para;</a></h3>
 <p>Input validation can be used to detect unauthorized input before it is passed to the LDAP query. For more information please see the <a href="Input_Validation_Cheat_Sheet.html">Input Validation Cheat Sheet</a>.</p>
 <h2 id="related-articles">Related Articles<a class="headerlink" href="#related-articles" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2488,11 +2983,22 @@ An attacker can still bypass bind authentication through an anonymous connection
 
 
 
+
+
+  
+  
+
+
+
+
+
+
                 
               </article>
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
@@ -2504,7 +3010,7 @@ An attacker can still bypass bind authentication through an anonymous connection
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+      ©Copyright <script>document.write(new Date().getFullYear())</script> - Cheat Sheets Series Team - This work is licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
     </div>
   
   
@@ -2524,10 +3030,11 @@ An attacker can still bypass bind authentication through an anonymous connection
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>

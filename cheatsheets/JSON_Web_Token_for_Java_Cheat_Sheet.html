@@ -24,7 +24,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
       
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -32,10 +32,10 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -54,7 +54,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -73,9 +73,6 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -101,12 +98,12 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -131,20 +128,20 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -152,10 +149,13 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
       
     
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -164,21 +164,21 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -195,7 +195,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -230,7 +230,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     OWASP Cheat Sheet Series
@@ -240,7 +240,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
       <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -252,6 +252,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
     
       
       
+  
   
   
   
@@ -274,6 +275,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="../Glossary.html" class="md-nav__link">
         
@@ -290,6 +292,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
     
       
       
+  
   
   
   
@@ -312,6 +315,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="../IndexMASVS.html" class="md-nav__link">
         
@@ -331,6 +335,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="../IndexProactiveControls.html" class="md-nav__link">
         
@@ -347,6 +352,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
     
       
       
+  
   
   
   
@@ -371,18 +377,24 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
     
   
   
+  
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -402,6 +414,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -425,6 +438,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Abuse_Case_Cheat_Sheet.html" class="md-nav__link">
         
@@ -442,6 +456,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -465,6 +480,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
         
@@ -482,6 +498,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -505,6 +522,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Authorization_Cheat_Sheet.html" class="md-nav__link">
         
@@ -522,6 +540,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -545,6 +564,28 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Automotive_Security.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automotive Security.md
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Bean_Validation_Cheat_Sheet.html" class="md-nav__link">
         
@@ -562,6 +603,28 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Browser_Extension_Vulnerabilities_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Browser Extension Vulnerabilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -585,6 +648,28 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="CI_CD_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI CD Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Choosing_and_Using_Security_Questions_Cheat_Sheet.html" class="md-nav__link">
         
@@ -602,6 +687,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -625,6 +711,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Content_Security_Policy_Cheat_Sheet.html" class="md-nav__link">
         
@@ -642,6 +729,28 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Cookie_Theft_Mitigation_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cookie Theft Mitigation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -665,6 +774,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -682,6 +792,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -705,6 +816,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Cryptographic_Storage_Cheat_Sheet.html" class="md-nav__link">
         
@@ -722,6 +834,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -745,6 +858,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -762,6 +876,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -785,6 +900,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Denial_of_Service_Cheat_Sheet.html" class="md-nav__link">
         
@@ -802,6 +918,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -825,6 +942,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Django_REST_Framework_Cheat_Sheet.html" class="md-nav__link">
         
@@ -842,6 +960,28 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Django_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -865,6 +1005,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="DotNet_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -882,6 +1023,28 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Drone_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drone Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -905,6 +1068,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="File_Upload_Cheat_Sheet.html" class="md-nav__link">
         
@@ -922,6 +1086,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -945,6 +1110,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="GraphQL_Cheat_Sheet.html" class="md-nav__link">
         
@@ -962,6 +1128,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -985,6 +1152,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="HTTP_Headers_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1002,6 +1170,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -1025,6 +1194,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Infrastructure_as_Code_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1042,6 +1212,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -1065,6 +1236,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Injection_Prevention_in_Java_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1082,6 +1254,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -1105,6 +1278,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1122,6 +1296,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -1145,6 +1320,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
     
+  
   
   
     <li class="md-nav__item md-nav__item--active">
@@ -1193,35 +1369,45 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
       
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
-    Introduction
+    <span class="md-ellipsis">
+      Introduction
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#token-structure" class="md-nav__link">
-    Token Structure
+    <span class="md-ellipsis">
+      Token Structure
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#objective" class="md-nav__link">
-    Objective
+    <span class="md-ellipsis">
+      Objective
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#consideration-about-using-jwt" class="md-nav__link">
-    Consideration about Using JWT
+    <span class="md-ellipsis">
+      Consideration about Using JWT
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#issues" class="md-nav__link">
-    Issues
+    <span class="md-ellipsis">
+      Issues
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Issues">
@@ -1229,7 +1415,9 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#none-hashing-algorithm" class="md-nav__link">
-    None Hashing Algorithm
+    <span class="md-ellipsis">
+      None Hashing Algorithm
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="None Hashing Algorithm">
@@ -1237,21 +1425,27 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#symptom" class="md-nav__link">
-    Symptom
+    <span class="md-ellipsis">
+      Symptom
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#how-to-prevent" class="md-nav__link">
-    How to Prevent
+    <span class="md-ellipsis">
+      How to Prevent
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#implementation-example" class="md-nav__link">
-    Implementation Example
+    <span class="md-ellipsis">
+      Implementation Example
+    </span>
   </a>
   
 </li>
@@ -1263,7 +1457,9 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#token-sidejacking" class="md-nav__link">
-    Token Sidejacking
+    <span class="md-ellipsis">
+      Token Sidejacking
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Token Sidejacking">
@@ -1271,21 +1467,27 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#symptom_1" class="md-nav__link">
-    Symptom
+    <span class="md-ellipsis">
+      Symptom
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#how-to-prevent_1" class="md-nav__link">
-    How to Prevent
+    <span class="md-ellipsis">
+      How to Prevent
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#implementation-example_1" class="md-nav__link">
-    Implementation example
+    <span class="md-ellipsis">
+      Implementation example
+    </span>
   </a>
   
 </li>
@@ -1297,7 +1499,9 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#no-built-in-token-revocation-by-the-user" class="md-nav__link">
-    No Built-In Token Revocation by the User
+    <span class="md-ellipsis">
+      No Built-In Token Revocation by the User
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="No Built-In Token Revocation by the User">
@@ -1305,21 +1509,27 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#symptom_2" class="md-nav__link">
-    Symptom
+    <span class="md-ellipsis">
+      Symptom
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#how-to-prevent_2" class="md-nav__link">
-    How to Prevent
+    <span class="md-ellipsis">
+      How to Prevent
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#implementation-example_2" class="md-nav__link">
-    Implementation Example
+    <span class="md-ellipsis">
+      Implementation Example
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Implementation Example">
@@ -1327,14 +1537,18 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#block-list-storage" class="md-nav__link">
-    Block List Storage
+    <span class="md-ellipsis">
+      Block List Storage
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#token-revocation-management" class="md-nav__link">
-    Token Revocation Management
+    <span class="md-ellipsis">
+      Token Revocation Management
+    </span>
   </a>
   
 </li>
@@ -1351,7 +1565,9 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#token-information-disclosure" class="md-nav__link">
-    Token Information Disclosure
+    <span class="md-ellipsis">
+      Token Information Disclosure
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Token Information Disclosure">
@@ -1359,21 +1575,27 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#symptom_3" class="md-nav__link">
-    Symptom
+    <span class="md-ellipsis">
+      Symptom
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#how-to-prevent_3" class="md-nav__link">
-    How to Prevent
+    <span class="md-ellipsis">
+      How to Prevent
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#implementation-example_3" class="md-nav__link">
-    Implementation Example
+    <span class="md-ellipsis">
+      Implementation Example
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Implementation Example">
@@ -1381,14 +1603,18 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#token-ciphering" class="md-nav__link">
-    Token Ciphering
+    <span class="md-ellipsis">
+      Token Ciphering
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#creation-validation-of-the-token" class="md-nav__link">
-    Creation / Validation of the Token
+    <span class="md-ellipsis">
+      Creation / Validation of the Token
+    </span>
   </a>
   
 </li>
@@ -1405,7 +1631,9 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#token-storage-on-client-side" class="md-nav__link">
-    Token Storage on Client Side
+    <span class="md-ellipsis">
+      Token Storage on Client Side
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Token Storage on Client Side">
@@ -1413,21 +1641,27 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#symptom_4" class="md-nav__link">
-    Symptom
+    <span class="md-ellipsis">
+      Symptom
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#how-to-prevent_4" class="md-nav__link">
-    How to Prevent
+    <span class="md-ellipsis">
+      How to Prevent
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#implementation-example_4" class="md-nav__link">
-    Implementation Example
+    <span class="md-ellipsis">
+      Implementation Example
+    </span>
   </a>
   
 </li>
@@ -1439,7 +1673,9 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#weak-token-secret" class="md-nav__link">
-    Weak Token Secret
+    <span class="md-ellipsis">
+      Weak Token Secret
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Weak Token Secret">
@@ -1447,21 +1683,27 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#symptom_5" class="md-nav__link">
-    Symptom
+    <span class="md-ellipsis">
+      Symptom
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#how-to-prevent_5" class="md-nav__link">
-    How to Prevent
+    <span class="md-ellipsis">
+      How to Prevent
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#further-reading" class="md-nav__link">
-    Further Reading
+    <span class="md-ellipsis">
+      Further Reading
+    </span>
   </a>
   
 </li>
@@ -1490,6 +1732,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Java_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1507,6 +1750,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -1530,6 +1774,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Kubernetes_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1547,6 +1792,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -1570,6 +1816,28 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="LLM_Prompt_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM Prompt Injection Prevention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Laravel_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1587,6 +1855,28 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Legacy_Application_Management_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Legacy Application Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -1610,6 +1900,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Logging_Vocabulary_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1627,6 +1918,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -1650,6 +1942,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Microservices_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1667,6 +1960,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -1690,6 +1984,28 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Mobile_Application_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mobile Application Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Multifactor_Authentication_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1707,6 +2023,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -1730,6 +2047,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Network_Segmentation_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1747,6 +2065,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -1770,6 +2089,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Nodejs_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1787,6 +2107,28 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="OAuth2_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -1810,6 +2152,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="PHP_Configuration_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1827,6 +2170,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -1850,6 +2194,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Pinning_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1867,6 +2212,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -1890,6 +2236,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Query_Parameterization_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1907,6 +2254,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -1930,6 +2278,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="REST_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1947,6 +2296,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -1970,6 +2320,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="SAML_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1987,6 +2338,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -2010,6 +2362,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Secrets_Management_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2027,6 +2380,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -2050,6 +2404,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Secure_Product_Design_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2067,6 +2422,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -2090,6 +2446,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2107,6 +2464,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -2130,6 +2488,49 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Software_Supply_Chain_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Supply Chain Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Symfony_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Symfony
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="TLS_Cipher_String_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2147,6 +2548,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -2170,6 +2572,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Threat_Modeling_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2187,6 +2590,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -2210,6 +2614,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Transport_Layer_Protection_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2227,6 +2632,28 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Transport_Layer_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transport Layer Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -2250,6 +2677,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="User_Privacy_Protection_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2267,6 +2695,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -2290,6 +2719,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Vulnerability_Disclosure_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2307,6 +2737,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -2330,6 +2761,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Web_Service_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2347,6 +2779,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -2370,6 +2803,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="XML_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2387,6 +2821,7 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
             
               
                 
+  
   
   
   
@@ -2410,12 +2845,34 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="XS_Leaks_Cheat_Sheet.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     XS Leaks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Zero_Trust_Architecture_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zero Trust Architecture
   </span>
   
 
@@ -2460,35 +2917,45 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
       
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
-    Introduction
+    <span class="md-ellipsis">
+      Introduction
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#token-structure" class="md-nav__link">
-    Token Structure
+    <span class="md-ellipsis">
+      Token Structure
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#objective" class="md-nav__link">
-    Objective
+    <span class="md-ellipsis">
+      Objective
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#consideration-about-using-jwt" class="md-nav__link">
-    Consideration about Using JWT
+    <span class="md-ellipsis">
+      Consideration about Using JWT
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#issues" class="md-nav__link">
-    Issues
+    <span class="md-ellipsis">
+      Issues
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Issues">
@@ -2496,7 +2963,9 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#none-hashing-algorithm" class="md-nav__link">
-    None Hashing Algorithm
+    <span class="md-ellipsis">
+      None Hashing Algorithm
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="None Hashing Algorithm">
@@ -2504,21 +2973,27 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#symptom" class="md-nav__link">
-    Symptom
+    <span class="md-ellipsis">
+      Symptom
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#how-to-prevent" class="md-nav__link">
-    How to Prevent
+    <span class="md-ellipsis">
+      How to Prevent
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#implementation-example" class="md-nav__link">
-    Implementation Example
+    <span class="md-ellipsis">
+      Implementation Example
+    </span>
   </a>
   
 </li>
@@ -2530,7 +3005,9 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#token-sidejacking" class="md-nav__link">
-    Token Sidejacking
+    <span class="md-ellipsis">
+      Token Sidejacking
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Token Sidejacking">
@@ -2538,21 +3015,27 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#symptom_1" class="md-nav__link">
-    Symptom
+    <span class="md-ellipsis">
+      Symptom
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#how-to-prevent_1" class="md-nav__link">
-    How to Prevent
+    <span class="md-ellipsis">
+      How to Prevent
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#implementation-example_1" class="md-nav__link">
-    Implementation example
+    <span class="md-ellipsis">
+      Implementation example
+    </span>
   </a>
   
 </li>
@@ -2564,7 +3047,9 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#no-built-in-token-revocation-by-the-user" class="md-nav__link">
-    No Built-In Token Revocation by the User
+    <span class="md-ellipsis">
+      No Built-In Token Revocation by the User
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="No Built-In Token Revocation by the User">
@@ -2572,21 +3057,27 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#symptom_2" class="md-nav__link">
-    Symptom
+    <span class="md-ellipsis">
+      Symptom
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#how-to-prevent_2" class="md-nav__link">
-    How to Prevent
+    <span class="md-ellipsis">
+      How to Prevent
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#implementation-example_2" class="md-nav__link">
-    Implementation Example
+    <span class="md-ellipsis">
+      Implementation Example
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Implementation Example">
@@ -2594,14 +3085,18 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#block-list-storage" class="md-nav__link">
-    Block List Storage
+    <span class="md-ellipsis">
+      Block List Storage
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#token-revocation-management" class="md-nav__link">
-    Token Revocation Management
+    <span class="md-ellipsis">
+      Token Revocation Management
+    </span>
   </a>
   
 </li>
@@ -2618,7 +3113,9 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#token-information-disclosure" class="md-nav__link">
-    Token Information Disclosure
+    <span class="md-ellipsis">
+      Token Information Disclosure
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Token Information Disclosure">
@@ -2626,21 +3123,27 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#symptom_3" class="md-nav__link">
-    Symptom
+    <span class="md-ellipsis">
+      Symptom
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#how-to-prevent_3" class="md-nav__link">
-    How to Prevent
+    <span class="md-ellipsis">
+      How to Prevent
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#implementation-example_3" class="md-nav__link">
-    Implementation Example
+    <span class="md-ellipsis">
+      Implementation Example
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Implementation Example">
@@ -2648,14 +3151,18 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#token-ciphering" class="md-nav__link">
-    Token Ciphering
+    <span class="md-ellipsis">
+      Token Ciphering
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#creation-validation-of-the-token" class="md-nav__link">
-    Creation / Validation of the Token
+    <span class="md-ellipsis">
+      Creation / Validation of the Token
+    </span>
   </a>
   
 </li>
@@ -2672,7 +3179,9 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#token-storage-on-client-side" class="md-nav__link">
-    Token Storage on Client Side
+    <span class="md-ellipsis">
+      Token Storage on Client Side
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Token Storage on Client Side">
@@ -2680,21 +3189,27 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#symptom_4" class="md-nav__link">
-    Symptom
+    <span class="md-ellipsis">
+      Symptom
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#how-to-prevent_4" class="md-nav__link">
-    How to Prevent
+    <span class="md-ellipsis">
+      How to Prevent
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#implementation-example_4" class="md-nav__link">
-    Implementation Example
+    <span class="md-ellipsis">
+      Implementation Example
+    </span>
   </a>
   
 </li>
@@ -2706,7 +3221,9 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#weak-token-secret" class="md-nav__link">
-    Weak Token Secret
+    <span class="md-ellipsis">
+      Weak Token Secret
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Weak Token Secret">
@@ -2714,21 +3231,27 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
         
           <li class="md-nav__item">
   <a href="#symptom_5" class="md-nav__link">
-    Symptom
+    <span class="md-ellipsis">
+      Symptom
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#how-to-prevent_5" class="md-nav__link">
-    How to Prevent
+    <span class="md-ellipsis">
+      How to Prevent
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#further-reading" class="md-nav__link">
-    Further Reading
+    <span class="md-ellipsis">
+      Further Reading
+    </span>
   </a>
   
 </li>
@@ -2768,8 +3291,8 @@ redirect_from: "/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.html"
 <blockquote>
 <p>JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA.</p>
 </blockquote>
-<p>JSON Web Token is used to carry information related to the identity and characteristics (claims) of a client. This information is signed by the server in order for it to detect whether it was tampered with after sending it to the client. This will prevent an attacker from changing the identity or any characteristics (for example, changing the role from simple user to admin or change the client login).</p>
-<p>This token is created during authentication (is provided in case of successful authentication) and is verified by the server before any processing. It is used by an application to allow a client to present a token representing the user's "identity card" to the server and allow the server to verify the validity and integrity of the token in a secure way, all of this in a stateless and portable approach (portable in the way that client and server technologies can be different including also the transport channel even if HTTP is the most often used).</p>
+<p>JWTs are used to carry information related to the identity and characteristics (claims) of a client. This information is signed by the server to ensure it has not been tampered with after being sent to the client. This prevents an attacker from modifying the identity or characteristics — for example, changing the role from a simple user to an admin or altering the client's login.</p>
+<p>The token is created during authentication (it is issued upon successful authentication) and is verified by the server before any processing. Applications use the token to allow a client to present what is essentially an "identity card" to the server. The server can then securely verify the token's validity and integrity. This approach is stateless and portable, meaning it works across different client and server technologies, and over various transport channels — although HTTP is the most commonly used.</p>
 <h2 id="token-structure">Token Structure<a class="headerlink" href="#token-structure" title="Permanent link">&para;</a></h2>
 <p>Token structure example taken from <a href="https://jwt.io/#debugger">JWT.IO</a>:</p>
 <p><code>[Base64(HEADER)].[Base64(PAYLOAD)].[Base64(SIGNATURE)]</code></p>
@@ -2799,7 +3322,7 @@ TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
 <p>You can find the Java project <a href="https://github.com/righettod/poc-jwt">here</a>, it uses the official <a href="https://jwt.io/#libraries">JWT library</a>.</p>
 <p>In the rest of the article, the term <strong>token</strong> refers to the <strong>JSON Web Tokens</strong> (JWT).</p>
 <h2 id="consideration-about-using-jwt">Consideration about Using JWT<a class="headerlink" href="#consideration-about-using-jwt" title="Permanent link">&para;</a></h2>
-<p>Even if a JWT token is "easy" to use and allow to expose services (mostly REST style) in a stateless way, it's not the solution that fits for all applications because it comes with some caveats, like for example the question of the storage of the token (tackled in this cheatsheet) and others...</p>
+<p>Even if a JWT is "easy" to use and allow to expose services (mostly REST style) in a stateless way, it's not the solution that fits for all applications because it comes with some caveats, like for example the question of the storage of the token (tackled in this cheatsheet) and others...</p>
 <p>If your application does not need to be fully stateless, you can consider using traditional session system provided by all web frameworks and follow the advice from the dedicated <a href="Session_Management_Cheat_Sheet.html">session management cheat sheet</a>. However, for stateless applications, when well implemented, it's a good candidate.</p>
 <h2 id="issues">Issues<a class="headerlink" href="#issues" title="Permanent link">&para;</a></h2>
 <h3 id="none-hashing-algorithm">None Hashing Algorithm<a class="headerlink" href="#none-hashing-algorithm" title="Permanent link">&para;</a></h3>
@@ -2825,13 +3348,13 @@ TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
 <h4 id="symptom_1">Symptom<a class="headerlink" href="#symptom_1" title="Permanent link">&para;</a></h4>
 <p>This attack occurs when a token has been intercepted/stolen by an attacker and they use it to gain access to the system using targeted user identity.</p>
 <h4 id="how-to-prevent_1">How to Prevent<a class="headerlink" href="#how-to-prevent_1" title="Permanent link">&para;</a></h4>
-<p>A way to prevent it is to add a "user context" in the token. A user context will be composed of the following information:</p>
+<p>One way to prevent this is by adding a "user context" to the token. The user context should consist of the following:</p>
 <ul>
-<li>A random string that will be generated during the authentication phase. It will be sent to the client as an hardened cookie (flags: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Secure_and_HttpOnly_cookies">HttpOnly + Secure</a> + <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#SameSite_cookies">SameSite</a> + <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie">Max-Age</a> + <a href="https://googlechrome.github.io/samples/cookie-prefixes/">cookie prefixes</a>). Avoid setting <em>expires</em> header so that the cookie is cleared when the browser is closed. Set <em>Max-Age</em> to a value smaller or equal to the value of JWT token expiry, but never more.</li>
+<li>A random string generated during the authentication phase. This string is sent to the client as a hardened cookie (with the following flags: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Secure_and_HttpOnly_cookies">HttpOnly + Secure</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#SameSite_cookies">SameSite</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie">Max-Age</a>, and <a href="https://googlechrome.github.io/samples/cookie-prefixes/">cookie prefixes</a>). Avoid setting the <em>expires</em> header so the cookie is cleared when the browser is closed. Set <em>Max-Age</em> to a value equal to or less than the JWT's expiry time — never more.</li>
 <li>A SHA256 hash of the random string will be stored in the token (instead of the raw value) in order to prevent any XSS issues allowing the attacker to read the random string value and setting the expected cookie.</li>
 </ul>
-<p>IP addresses should not be used because there are some legitimate situations in which the IP address can change during the same session. For example, when an user accesses an application through their mobile device and the mobile operator changes during the exchange, then the IP address may (often) change. Moreover, using the IP address can potentially cause issues with <a href="https://gdpr.eu/">European GDPR</a> compliance.</p>
-<p>During token validation, if the received token does not contain the right context (for example, if it has been replayed), then it must be rejected.</p>
+<p>Avoid using IP addresses as part of the context. IP addresses can change during a single session due to legitimate reasons — for example, when a user accesses the application on a mobile device and switches network providers. Additionally, IP tracking can raise concerns related to <a href="https://gdpr.eu/">GDPR compliance</a> in the EU.</p>
+<p>During token validation, if the received token does not contain the correct context (e.g., if it is being replayed by an attacker), it must be rejected.</p>
 <h4 id="implementation-example_1">Implementation example<a class="headerlink" href="#implementation-example_1" title="Permanent link">&para;</a></h4>
 <p>Code to create the token after successful authentication.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// HMAC key - Block serialization and storage as String in JVM memory</span>
@@ -2912,18 +3435,18 @@ TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
 <h4 id="symptom_2">Symptom<a class="headerlink" href="#symptom_2" title="Permanent link">&para;</a></h4>
 <p>This problem is inherent to JWT because a token only becomes invalid when it expires. The user has no built-in feature to explicitly revoke the validity of a token. This means that if it is stolen, a user cannot revoke the token itself thereby blocking the attacker.</p>
 <h4 id="how-to-prevent_2">How to Prevent<a class="headerlink" href="#how-to-prevent_2" title="Permanent link">&para;</a></h4>
-<p>Since JWT tokens are stateless, There is no session maintained on the server(s) serving client requests. As such, there is no session to invalidate on the server side. A well implemented Token Sidejacking solution (as explained above) should alleviate the need for maintaining block list on server side. This is because a hardened cookie used in the Token Sidejacking can be considered as secure as a session ID used in the traditional session system, and unless both the cookie and the JWT token are intercepted/stolen, the JWT is unusable. A logout can thus be 'simulated' by clearing the JWT from session storage. If the user chooses to close the browser instead, then both the cookie and sessionStorage are cleared automatically.</p>
-<p>Another way to protect against this is to implement a token block list that will be used to mimic the "logout" feature that exists with traditional session management system.</p>
-<p>The block list will keep a digest (SHA-256 encoded in HEX) of the token with a revocation date. This entry must endure at least until the expiration of the token.</p>
-<p>When the user wants to "logout" then it call a dedicated service that will add the provided user token to the block list resulting in an immediate invalidation of the token for further usage in the application.</p>
+<p>Since JWTs are stateless, There is no session maintained on the server(s) serving client requests. As such, there is no session to invalidate on the server side. A well implemented Token Sidejacking solution (as explained above) should alleviate the need for maintaining denylist on server side. This is because a hardened cookie used in the Token Sidejacking can be considered as secure as a session ID used in the traditional session system, and unless both the cookie and the JWT are intercepted/stolen, the JWT is unusable. A logout can thus be 'simulated' by clearing the JWT from session storage. If the user chooses to close the browser instead, then both the cookie and sessionStorage are cleared automatically.</p>
+<p>Another way to protect against this is to implement a token denylist that will be used to mimic the "logout" feature that exists with traditional session management system.</p>
+<p>The denylist will keep a digest (SHA-256 encoded in HEX) of the token with a revocation date. This entry must endure at least until the expiration of the token.</p>
+<p>When the user wants to "logout" then it call a dedicated service that will add the provided user token to the denylist resulting in an immediate invalidation of the token for further usage in the application.</p>
 <h4 id="implementation-example_2">Implementation Example<a class="headerlink" href="#implementation-example_2" title="Permanent link">&para;</a></h4>
 <h5 id="block-list-storage">Block List Storage<a class="headerlink" href="#block-list-storage" title="Permanent link">&para;</a></h5>
-<p>A database table with the following structure will be used as the central block list storage.</p>
+<p>A database table with the following structure will be used as the central denylist storage.</p>
 <div class="highlight"><pre><span></span><code><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">exists</span><span class="w"> </span><span class="n">revoked_token</span><span class="p">(</span><span class="n">jwt_token_digest</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">primary</span><span class="w"> </span><span class="k">key</span><span class="p">,</span>
 <span class="n">revocation_date</span><span class="w"> </span><span class="k">timestamp</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">now</span><span class="p">());</span>
 </code></pre></div>
 <h5 id="token-revocation-management">Token Revocation Management<a class="headerlink" href="#token-revocation-management" title="Permanent link">&para;</a></h5>
-<p>Code in charge of adding a token to the block list and checking if a token is revoked.</p>
+<p>Code in charge of adding a token to the denylist and checking if a token is revoked.</p>
 <div class="highlight"><pre><span></span><code><span class="cm">/**</span>
 <span class="cm">* Handle the revocation of the token (logout).</span>
 <span class="cm">* Use a DB in order to allow multiple instances to check for revoked token</span>
@@ -3007,7 +3530,7 @@ TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
 </code></pre></div>
 <h3 id="token-information-disclosure">Token Information Disclosure<a class="headerlink" href="#token-information-disclosure" title="Permanent link">&para;</a></h3>
 <h4 id="symptom_3">Symptom<a class="headerlink" href="#symptom_3" title="Permanent link">&para;</a></h4>
-<p>This attack occurs when an attacker has access to a token (or a set of tokens) and extracts information stored in it (the contents of JWT tokens are base64 encoded, but is not encrypted by default) in order to obtain information about the system. Information can be for example the security roles, login format...</p>
+<p>This attack occurs when an attacker has access to a token (or a set of tokens) and extracts information stored in it (the contents of JWTs are base64 encoded, but is not encrypted by default) in order to obtain information about the system. Information can be for example the security roles, login format...</p>
 <h4 id="how-to-prevent_3">How to Prevent<a class="headerlink" href="#how-to-prevent_3" title="Permanent link">&para;</a></h4>
 <p>A way to protect against this attack is to cipher the token using, for example, a symmetric algorithm.</p>
 <p>It's also important to protect the ciphered data against attack like <a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/02-Testing_for_Padding_Oracle.html">Padding Oracle</a> or any other attack using cryptanalysis.</p>
@@ -3027,7 +3550,7 @@ integrity (ie. data has not been tampered with) of that data, but not its secrec
 See RFC5116: https://tools.ietf.org/html/rfc5116
 </code></pre></div>
 <p><strong>Note:</strong></p>
-<p>Here ciphering is added mainly to hide internal information but it's very important to remember that the first protection against tampering of the JWT token is the signature. So, the token signature and its verification must be always in place.</p>
+<p>Here ciphering is added mainly to hide internal information but it's very important to remember that the first protection against tampering of the JWT is the signature. So, the token signature and its verification must be always in place.</p>
 <h4 id="implementation-example_3">Implementation Example<a class="headerlink" href="#implementation-example_3" title="Permanent link">&para;</a></h4>
 <h5 id="token-ciphering">Token Ciphering<a class="headerlink" href="#token-ciphering" title="Permanent link">&para;</a></h5>
 <p>Code in charge of managing the ciphering. <a href="https://github.com/google/tink">Google Tink</a> dedicated crypto library is used to handle ciphering operations in order to use built-in best practices provided by this library.</p>
@@ -3137,8 +3660,15 @@ See RFC5116: https://tools.ietf.org/html/rfc5116
 <li>Add it as a <em>Bearer</em> HTTP <code>Authentication</code> header with JavaScript when calling services.</li>
 <li>Add <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html#token-sidejacking">fingerprint</a> information to the token.</li>
 </ol>
-<p>By storing the token in browser <em>sessionStorage</em> container it exposes the token to being stolen through a XSS attack. However, fingerprints added to the token prevent reuse of the stolen token by the attacker on their machine. To close a maximum of exploitation surfaces for an attacker, add a browser <a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">Content Security Policy</a> to harden the execution context.</p>
-<p>An alternative to storing token in browser <em>sessionStorage</em> is to use JavaScript private variable or Closures. In this, access to all web requests are routed through a JavaScript module that encapsulates the token in a private variable which can not be accessed other than from within the module.</p>
+<p>By storing the token in browser <em>sessionStorage</em> container it exposes the token to being stolen through an XSS attack. However, fingerprints added to the token prevent reuse of the stolen token by the attacker on their machine. To close a maximum of exploitation surfaces for an attacker, add a browser <a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">Content Security Policy</a> to harden the execution context.</p>
+<p>But, we know that <em>sessionStorage</em> is not always practical due to its per-tab scope, and the storage method for tokens should balance <em>security</em> and <em>usability</em>.</p>
+<p><em>LocalStorage</em> is a better method than <em>sessionStorage</em> for usability because it allows the session to persist between browser restarts and across tabs, but you must use strict security controls:</p>
+<ul>
+<li>Tokens stored in <em>localStorage</em> should have <em>short expiration times</em> (e.g., <em>15-30 minutes idle timeout, 8-hour absolute timeout</em>).</li>
+<li>Implement mechanisms such as <em>token rotation</em> and <em>refresh tokens</em> to minimize risk.</li>
+</ul>
+<p>If <em>session persistence across tabs</em> and <em>sessionStorage</em> are required, consider using <em>BroadcastChannel API</em> or <em>Single Sign-On (SSO)</em> to re-authenticate users automatically when they open new tabs.</p>
+<p>An alternative to storing token in browser <em>sessionStorage</em> or in <em>localStorage</em> is to use JavaScript private variable or Closures. In this, access to all web requests are routed through a JavaScript module that encapsulates the token in a private variable which can not be accessed other than from within the module.</p>
 <p><em>Note:</em></p>
 <ul>
 <li>The remaining case is when an attacker uses the user's browsing context as a proxy to use the target application through the legitimate user but the Content Security Policy can prevent communication with non expected domains.</li>
@@ -3270,11 +3800,22 @@ See RFC5116: https://tools.ietf.org/html/rfc5116
 
 
 
+
+
+  
+  
+
+
+
+
+
+
                 
               </article>
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
@@ -3286,7 +3827,7 @@ See RFC5116: https://tools.ietf.org/html/rfc5116
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+      ©Copyright <script>document.write(new Date().getFullYear())</script> - Cheat Sheets Series Team - This work is licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
     </div>
   
   
@@ -3306,10 +3847,11 @@ See RFC5116: https://tools.ietf.org/html/rfc5116
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>

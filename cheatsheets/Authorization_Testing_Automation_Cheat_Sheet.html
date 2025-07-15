@@ -20,11 +20,11 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
         <link rel="prev" href="Authorization_Cheat_Sheet.html">
       
       
-        <link rel="next" href="Bean_Validation_Cheat_Sheet.html">
+        <link rel="next" href="Automotive_Security.html">
       
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -32,10 +32,10 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -54,7 +54,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -73,9 +73,6 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -101,12 +98,12 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -131,20 +128,20 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -152,10 +149,13 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
       
     
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -164,21 +164,21 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -195,7 +195,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
         <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -230,7 +230,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     OWASP Cheat Sheet Series
@@ -240,7 +240,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
       <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -252,6 +252,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
     
       
       
+  
   
   
   
@@ -274,6 +275,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="../Glossary.html" class="md-nav__link">
         
@@ -290,6 +292,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
     
       
       
+  
   
   
   
@@ -312,6 +315,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="../IndexMASVS.html" class="md-nav__link">
         
@@ -331,6 +335,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="../IndexProactiveControls.html" class="md-nav__link">
         
@@ -347,6 +352,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
     
       
       
+  
   
   
   
@@ -371,18 +377,24 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
     
   
   
+  
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -402,6 +414,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -425,6 +438,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Abuse_Case_Cheat_Sheet.html" class="md-nav__link">
         
@@ -442,6 +456,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -465,6 +480,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
         
@@ -482,6 +498,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -505,6 +522,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Authorization_Cheat_Sheet.html" class="md-nav__link">
         
@@ -525,6 +543,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
     
+  
   
   
     <li class="md-nav__item md-nav__item--active">
@@ -573,43 +592,64 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
       
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
-    Introduction
+    <span class="md-ellipsis">
+      Introduction
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#context" class="md-nav__link">
-    Context
+    <span class="md-ellipsis">
+      Context
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#objective" class="md-nav__link">
-    Objective
+    <span class="md-ellipsis">
+      Objective
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#proposition" class="md-nav__link">
-    Proposition
+    <span class="md-ellipsis">
+      Proposition
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Proposition">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#authorization-matrix-pivot-file" class="md-nav__link">
-    Authorization matrix pivot file
+  <a href="#preparing-to-automate-the-authorization-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparing to automate the authorization matrix
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#integration-tests" class="md-nav__link">
-    Integration tests
+  <a href="#create-the-authorization-matrix-pivot-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the authorization matrix pivot file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-an-integration-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing an integration test
+    </span>
   </a>
   
 </li>
@@ -620,15 +660,19 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
 </li>
       
         <li class="md-nav__item">
-  <a href="#rendering-of-the-authorization-matrix-for-an-audit-review" class="md-nav__link">
-    Rendering of the authorization matrix for an audit / review
+  <a href="#rendering-the-authorization-matrix-for-an-audit-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendering the authorization matrix for an audit / review
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#sources-of-the-prototype" class="md-nav__link">
-    Sources of the prototype
+    <span class="md-ellipsis">
+      Sources of the prototype
+    </span>
   </a>
   
 </li>
@@ -644,6 +688,28 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Automotive_Security.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automotive Security.md
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -667,6 +733,28 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Browser_Extension_Vulnerabilities_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Browser Extension Vulnerabilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="C-Based_Toolchain_Hardening_Cheat_Sheet.html" class="md-nav__link">
         
@@ -684,6 +772,28 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CI_CD_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI CD Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -707,6 +817,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Clickjacking_Defense_Cheat_Sheet.html" class="md-nav__link">
         
@@ -724,6 +835,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -747,6 +859,28 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Cookie_Theft_Mitigation_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cookie Theft Mitigation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Credential_Stuffing_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -764,6 +898,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -787,6 +922,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -804,6 +940,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -827,6 +964,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="DOM_Clobbering_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -844,6 +982,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -867,6 +1006,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Database_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -884,6 +1024,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -907,6 +1048,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Deserialization_Cheat_Sheet.html" class="md-nav__link">
         
@@ -924,6 +1066,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -947,6 +1090,28 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Django_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Docker_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -964,6 +1129,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -987,6 +1153,28 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Drone_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drone Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Error_Handling_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1004,6 +1192,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1027,6 +1216,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Forgot_Password_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1044,6 +1234,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1067,6 +1258,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="HTML5_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1084,6 +1276,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1107,6 +1300,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1124,6 +1318,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1147,6 +1342,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1164,6 +1360,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1187,6 +1384,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Input_Validation_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1204,6 +1402,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1227,6 +1426,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="JAAS_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1244,6 +1444,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1267,6 +1468,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Java_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1284,6 +1486,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1307,6 +1510,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Kubernetes_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1324,6 +1528,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1347,6 +1552,28 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="LLM_Prompt_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM Prompt Injection Prevention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Laravel_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1364,6 +1591,28 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Legacy_Application_Management_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Legacy Application Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -1387,6 +1636,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Logging_Vocabulary_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1404,6 +1654,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1427,6 +1678,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Microservices_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1444,6 +1696,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1467,6 +1720,28 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Mobile_Application_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mobile Application Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Multifactor_Authentication_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1484,6 +1759,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1507,6 +1783,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Network_Segmentation_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1524,6 +1801,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1547,6 +1825,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Nodejs_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1564,6 +1843,28 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="OAuth2_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -1587,6 +1888,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="PHP_Configuration_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1604,6 +1906,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1627,6 +1930,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Pinning_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1644,6 +1948,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1667,6 +1972,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Query_Parameterization_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1684,6 +1990,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1707,6 +2014,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="REST_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1724,6 +2032,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1747,6 +2056,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="SAML_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1764,6 +2074,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1787,6 +2098,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Secrets_Management_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1804,6 +2116,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1827,6 +2140,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Secure_Product_Design_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1844,6 +2158,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1867,6 +2182,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1884,6 +2200,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1907,6 +2224,49 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Software_Supply_Chain_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Supply Chain Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Symfony_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Symfony
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="TLS_Cipher_String_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1924,6 +2284,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1947,6 +2308,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Threat_Modeling_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1964,6 +2326,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -1987,6 +2350,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Transport_Layer_Protection_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2004,6 +2368,28 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Transport_Layer_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transport Layer Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -2027,6 +2413,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="User_Privacy_Protection_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2044,6 +2431,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -2067,6 +2455,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Vulnerability_Disclosure_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2084,6 +2473,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -2107,6 +2497,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Web_Service_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2124,6 +2515,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -2147,6 +2539,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="XML_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2164,6 +2557,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
             
               
                 
+  
   
   
   
@@ -2187,12 +2581,34 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="XS_Leaks_Cheat_Sheet.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     XS Leaks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Zero_Trust_Architecture_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zero Trust Architecture
   </span>
   
 
@@ -2237,43 +2653,64 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
       
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
-    Introduction
+    <span class="md-ellipsis">
+      Introduction
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#context" class="md-nav__link">
-    Context
+    <span class="md-ellipsis">
+      Context
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#objective" class="md-nav__link">
-    Objective
+    <span class="md-ellipsis">
+      Objective
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#proposition" class="md-nav__link">
-    Proposition
+    <span class="md-ellipsis">
+      Proposition
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Proposition">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#authorization-matrix-pivot-file" class="md-nav__link">
-    Authorization matrix pivot file
+  <a href="#preparing-to-automate-the-authorization-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparing to automate the authorization matrix
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#integration-tests" class="md-nav__link">
-    Integration tests
+  <a href="#create-the-authorization-matrix-pivot-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the authorization matrix pivot file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-an-integration-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing an integration test
+    </span>
   </a>
   
 </li>
@@ -2284,15 +2721,19 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
 </li>
       
         <li class="md-nav__item">
-  <a href="#rendering-of-the-authorization-matrix-for-an-audit-review" class="md-nav__link">
-    Rendering of the authorization matrix for an audit / review
+  <a href="#rendering-the-authorization-matrix-for-an-audit-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendering the authorization matrix for an audit / review
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#sources-of-the-prototype" class="md-nav__link">
-    Sources of the prototype
+    <span class="md-ellipsis">
+      Sources of the prototype
+    </span>
   </a>
   
 </li>
@@ -2317,57 +2758,54 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
 
 <h1 id="authorization-testing-automation-cheat-sheet">Authorization Testing Automation Cheat Sheet<a class="headerlink" href="#authorization-testing-automation-cheat-sheet" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>Authorizations definition and implementation is one of the important protection measures of an application. They are defined in the creation phase of the project and, even if authorization issues are found when the application is initially released and submitted to a security audit before to going live, the most significant number of issues related to authorization come in the maintenance lifetime of the application.</p>
-<p>This situation is often explained by the fact that features are added/modified and no review of the authorizations is performed on the application before the publishing of the new release, for cost or time issue reason.</p>
+<p><strong>When you are implementing protection measures for an application, one of the most important parts of the process is defining and implementing the application's authorizations.</strong> Despite all of the checks and security audits conducted during the creation phase, most of the problems with authorizations occur because features are added/modified in updated releases without determining their effect on the application's authorizations (usually because of cost or time issue reasons).</p>
+<p>To deal with this problem, we recommend that developers automate the evaluation of the authorizations and perform a test when a new release is created. This ensures that the team knows if changes to the application will conflict with an authorization's definition and/or implementation.</p>
 <h2 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h2>
-<p>In order to try to address this situation, it can be interesting to automate the evaluation of the authorizations definition and implementation on the application. This, to constantly ensure that implementation of the authorizations in the application is consistent with the authorizations' definition.</p>
-<p>An authorization is often composed by 2 elements (also named dimensions): The <strong>Feature</strong>, and the <strong>Logical Role</strong> that can access it (sometime a third dimension named <strong>Data</strong> is added in order to define access that includes a filtering at business data level).</p>
-<p>The representation of the different combinations of these 2 dimensions is often named an <strong>Authorization matrix</strong> and is often formalized in a spreadsheet.</p>
-<p>During a test of an authorization, a <strong>Logical Role</strong> is also called a <strong>Point Of View</strong>.</p>
+<p>An authorization usually contains two elements (also named dimensions): The <strong>Feature</strong> and the <strong>Logical Role</strong> that accesses it. Sometimes a third dimension named <strong>Data</strong> is added in order to define access that includes a filtering at business data level.</p>
+<p>Generally, the two dimensions of each authorization should be listed in a spreadsheet that is called an <strong>authorization matrix</strong>. When authorizations are tested, the logical roles are sometimes called a <strong>Point Of View</strong>.</p>
 <h2 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">&para;</a></h2>
-<p>This article describes a proposition of implementation in order to automate the tests of an <em>authorization matrix</em>.</p>
-<p>This article assumes that 2 dimensions are used to represent an authorization for the technical proposition described and takes an application exposing REST services as an example.</p>
-<p>The objective is to provide starting ideas/hints in order to create a tailored way of testing of the authorization matrix for the target application.</p>
+<p>This cheat sheet is designed to help you generate your own approaches to automating authorization tests in an authorization matrix. Since developers will need to design their own approach to automating authorization tests, <strong>this cheat sheet will show a possible approach to automating authorization tests for one possible implementation of an application that exposes REST Services.</strong></p>
 <h2 id="proposition">Proposition<a class="headerlink" href="#proposition" title="Permanent link">&para;</a></h2>
-<p>In order to achieve the full automation of the evaluation of the <em>authorization matrix</em>, the following actions have been performed:</p>
+<h3 id="preparing-to-automate-the-authorization-matrix">Preparing to automate the authorization matrix<a class="headerlink" href="#preparing-to-automate-the-authorization-matrix" title="Permanent link">&para;</a></h3>
+<p>Before we start to automate a test of the authorization matrix, we will need to do the following:</p>
 <ol>
 <li>
-<p>Formalize the authorization matrix in a pivot format file allowing:</p>
+<p><strong>Formalize the authorization matrix in a pivot format file, which will allow you to:</strong></p>
 <ol>
-<li>The processing by a program easily.</li>
-<li>To be read and updated by a human for the follow-up of the authorization combinations.</li>
-<li>Hierarchy in the information in order to easily materialize the different combinations.</li>
-<li>The maximum possible of independence from the technology and design used to implement the application exposing the features.</li>
+<li>Easily process the matrix by a program.</li>
+<li>Allow a human to read and update when you need to follow up on the authorization combinations.</li>
+<li>Set up a hierarchy of the authorizations, which will allow you to easily create different combinations.</li>
+<li>Create the maximum possible of independence from the technology and design used to implement the applications.</li>
 </ol>
 </li>
 <li>
-<p>Create a set of integration tests that fully use the authorization matrix pivot file as input source in order to evaluate the different combinations with:</p>
+<p><strong>Create a set of integration tests that fully use the authorization matrix pivot file as an input source, which will allow you to evaluate the different combinations with the following advantages:</strong></p>
 <ol>
 <li>The minimum possible of maintenance when the authorization matrix pivot file is updated.</li>
 <li>A clear indication, in case of failed test, of the source authorization combination that does not respect the authorization matrix.</li>
 </ol>
 </li>
 </ol>
-<h3 id="authorization-matrix-pivot-file">Authorization matrix pivot file<a class="headerlink" href="#authorization-matrix-pivot-file" title="Permanent link">&para;</a></h3>
-<p>The XML format has been used to formalize the authorization matrix.</p>
-<p>The XML structure contains 3 main sections:</p>
+<h3 id="create-the-authorization-matrix-pivot-file">Create the authorization matrix pivot file<a class="headerlink" href="#create-the-authorization-matrix-pivot-file" title="Permanent link">&para;</a></h3>
+<p><strong>In this example, we use an XML format to formalize the authorization matrix.</strong></p>
+<p>This XML structure has three main sections (or nodes):</p>
 <ul>
-<li>Node <strong>roles</strong>: This node describes the possible logical roles used in the system, is used to provide a list, and the explanation of the different roles (authorization level).</li>
-<li>Node <strong>services</strong>: This node lists and describes the available services exposed by the system, and the associated logical role(s) that can call them.</li>
-<li>Node <strong>services-testing</strong>: This node provides a test payload for each service if the service uses input data other than the one coming from URL or path.</li>
+<li>Node <strong>roles</strong>: Describes the possible logical roles used in the system, provides a list of the roles, and explains the different roles (authorization level).</li>
+<li>Node <strong>services</strong>: Provides a list of the available services exposed by the system, provides a description of those services, and defines the associated logical role(s) that can call them.</li>
+<li>Node <strong>services-testing</strong>: Provides a test payload for each service if the service uses input data other than the one coming from URL or path.</li>
 </ul>
-<p>This is an example of the XML used to represent the authorization:</p>
+<p><strong>This sample demonstrates how an authorization could be defined with XML</strong>:</p>
 <blockquote>
 <p>Placeholders (values between {}) are used to mark location where test value must be placed by the integration tests if needed</p>
 </blockquote>
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="w">  </span><span class="cm">&lt;!--</span>
 <span class="cm">      This file materializes the authorization matrix for the different</span>
-<span class="cm">      services exposed by the system.</span>
+<span class="cm">      services exposed by the system:</span>
 
-<span class="cm">      It will be used by the tests as a input source for the different tests cases:</span>
-<span class="cm">      1) Evaluate legitimate access and its correct implementation</span>
-<span class="cm">      2) Identify not legitimate access (authorization definition issue</span>
+<span class="cm">      The tests will use this as a input source for the different test cases by:</span>
+<span class="cm">      1) Defining legitimate access and the correct implementation</span>
+<span class="cm">      2) Identifying illegitimate access (authorization definition issue</span>
 <span class="cm">      on service implementation)</span>
 
 <span class="cm">      The &quot;name&quot; attribute is used to uniquely identify a SERVICE or a ROLE.</span>
@@ -2432,10 +2870,10 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
 
 <span class="w">  </span><span class="nt">&lt;/authorization-matrix&gt;</span>
 </code></pre></div>
-<h3 id="integration-tests">Integration tests<a class="headerlink" href="#integration-tests" title="Permanent link">&para;</a></h3>
-<p>Integration tests are implemented using a maximum of factorized code and one test case by <strong>Point Of View (POV)</strong> has been created in order to group the verifications by profile of access level (logical role) and facilitate the rendering/identification of the errors.</p>
-<p>Parsing, object mapping and access to the authorization matrix information has been implemented using XML marshalling/unmarshalling built-in features provided by the technology used to implement the tests (JAXB here) in order to limit the code to the one in charge of performing the tests.</p>
-<p>This is the implementation of the integration tests case class:</p>
+<h3 id="implementing-an-integration-test">Implementing an integration test<a class="headerlink" href="#implementing-an-integration-test" title="Permanent link">&para;</a></h3>
+<p><strong>To create an integration test, you should use a maximum of factorized code and one test case by Point Of View (POV) so the verifications can be profiled by access level (logical role). This will facilitate the rendering/identification of the errors.</strong></p>
+<p>In this integration test, we have implemented parsing, object mapping and access to the authorization matrix by marshalling XML into a Java object and unmarshalling the object back into XML These features are used to implement the tests (JAXB here) and limit the code to the developer in charge of performing the tests.</p>
+<p><strong>Here is a sample implementation of an integration test case class:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="kn">import</span><span class="w"> </span><span class="nn">org.owasp.pocauthztesting.enumeration.SecurityRole</span><span class="p">;</span>
 <span class="w">  </span><span class="kn">import</span><span class="w"> </span><span class="nn">org.owasp.pocauthztesting.service.AuthService</span><span class="p">;</span>
 <span class="w">  </span><span class="kn">import</span><span class="w"> </span><span class="nn">org.owasp.pocauthztesting.vo.AuthorizationMatrix</span><span class="p">;</span>
@@ -2462,9 +2900,9 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
 <span class="w">  </span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Optional</span><span class="p">;</span>
 
 <span class="w">  </span><span class="cm">/**</span>
-<span class="cm">   * Integration Test cases in charge of validate the correct implementation of the authorization matrix.</span>
-<span class="cm">   * Create on test case by logical role that will test access on all services exposed by the system.</span>
-<span class="cm">   * Implements here focus on readability</span>
+<span class="cm">   * Integration test cases validate the correct implementation of the authorization matrix.</span>
+<span class="cm">   * They create a test case by logical role that will test access on all services exposed by the system.</span>
+<span class="cm">   * This implementation focuses on readability</span>
 <span class="cm">   */</span>
 <span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AuthorizationMatrixIT</span><span class="w"> </span><span class="p">{</span>
 
@@ -2523,7 +2961,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
 <span class="w">      </span><span class="p">}</span>
 
 <span class="w">      </span><span class="cm">/**</span>
-<span class="cm">       * Test access to the services from a administrator user.</span>
+<span class="cm">       * Test access to the services from a user with administrator access.</span>
 <span class="cm">       *</span>
 <span class="cm">       * @throws Exception</span>
 <span class="cm">       */</span>
@@ -2538,7 +2976,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
 <span class="w">      </span><span class="p">}</span>
 
 <span class="w">      </span><span class="cm">/**</span>
-<span class="cm">       * Evaluate the access to all service using the point of view (POV) specified.</span>
+<span class="cm">       * Evaluate the access to all service using the specified point of view (POV).</span>
 <span class="cm">       *</span>
 <span class="cm">       * @param pointOfView Point of view to use</span>
 <span class="cm">       * @param accessToken Access token that is linked to the point of view in terms of authorization.</span>
@@ -2601,8 +3039,8 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
 <span class="w">      </span><span class="p">}</span>
 
 <span class="w">      </span><span class="cm">/**</span>
-<span class="cm">       * Call a service with a specific payload and return the HTTP response code received.</span>
-<span class="cm">       * Delegate this step in order to made the test cases more easy to maintain.</span>
+<span class="cm">       * Call a service with a specific payload and return the HTTP response code that was received.</span>
+<span class="cm">       * This step was delegated in order to made the test cases more easy to maintain.</span>
 <span class="cm">       *</span>
 <span class="cm">       * @param uri                URI of the target service</span>
 <span class="cm">       * @param payloadContentType Content type of the payload to send</span>
@@ -2615,7 +3053,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
 <span class="w">      </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">callService</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">uri</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">payload</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">payloadContentType</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">httpMethod</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">accessToken</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
 <span class="w">          </span><span class="kt">int</span><span class="w"> </span><span class="n">rc</span><span class="p">;</span>
 
-<span class="w">          </span><span class="c1">//Build the request - Use Apache HTTP Client in order to be more flexible in the combination</span>
+<span class="w">          </span><span class="c1">//Build the request - Use Apache HTTP Client in order to be more flexible in the combination.</span>
 <span class="w">          </span><span class="n">HttpRequestBase</span><span class="w"> </span><span class="n">request</span><span class="p">;</span>
 <span class="w">          </span><span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">BASE_URL</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">uri</span><span class="p">).</span><span class="na">replaceAll</span><span class="p">(</span><span class="s">&quot;\\{messageId\\}&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">);</span>
 <span class="w">          </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">httpMethod</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2638,7 +3076,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
 <span class="w">          </span><span class="n">request</span><span class="p">.</span><span class="na">setHeader</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">accessToken</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">accessToken</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
 
 
-<span class="w">          </span><span class="c1">//Send the request and get the HTTP response code</span>
+<span class="w">          </span><span class="c1">//Send the request and get the HTTP response code.</span>
 <span class="w">          </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">CloseableHttpClient</span><span class="w"> </span><span class="n">httpClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HttpClients</span><span class="p">.</span><span class="na">createDefault</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <span class="w">              </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">CloseableHttpResponse</span><span class="w"> </span><span class="n">httpResponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">httpClient</span><span class="p">.</span><span class="na">execute</span><span class="p">(</span><span class="n">request</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                  </span><span class="c1">//Don&#39;t care here about the response content...</span>
@@ -2650,7 +3088,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
 <span class="w">      </span><span class="p">}</span>
 
 <span class="w">      </span><span class="cm">/**</span>
-<span class="cm">       * Generate a JWT token the user and role specified.</span>
+<span class="cm">       * Generate a JWT token for the specified user and role.</span>
 <span class="cm">       *</span>
 <span class="cm">       * @param login User login</span>
 <span class="cm">       * @param role  Authorization logical role</span>
@@ -2663,7 +3101,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
 
 
 <span class="w">      </span><span class="cm">/**</span>
-<span class="cm">       * Format a list of errors to a printable string</span>
+<span class="cm">       * Format a list of errors to a printable string.</span>
 <span class="cm">       *</span>
 <span class="cm">       * @param errors Error list</span>
 <span class="cm">       * @return Printable string</span>
@@ -2675,7 +3113,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
 <span class="w">      </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 </code></pre></div>
-<p>In case of detecting an authorization issue(s) the output is the following:</p>
+<p>If an authorization issue is detected (or issues are detected), the output is the following:</p>
 <div class="highlight"><pre><span></span><code><span class="n">testAccessUsingAnonymousUserPointOfView</span><span class="p">(</span><span class="n">org</span><span class="p">.</span><span class="na">owasp</span><span class="p">.</span><span class="na">pocauthztesting</span><span class="p">.</span><span class="na">AuthorizationMatrixIT</span><span class="p">)</span>
 <span class="n">Time</span><span class="w"> </span><span class="n">elapsed</span><span class="p">:</span><span class="w"> </span><span class="mf">1.009</span><span class="w"> </span><span class="n">s</span><span class="w">  </span><span class="err">###</span><span class="w"> </span><span class="n">FAILURE</span>
 <span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">AssertionError</span><span class="p">:</span>
@@ -2693,9 +3131,12 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
 <span class="w">    </span><span class="n">The</span><span class="w"> </span><span class="n">service</span><span class="w"> </span><span class="err">&#39;</span><span class="n">DeleteMessage</span><span class="err">&#39;</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">called</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">POV</span><span class="w"> </span><span class="err">&#39;</span><span class="n">BASIC</span><span class="err">&#39;</span><span class="w"> </span><span class="k">return</span>
 <span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">expected</span><span class="w"> </span><span class="nf">one</span><span class="w"> </span><span class="p">(</span><span class="mi">403</span><span class="w"> </span><span class="n">expected</span><span class="p">).</span>
 </code></pre></div>
-<h2 id="rendering-of-the-authorization-matrix-for-an-audit-review">Rendering of the authorization matrix for an audit / review<a class="headerlink" href="#rendering-of-the-authorization-matrix-for-an-audit-review" title="Permanent link">&para;</a></h2>
-<p>Even if the authorization matrix is stored in a human-readable format (XML), it can be interesting to provide an on-the-fly rendering representation of the XML file in order to facilitate the review, audit and discussion about the authorization matrix in order to spot potential inconsistencies.</p>
-<p>The Following XSL stylesheet can be used:</p>
+<h2 id="rendering-the-authorization-matrix-for-an-audit-review">Rendering the authorization matrix for an audit / review<a class="headerlink" href="#rendering-the-authorization-matrix-for-an-audit-review" title="Permanent link">&para;</a></h2>
+<p>Even if the authorization matrix is stored in a human-readable format (XML), you might want to show an on-the-fly rendered representation of the XML file to spot potential inconsistencies and facilitate the review, audit and discussion about the authorization matrix.</p>
+<!-- textlint-disable -->
+<p>To achieve this task, you could use the following XSL stylesheet:</p>
+<!-- textlint-enable -->
+
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="k">&lt;xsl:stylesheet</span><span class="w"> </span><span class="na">xmlns:xsl=</span><span class="s">&quot;http://www.w3.org/1999/XSL/Transform&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
 <span class="w">  </span><span class="k">&lt;xsl:template</span><span class="w"> </span><span class="na">match=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>
@@ -2807,11 +3248,22 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
 
 
 
+
+
+  
+  
+
+
+
+
+
+
                 
               </article>
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
@@ -2823,7 +3275,7 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+      ©Copyright <script>document.write(new Date().getFullYear())</script> - Cheat Sheets Series Team - This work is licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
     </div>
   
   
@@ -2843,10 +3295,11 @@ redirect_from: "/cheatsheets/Authorization_Testing_Automation.html"
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>

@@ -24,7 +24,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -32,10 +32,10 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -54,7 +54,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -73,9 +73,6 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -101,12 +98,12 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -131,20 +128,20 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -152,10 +149,13 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
     
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -164,21 +164,21 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -195,7 +195,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -230,7 +230,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     OWASP Cheat Sheet Series
@@ -240,7 +240,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -252,6 +252,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
     
       
       
+  
   
   
   
@@ -274,6 +275,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="../Glossary.html" class="md-nav__link">
         
@@ -290,6 +292,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
     
       
       
+  
   
   
   
@@ -312,6 +315,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="../IndexMASVS.html" class="md-nav__link">
         
@@ -331,6 +335,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="../IndexProactiveControls.html" class="md-nav__link">
         
@@ -347,6 +352,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
     
       
       
+  
   
   
   
@@ -371,18 +377,24 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
     
   
   
+  
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -402,6 +414,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -425,6 +438,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Abuse_Case_Cheat_Sheet.html" class="md-nav__link">
         
@@ -442,6 +456,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -465,6 +480,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
         
@@ -482,6 +498,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -505,6 +522,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Authorization_Cheat_Sheet.html" class="md-nav__link">
         
@@ -522,6 +540,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -545,6 +564,28 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Automotive_Security.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automotive Security.md
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Bean_Validation_Cheat_Sheet.html" class="md-nav__link">
         
@@ -562,6 +603,28 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Browser_Extension_Vulnerabilities_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Browser Extension Vulnerabilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -585,6 +648,28 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="CI_CD_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI CD Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Choosing_and_Using_Security_Questions_Cheat_Sheet.html" class="md-nav__link">
         
@@ -602,6 +687,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -625,6 +711,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Content_Security_Policy_Cheat_Sheet.html" class="md-nav__link">
         
@@ -642,6 +729,28 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Cookie_Theft_Mitigation_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cookie Theft Mitigation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -665,6 +774,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -682,6 +792,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -705,6 +816,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Cryptographic_Storage_Cheat_Sheet.html" class="md-nav__link">
         
@@ -722,6 +834,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -745,6 +858,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -762,6 +876,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -785,6 +900,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Denial_of_Service_Cheat_Sheet.html" class="md-nav__link">
         
@@ -802,6 +918,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -825,6 +942,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Django_REST_Framework_Cheat_Sheet.html" class="md-nav__link">
         
@@ -842,6 +960,28 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Django_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -865,6 +1005,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="DotNet_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -882,6 +1023,28 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Drone_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drone Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -905,6 +1068,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="File_Upload_Cheat_Sheet.html" class="md-nav__link">
         
@@ -922,6 +1086,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -945,6 +1110,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="GraphQL_Cheat_Sheet.html" class="md-nav__link">
         
@@ -962,6 +1128,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -985,6 +1152,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="HTTP_Headers_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1002,6 +1170,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -1025,6 +1194,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Infrastructure_as_Code_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1042,6 +1212,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -1065,6 +1236,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Injection_Prevention_in_Java_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1082,6 +1254,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -1105,6 +1278,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1122,6 +1296,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -1145,6 +1320,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1162,6 +1338,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -1185,6 +1362,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Key_Management_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1202,6 +1380,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -1225,6 +1404,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="LDAP_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1242,6 +1422,28 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="LLM_Prompt_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM Prompt Injection Prevention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -1265,6 +1467,28 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Legacy_Application_Management_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Legacy Application Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Logging_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1285,6 +1509,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
     
+  
   
   
     <li class="md-nav__item md-nav__item--active">
@@ -1333,21 +1558,27 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
-    Overview
+    <span class="md-ellipsis">
+      Overview
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#assumptions" class="md-nav__link">
-    Assumptions
+    <span class="md-ellipsis">
+      Assumptions
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#getting-started" class="md-nav__link">
-    Getting Started
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Getting Started">
@@ -1355,7 +1586,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#identifying-events" class="md-nav__link">
-    Identifying Events
+    <span class="md-ellipsis">
+      Identifying Events
+    </span>
   </a>
   
 </li>
@@ -1367,21 +1600,27 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#format" class="md-nav__link">
-    Format
+    <span class="md-ellipsis">
+      Format
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#the-vocabulary" class="md-nav__link">
-    The Vocabulary
+    <span class="md-ellipsis">
+      The Vocabulary
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#authentication-authn" class="md-nav__link">
-    Authentication [AUTHN]
+    <span class="md-ellipsis">
+      Authentication [AUTHN]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Authentication [AUTHN]">
@@ -1389,84 +1628,108 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#authn_login_successuserid" class="md-nav__link">
-    authn_login_success[:userid]
+    <span class="md-ellipsis">
+      authn_login_success[:userid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_login_successafterfailuseridretries" class="md-nav__link">
-    authn_login_successafterfail[:userid,retries]
+    <span class="md-ellipsis">
+      authn_login_successafterfail[:userid,retries]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_login_failuserid" class="md-nav__link">
-    authn_login_fail[:userid]
+    <span class="md-ellipsis">
+      authn_login_fail[:userid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_login_fail_maxuseridmaxlimitint" class="md-nav__link">
-    authn_login_fail_max[:userid,maxlimit(int)]
+    <span class="md-ellipsis">
+      authn_login_fail_max[:userid,maxlimit(int)]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_login_lockuseridreason" class="md-nav__link">
-    authn_login_lock[:userid,reason]
+    <span class="md-ellipsis">
+      authn_login_lock[:userid,reason]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_password_changeuserid" class="md-nav__link">
-    authn_password_change[:userid]
+    <span class="md-ellipsis">
+      authn_password_change[:userid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_password_change_failuserid" class="md-nav__link">
-    authn_password_change_fail[:userid]
+    <span class="md-ellipsis">
+      authn_password_change_fail[:userid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_impossible_traveluseridregion1region2" class="md-nav__link">
-    authn_impossible_travel[:userid,region1,region2]
+    <span class="md-ellipsis">
+      authn_impossible_travel[:userid,region1,region2]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_token_createduserid-entitlements" class="md-nav__link">
-    authn_token_created[:userid, entitlement(s)]
+    <span class="md-ellipsis">
+      authn_token_created[:userid, entitlement(s)]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_token_revokeduseridtokenid" class="md-nav__link">
-    authn_token_revoked[:userid,tokenid]
+    <span class="md-ellipsis">
+      authn_token_revoked[:userid,tokenid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_token_reuseuseridtokenid" class="md-nav__link">
-    authn_token_reuse[:userid,tokenid]
+    <span class="md-ellipsis">
+      authn_token_reuse[:userid,tokenid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_token_deleteappid" class="md-nav__link">
-    authn_token_delete[:appid]
+    <span class="md-ellipsis">
+      authn_token_delete[:appid]
+    </span>
   </a>
   
 </li>
@@ -1478,7 +1741,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#authorization-authz" class="md-nav__link">
-    Authorization [AUTHZ]
+    <span class="md-ellipsis">
+      Authorization [AUTHZ]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Authorization [AUTHZ]">
@@ -1486,21 +1751,60 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#authz_failuseridresource" class="md-nav__link">
-    authz_fail[:userid,resource]
+    <span class="md-ellipsis">
+      authz_fail[:userid,resource]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authz_changeuseridfromto" class="md-nav__link">
-    authz_change[:userid,from,to]
+    <span class="md-ellipsis">
+      authz_change[:userid,from,to]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authz_adminuseridevent" class="md-nav__link">
-    authz_admin[:userid,event]
+    <span class="md-ellipsis">
+      authz_admin[:userid,event]
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encryptiondecryption-crypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encryption/Decryption [CRYPT]
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Encryption/Decryption [CRYPT]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crypt_decrypt_failuserid" class="md-nav__link">
+    <span class="md-ellipsis">
+      crypt_decrypt_fail[userid]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crypt_encrypt_failuserid" class="md-nav__link">
+    <span class="md-ellipsis">
+      crypt_encrypt_fail[userid]
+    </span>
   </a>
   
 </li>
@@ -1512,7 +1816,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#excessive-use-excess" class="md-nav__link">
-    Excessive Use [EXCESS]
+    <span class="md-ellipsis">
+      Excessive Use [EXCESS]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Excessive Use [EXCESS]">
@@ -1520,7 +1826,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#excess_rate_limit_exceededuseridmax" class="md-nav__link">
-    excess_rate_limit_exceeded[userid,max]
+    <span class="md-ellipsis">
+      excess_rate_limit_exceeded[userid,max]
+    </span>
   </a>
   
 </li>
@@ -1532,7 +1840,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#file-upload-upload" class="md-nav__link">
-    File Upload [UPLOAD]
+    <span class="md-ellipsis">
+      File Upload [UPLOAD]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="File Upload [UPLOAD]">
@@ -1540,28 +1850,36 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#upload_completeuseridfilenametype" class="md-nav__link">
-    upload_complete[userid,filename,type]
+    <span class="md-ellipsis">
+      upload_complete[userid,filename,type]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#upload_storedfilenamefromto" class="md-nav__link">
-    upload_stored[filename,from,to]
+    <span class="md-ellipsis">
+      upload_stored[filename,from,to]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#upload_validationfilenamevirusscanimagemagickfailedincompletepassed" class="md-nav__link">
-    upload_validation[filename,(virusscan|imagemagick|...):(FAILED|incomplete|passed)]
+    <span class="md-ellipsis">
+      upload_validation[filename,(virusscan|imagemagick|...):(FAILED|incomplete|passed)]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#upload_deleteuseridfileid" class="md-nav__link">
-    upload_delete[userid,fileid]
+    <span class="md-ellipsis">
+      upload_delete[userid,fileid]
+    </span>
   </a>
   
 </li>
@@ -1573,15 +1891,19 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#input-validation-input" class="md-nav__link">
-    Input Validation [INPUT]
+    <span class="md-ellipsis">
+      Input Validation [INPUT]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Input Validation [INPUT]">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#input_validation_failfielduserid" class="md-nav__link">
-    input_validation_fail[:field,userid]
+  <a href="#input_validation_failfieldonefieldtwouserid" class="md-nav__link">
+    <span class="md-ellipsis">
+      input_validation_fail:[(fieldone,fieldtwo...),userid]
+    </span>
   </a>
   
 </li>
@@ -1593,7 +1915,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#malicious-behavior-malicious" class="md-nav__link">
-    Malicious Behavior [MALICIOUS
+    <span class="md-ellipsis">
+      Malicious Behavior [MALICIOUS
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Malicious Behavior [MALICIOUS">
@@ -1601,35 +1925,45 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#malicious_excess_404useridipuseragent" class="md-nav__link">
-    malicious_excess_404:[userid|IP,useragent]
+    <span class="md-ellipsis">
+      malicious_excess_404:[userid|IP,useragent]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#malicious_extraneoususeridipinputnameuseragent" class="md-nav__link">
-    malicious_extraneous:[userid|IP,inputname,useragent]
+    <span class="md-ellipsis">
+      malicious_extraneous:[userid|IP,inputname,useragent]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#malicious_attack_tooluseridiptoolnameuseragent" class="md-nav__link">
-    malicious_attack_tool:[userid|IP,toolname,useragent]
+    <span class="md-ellipsis">
+      malicious_attack_tool:[userid|IP,toolname,useragent]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#malicious_corsuseridipuseragentreferer" class="md-nav__link">
-    malicious_cors:[userid|IP,useragent,referer]
+    <span class="md-ellipsis">
+      malicious_cors:[userid|IP,useragent,referer]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#malicious_direct_referenceuseridip-useragent" class="md-nav__link">
-    malicious_direct_reference:[userid|IP, useragent]
+    <span class="md-ellipsis">
+      malicious_direct_reference:[userid|IP, useragent]
+    </span>
   </a>
   
 </li>
@@ -1641,7 +1975,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#privilege-changes-privilege" class="md-nav__link">
-    Privilege Changes [PRIVILEGE]
+    <span class="md-ellipsis">
+      Privilege Changes [PRIVILEGE]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Privilege Changes [PRIVILEGE]">
@@ -1649,7 +1985,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#privilege_permissions_changeduseridfileobjectfromleveltolevel" class="md-nav__link">
-    privilege_permissions_changed:[userid,file|object,fromlevel,tolevel]
+    <span class="md-ellipsis">
+      privilege_permissions_changed:[userid,file|object,fromlevel,tolevel]
+    </span>
   </a>
   
 </li>
@@ -1661,7 +1999,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#sensitive-data-changes-data" class="md-nav__link">
-    Sensitive Data Changes [DATA]
+    <span class="md-ellipsis">
+      Sensitive Data Changes [DATA]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Sensitive Data Changes [DATA]">
@@ -1669,28 +2009,36 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#sensitive_createuseridfileobject" class="md-nav__link">
-    sensitive_create:[userid,file|object]
+    <span class="md-ellipsis">
+      sensitive_create:[userid,file|object]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#sensitive_readuseridfileobject" class="md-nav__link">
-    sensitive_read:[userid,file|object]
+    <span class="md-ellipsis">
+      sensitive_read:[userid,file|object]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#sensitive_updateuseridfileobject" class="md-nav__link">
-    sensitive_update:[userid,file|object]
+    <span class="md-ellipsis">
+      sensitive_update:[userid,file|object]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#sensitive_deleteuseridfileobject" class="md-nav__link">
-    sensitive_delete:[userid,file|object]
+    <span class="md-ellipsis">
+      sensitive_delete:[userid,file|object]
+    </span>
   </a>
   
 </li>
@@ -1702,7 +2050,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#sequence-errors-sequence" class="md-nav__link">
-    Sequence Errors [SEQUENCE]
+    <span class="md-ellipsis">
+      Sequence Errors [SEQUENCE]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Sequence Errors [SEQUENCE]">
@@ -1710,7 +2060,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#sequence_failuserid" class="md-nav__link">
-    sequence_fail:[userid]
+    <span class="md-ellipsis">
+      sequence_fail:[userid]
+    </span>
   </a>
   
 </li>
@@ -1722,7 +2074,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#session-management-session" class="md-nav__link">
-    Session Management [SESSION]
+    <span class="md-ellipsis">
+      Session Management [SESSION]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Session Management [SESSION]">
@@ -1730,28 +2084,36 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#session_createduserid" class="md-nav__link">
-    session_created:[userid]
+    <span class="md-ellipsis">
+      session_created:[userid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#session_reneweduserid" class="md-nav__link">
-    session_renewed:[userid]
+    <span class="md-ellipsis">
+      session_renewed:[userid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#session_expireduseridreason" class="md-nav__link">
-    session_expired:[userid,reason]
+    <span class="md-ellipsis">
+      session_expired:[userid,reason]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#session_use_after_expireuserid" class="md-nav__link">
-    session_use_after_expire:[userid]
+    <span class="md-ellipsis">
+      session_use_after_expire:[userid]
+    </span>
   </a>
   
 </li>
@@ -1763,7 +2125,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#system-events-sys" class="md-nav__link">
-    System Events [SYS]
+    <span class="md-ellipsis">
+      System Events [SYS]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="System Events [SYS]">
@@ -1771,42 +2135,54 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#sys_startupuserid" class="md-nav__link">
-    sys_startup:[userid]
+    <span class="md-ellipsis">
+      sys_startup:[userid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#sys_shutdownuserid" class="md-nav__link">
-    sys_shutdown:[userid]
+    <span class="md-ellipsis">
+      sys_shutdown:[userid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#sys_restartuserid" class="md-nav__link">
-    sys_restart:[userid]
+    <span class="md-ellipsis">
+      sys_restart:[userid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#sys_crashreason" class="md-nav__link">
-    sys_crash[:reason]
+    <span class="md-ellipsis">
+      sys_crash[:reason]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#sys_monitor_disableduseridmonitor" class="md-nav__link">
-    sys_monitor_disabled:[userid,monitor]
+    <span class="md-ellipsis">
+      sys_monitor_disabled:[userid,monitor]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#sys_monitor_enableduseridmonitor" class="md-nav__link">
-    sys_monitor_enabled:[userid,monitor]
+    <span class="md-ellipsis">
+      sys_monitor_enabled:[userid,monitor]
+    </span>
   </a>
   
 </li>
@@ -1818,7 +2194,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#user-management-user" class="md-nav__link">
-    User Management [USER]
+    <span class="md-ellipsis">
+      User Management [USER]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="User Management [USER]">
@@ -1826,28 +2204,36 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#user_createduseridnewuseridattributesonetwothree" class="md-nav__link">
-    user_created:[userid,newuserid,attributes[one,two,three]]
+    <span class="md-ellipsis">
+      user_created:[userid,newuserid,attributes[one,two,three]]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#user_updateduseridonuseridattributesonetwothree" class="md-nav__link">
-    user_updated:[userid,onuserid,attributes[one,two,three]]
+    <span class="md-ellipsis">
+      user_updated:[userid,onuserid,attributes[one,two,three]]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#user_archiveduseridonuserid" class="md-nav__link">
-    user_archived:[userid,onuserid]
+    <span class="md-ellipsis">
+      user_archived:[userid,onuserid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#user_deleteduseridonuserid" class="md-nav__link">
-    user_deleted:[userid,onuserid]
+    <span class="md-ellipsis">
+      user_deleted:[userid,onuserid]
+    </span>
   </a>
   
 </li>
@@ -1859,7 +2245,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#exclusions" class="md-nav__link">
-    Exclusions
+    <span class="md-ellipsis">
+      Exclusions
+    </span>
   </a>
   
 </li>
@@ -1875,6 +2263,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -1898,6 +2287,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Microservices_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1915,6 +2305,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -1938,6 +2329,28 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Mobile_Application_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mobile Application Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="Multifactor_Authentication_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1955,6 +2368,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -1978,6 +2392,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Network_Segmentation_Cheat_Sheet.html" class="md-nav__link">
         
@@ -1995,6 +2410,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -2018,6 +2434,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Nodejs_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2035,6 +2452,28 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="OAuth2_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -2058,6 +2497,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="PHP_Configuration_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2075,6 +2515,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -2098,6 +2539,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Pinning_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2115,6 +2557,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -2138,6 +2581,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Query_Parameterization_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2155,6 +2599,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -2178,6 +2623,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="REST_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2195,6 +2641,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -2218,6 +2665,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="SAML_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2235,6 +2683,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -2258,6 +2707,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Secrets_Management_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2275,6 +2725,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -2298,6 +2749,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Secure_Product_Design_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2315,6 +2767,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -2338,6 +2791,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2355,6 +2809,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -2378,6 +2833,49 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="Software_Supply_Chain_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Supply Chain Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Symfony_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Symfony
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="TLS_Cipher_String_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2395,6 +2893,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -2418,6 +2917,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Threat_Modeling_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2435,6 +2935,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -2458,6 +2959,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Transport_Layer_Protection_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2475,6 +2977,28 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Transport_Layer_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transport Layer Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
@@ -2498,6 +3022,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="User_Privacy_Protection_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2515,6 +3040,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -2538,6 +3064,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Vulnerability_Disclosure_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2555,6 +3082,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -2578,6 +3106,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="Web_Service_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2595,6 +3124,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -2618,6 +3148,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="XML_Security_Cheat_Sheet.html" class="md-nav__link">
         
@@ -2635,6 +3166,7 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
             
               
                 
+  
   
   
   
@@ -2658,12 +3190,34 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
   
   
   
+  
     <li class="md-nav__item">
       <a href="XS_Leaks_Cheat_Sheet.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     XS Leaks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Zero_Trust_Architecture_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zero Trust Architecture
   </span>
   
 
@@ -2708,21 +3262,27 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
-    Overview
+    <span class="md-ellipsis">
+      Overview
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#assumptions" class="md-nav__link">
-    Assumptions
+    <span class="md-ellipsis">
+      Assumptions
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#getting-started" class="md-nav__link">
-    Getting Started
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Getting Started">
@@ -2730,7 +3290,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#identifying-events" class="md-nav__link">
-    Identifying Events
+    <span class="md-ellipsis">
+      Identifying Events
+    </span>
   </a>
   
 </li>
@@ -2742,21 +3304,27 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#format" class="md-nav__link">
-    Format
+    <span class="md-ellipsis">
+      Format
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#the-vocabulary" class="md-nav__link">
-    The Vocabulary
+    <span class="md-ellipsis">
+      The Vocabulary
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#authentication-authn" class="md-nav__link">
-    Authentication [AUTHN]
+    <span class="md-ellipsis">
+      Authentication [AUTHN]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Authentication [AUTHN]">
@@ -2764,84 +3332,108 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#authn_login_successuserid" class="md-nav__link">
-    authn_login_success[:userid]
+    <span class="md-ellipsis">
+      authn_login_success[:userid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_login_successafterfailuseridretries" class="md-nav__link">
-    authn_login_successafterfail[:userid,retries]
+    <span class="md-ellipsis">
+      authn_login_successafterfail[:userid,retries]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_login_failuserid" class="md-nav__link">
-    authn_login_fail[:userid]
+    <span class="md-ellipsis">
+      authn_login_fail[:userid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_login_fail_maxuseridmaxlimitint" class="md-nav__link">
-    authn_login_fail_max[:userid,maxlimit(int)]
+    <span class="md-ellipsis">
+      authn_login_fail_max[:userid,maxlimit(int)]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_login_lockuseridreason" class="md-nav__link">
-    authn_login_lock[:userid,reason]
+    <span class="md-ellipsis">
+      authn_login_lock[:userid,reason]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_password_changeuserid" class="md-nav__link">
-    authn_password_change[:userid]
+    <span class="md-ellipsis">
+      authn_password_change[:userid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_password_change_failuserid" class="md-nav__link">
-    authn_password_change_fail[:userid]
+    <span class="md-ellipsis">
+      authn_password_change_fail[:userid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_impossible_traveluseridregion1region2" class="md-nav__link">
-    authn_impossible_travel[:userid,region1,region2]
+    <span class="md-ellipsis">
+      authn_impossible_travel[:userid,region1,region2]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_token_createduserid-entitlements" class="md-nav__link">
-    authn_token_created[:userid, entitlement(s)]
+    <span class="md-ellipsis">
+      authn_token_created[:userid, entitlement(s)]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_token_revokeduseridtokenid" class="md-nav__link">
-    authn_token_revoked[:userid,tokenid]
+    <span class="md-ellipsis">
+      authn_token_revoked[:userid,tokenid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_token_reuseuseridtokenid" class="md-nav__link">
-    authn_token_reuse[:userid,tokenid]
+    <span class="md-ellipsis">
+      authn_token_reuse[:userid,tokenid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authn_token_deleteappid" class="md-nav__link">
-    authn_token_delete[:appid]
+    <span class="md-ellipsis">
+      authn_token_delete[:appid]
+    </span>
   </a>
   
 </li>
@@ -2853,7 +3445,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#authorization-authz" class="md-nav__link">
-    Authorization [AUTHZ]
+    <span class="md-ellipsis">
+      Authorization [AUTHZ]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Authorization [AUTHZ]">
@@ -2861,21 +3455,60 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#authz_failuseridresource" class="md-nav__link">
-    authz_fail[:userid,resource]
+    <span class="md-ellipsis">
+      authz_fail[:userid,resource]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authz_changeuseridfromto" class="md-nav__link">
-    authz_change[:userid,from,to]
+    <span class="md-ellipsis">
+      authz_change[:userid,from,to]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authz_adminuseridevent" class="md-nav__link">
-    authz_admin[:userid,event]
+    <span class="md-ellipsis">
+      authz_admin[:userid,event]
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encryptiondecryption-crypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encryption/Decryption [CRYPT]
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Encryption/Decryption [CRYPT]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crypt_decrypt_failuserid" class="md-nav__link">
+    <span class="md-ellipsis">
+      crypt_decrypt_fail[userid]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crypt_encrypt_failuserid" class="md-nav__link">
+    <span class="md-ellipsis">
+      crypt_encrypt_fail[userid]
+    </span>
   </a>
   
 </li>
@@ -2887,7 +3520,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#excessive-use-excess" class="md-nav__link">
-    Excessive Use [EXCESS]
+    <span class="md-ellipsis">
+      Excessive Use [EXCESS]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Excessive Use [EXCESS]">
@@ -2895,7 +3530,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#excess_rate_limit_exceededuseridmax" class="md-nav__link">
-    excess_rate_limit_exceeded[userid,max]
+    <span class="md-ellipsis">
+      excess_rate_limit_exceeded[userid,max]
+    </span>
   </a>
   
 </li>
@@ -2907,7 +3544,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#file-upload-upload" class="md-nav__link">
-    File Upload [UPLOAD]
+    <span class="md-ellipsis">
+      File Upload [UPLOAD]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="File Upload [UPLOAD]">
@@ -2915,28 +3554,36 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#upload_completeuseridfilenametype" class="md-nav__link">
-    upload_complete[userid,filename,type]
+    <span class="md-ellipsis">
+      upload_complete[userid,filename,type]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#upload_storedfilenamefromto" class="md-nav__link">
-    upload_stored[filename,from,to]
+    <span class="md-ellipsis">
+      upload_stored[filename,from,to]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#upload_validationfilenamevirusscanimagemagickfailedincompletepassed" class="md-nav__link">
-    upload_validation[filename,(virusscan|imagemagick|...):(FAILED|incomplete|passed)]
+    <span class="md-ellipsis">
+      upload_validation[filename,(virusscan|imagemagick|...):(FAILED|incomplete|passed)]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#upload_deleteuseridfileid" class="md-nav__link">
-    upload_delete[userid,fileid]
+    <span class="md-ellipsis">
+      upload_delete[userid,fileid]
+    </span>
   </a>
   
 </li>
@@ -2948,15 +3595,19 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#input-validation-input" class="md-nav__link">
-    Input Validation [INPUT]
+    <span class="md-ellipsis">
+      Input Validation [INPUT]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Input Validation [INPUT]">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#input_validation_failfielduserid" class="md-nav__link">
-    input_validation_fail[:field,userid]
+  <a href="#input_validation_failfieldonefieldtwouserid" class="md-nav__link">
+    <span class="md-ellipsis">
+      input_validation_fail:[(fieldone,fieldtwo...),userid]
+    </span>
   </a>
   
 </li>
@@ -2968,7 +3619,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#malicious-behavior-malicious" class="md-nav__link">
-    Malicious Behavior [MALICIOUS
+    <span class="md-ellipsis">
+      Malicious Behavior [MALICIOUS
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Malicious Behavior [MALICIOUS">
@@ -2976,35 +3629,45 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#malicious_excess_404useridipuseragent" class="md-nav__link">
-    malicious_excess_404:[userid|IP,useragent]
+    <span class="md-ellipsis">
+      malicious_excess_404:[userid|IP,useragent]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#malicious_extraneoususeridipinputnameuseragent" class="md-nav__link">
-    malicious_extraneous:[userid|IP,inputname,useragent]
+    <span class="md-ellipsis">
+      malicious_extraneous:[userid|IP,inputname,useragent]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#malicious_attack_tooluseridiptoolnameuseragent" class="md-nav__link">
-    malicious_attack_tool:[userid|IP,toolname,useragent]
+    <span class="md-ellipsis">
+      malicious_attack_tool:[userid|IP,toolname,useragent]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#malicious_corsuseridipuseragentreferer" class="md-nav__link">
-    malicious_cors:[userid|IP,useragent,referer]
+    <span class="md-ellipsis">
+      malicious_cors:[userid|IP,useragent,referer]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#malicious_direct_referenceuseridip-useragent" class="md-nav__link">
-    malicious_direct_reference:[userid|IP, useragent]
+    <span class="md-ellipsis">
+      malicious_direct_reference:[userid|IP, useragent]
+    </span>
   </a>
   
 </li>
@@ -3016,7 +3679,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#privilege-changes-privilege" class="md-nav__link">
-    Privilege Changes [PRIVILEGE]
+    <span class="md-ellipsis">
+      Privilege Changes [PRIVILEGE]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Privilege Changes [PRIVILEGE]">
@@ -3024,7 +3689,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#privilege_permissions_changeduseridfileobjectfromleveltolevel" class="md-nav__link">
-    privilege_permissions_changed:[userid,file|object,fromlevel,tolevel]
+    <span class="md-ellipsis">
+      privilege_permissions_changed:[userid,file|object,fromlevel,tolevel]
+    </span>
   </a>
   
 </li>
@@ -3036,7 +3703,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#sensitive-data-changes-data" class="md-nav__link">
-    Sensitive Data Changes [DATA]
+    <span class="md-ellipsis">
+      Sensitive Data Changes [DATA]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Sensitive Data Changes [DATA]">
@@ -3044,28 +3713,36 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#sensitive_createuseridfileobject" class="md-nav__link">
-    sensitive_create:[userid,file|object]
+    <span class="md-ellipsis">
+      sensitive_create:[userid,file|object]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#sensitive_readuseridfileobject" class="md-nav__link">
-    sensitive_read:[userid,file|object]
+    <span class="md-ellipsis">
+      sensitive_read:[userid,file|object]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#sensitive_updateuseridfileobject" class="md-nav__link">
-    sensitive_update:[userid,file|object]
+    <span class="md-ellipsis">
+      sensitive_update:[userid,file|object]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#sensitive_deleteuseridfileobject" class="md-nav__link">
-    sensitive_delete:[userid,file|object]
+    <span class="md-ellipsis">
+      sensitive_delete:[userid,file|object]
+    </span>
   </a>
   
 </li>
@@ -3077,7 +3754,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#sequence-errors-sequence" class="md-nav__link">
-    Sequence Errors [SEQUENCE]
+    <span class="md-ellipsis">
+      Sequence Errors [SEQUENCE]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Sequence Errors [SEQUENCE]">
@@ -3085,7 +3764,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#sequence_failuserid" class="md-nav__link">
-    sequence_fail:[userid]
+    <span class="md-ellipsis">
+      sequence_fail:[userid]
+    </span>
   </a>
   
 </li>
@@ -3097,7 +3778,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#session-management-session" class="md-nav__link">
-    Session Management [SESSION]
+    <span class="md-ellipsis">
+      Session Management [SESSION]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Session Management [SESSION]">
@@ -3105,28 +3788,36 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#session_createduserid" class="md-nav__link">
-    session_created:[userid]
+    <span class="md-ellipsis">
+      session_created:[userid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#session_reneweduserid" class="md-nav__link">
-    session_renewed:[userid]
+    <span class="md-ellipsis">
+      session_renewed:[userid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#session_expireduseridreason" class="md-nav__link">
-    session_expired:[userid,reason]
+    <span class="md-ellipsis">
+      session_expired:[userid,reason]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#session_use_after_expireuserid" class="md-nav__link">
-    session_use_after_expire:[userid]
+    <span class="md-ellipsis">
+      session_use_after_expire:[userid]
+    </span>
   </a>
   
 </li>
@@ -3138,7 +3829,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#system-events-sys" class="md-nav__link">
-    System Events [SYS]
+    <span class="md-ellipsis">
+      System Events [SYS]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="System Events [SYS]">
@@ -3146,42 +3839,54 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#sys_startupuserid" class="md-nav__link">
-    sys_startup:[userid]
+    <span class="md-ellipsis">
+      sys_startup:[userid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#sys_shutdownuserid" class="md-nav__link">
-    sys_shutdown:[userid]
+    <span class="md-ellipsis">
+      sys_shutdown:[userid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#sys_restartuserid" class="md-nav__link">
-    sys_restart:[userid]
+    <span class="md-ellipsis">
+      sys_restart:[userid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#sys_crashreason" class="md-nav__link">
-    sys_crash[:reason]
+    <span class="md-ellipsis">
+      sys_crash[:reason]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#sys_monitor_disableduseridmonitor" class="md-nav__link">
-    sys_monitor_disabled:[userid,monitor]
+    <span class="md-ellipsis">
+      sys_monitor_disabled:[userid,monitor]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#sys_monitor_enableduseridmonitor" class="md-nav__link">
-    sys_monitor_enabled:[userid,monitor]
+    <span class="md-ellipsis">
+      sys_monitor_enabled:[userid,monitor]
+    </span>
   </a>
   
 </li>
@@ -3193,7 +3898,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#user-management-user" class="md-nav__link">
-    User Management [USER]
+    <span class="md-ellipsis">
+      User Management [USER]
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="User Management [USER]">
@@ -3201,28 +3908,36 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
         
           <li class="md-nav__item">
   <a href="#user_createduseridnewuseridattributesonetwothree" class="md-nav__link">
-    user_created:[userid,newuserid,attributes[one,two,three]]
+    <span class="md-ellipsis">
+      user_created:[userid,newuserid,attributes[one,two,three]]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#user_updateduseridonuseridattributesonetwothree" class="md-nav__link">
-    user_updated:[userid,onuserid,attributes[one,two,three]]
+    <span class="md-ellipsis">
+      user_updated:[userid,onuserid,attributes[one,two,three]]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#user_archiveduseridonuserid" class="md-nav__link">
-    user_archived:[userid,onuserid]
+    <span class="md-ellipsis">
+      user_archived:[userid,onuserid]
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#user_deleteduseridonuserid" class="md-nav__link">
-    user_deleted:[userid,onuserid]
+    <span class="md-ellipsis">
+      user_deleted:[userid,onuserid]
+    </span>
   </a>
   
 </li>
@@ -3234,7 +3949,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
       
         <li class="md-nav__item">
   <a href="#exclusions" class="md-nav__link">
-    Exclusions
+    <span class="md-ellipsis">
+      Exclusions
+    </span>
   </a>
   
 </li>
@@ -3262,9 +3979,9 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>Each year IBM Security commissions the Ponemon Institute to survey companies around the world for information related to security breaches, mitigation, and the associated costs; the result is called the Cost of a Data Breach Report.</p>
 <p>In addition to the millions of dollars lost due to breaches the report finds that the <strong>mean time to identify</strong> a breach continues to hover around <strong>200 days</strong>. Clearly our ability to monitor applications and alert on anomalous behavior would improve our time to identify and mitigate an attack against our applications.</p>
-<p><img alt="IBM Cost of Data Breach Report 2020" src="../assets/cost-of-breach-2020.png" /></p>
+<p><img alt="IBM Cost of Data Breach Report 2020" src="../assets/cost-of-breach-2024.png" /></p>
 <blockquote>
-<p>IBM Cost of a Data Breach Study 2020, Fig.34, pg.52, [https://www.ibm.com/security/data-breach]</p>
+<p>IBM Cost of a Data Breach Study 2020, Fig.4, pg.10, [https://www.ibm.com/security/data-breach]</p>
 </blockquote>
 <p>This logging standard would seek to define specific keywords which, when applied consistently across software, would allow groups to simply monitor for these events terms across all applications and respond quickly in the event of attack.</p>
 <h2 id="assumptions">Assumptions<a class="headerlink" href="#assumptions" title="Permanent link">&para;</a></h2>
@@ -3279,35 +3996,29 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
 <h3 id="identifying-events">Identifying Events<a class="headerlink" href="#identifying-events" title="Permanent link">&para;</a></h3>
 <p>In order to better understand security event logging a good high-level understanding of threat modeling would be helpful, even if it's a simple approach of:</p>
 <ol>
-<li>
-<p><strong>What could go wrong?</strong></p>
-</li>
-<li>
-<p>Orders: could someone order on behalf of another?</p>
-</li>
+<li><strong>What could go wrong?</strong></li>
+</ol>
+<ul>
+<li>Orders: could someone order on behalf of another?</li>
 <li>Authentication: could I log in as someone else?</li>
-<li>
-<p>Authorization: could I see someone else' account?</p>
-</li>
-<li>
-<p><strong>What would happen if it did?</strong></p>
-</li>
-<li>
-<p>Orders: I've placed an order on behalf of another... to an abandoned warehouse in New Jersey. Oops.</p>
-</li>
+<li>Authorization: could I see someone else' account?</li>
+</ul>
+<ol start="2">
+<li><strong>What would happen if it did?</strong></li>
+</ol>
+<ul>
+<li>Orders: I've placed an order on behalf of another... to an abandoned warehouse in New Jersey. Oops.</li>
 <li>Then I bragged about it on 4Chan.</li>
-<li>
-<p>Then I told the New York Times about it.</p>
-</li>
-<li>
-<p><strong>Who might intend to do this?</strong></p>
-</li>
-<li>
-<p>Intentional attacks by hackers.</p>
-</li>
+<li>Then I told the New York Times about it.</li>
+</ul>
+<ol start="3">
+<li><strong>Who might intend to do this?</strong></li>
+</ol>
+<ul>
+<li>Intentional attacks by hackers.</li>
 <li>An employee "testing" how things work.</li>
 <li>An API coded incorrectly doing things the author did not intend.</li>
-</ol>
+</ul>
 <h2 id="format">Format<a class="headerlink" href="#format" title="Permanent link">&para;</a></h2>
 <p><em>NOTE: All dates should be logged in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format <strong>WITH</strong> UTC offset to ensure maximum portability</em></p>
 <div class="highlight"><pre><span></span><code>{
@@ -3329,8 +4040,10 @@ redirect_from: "/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
 }
 </code></pre></div>
 <h2 id="the-vocabulary">The Vocabulary<a class="headerlink" href="#the-vocabulary" title="Permanent link">&para;</a></h2>
-<p>What follows are the various event types that should be captured. For each event type there is a prefix like "authn" and additional data that should be included for that event.</p>
+<p>What follows are the various event types that should be captured. For each event type there is a prefix like "authn" and additional data that may be included for that event.</p>
 <p>Portions of the full logging format are included for example, but a complete event log should follow the format above.</p>
+<p><strong>Note on Data Privacy:</strong></p>
+<p>All fields logged after event type should be considered optional. Businesses implementing this logging method should consider value of the fields being logged vs. responsibility as a data steward for the data logged. For example: logging user IP address may be useful for detection and response, but may be considered personally identifiable information when combined with other data and subject to regulation or deletion requests.</p>
 <hr />
 <h2 id="authentication-authn">Authentication [AUTHN]<a class="headerlink" href="#authentication-authn" title="Permanent link">&para;</a></h2>
 <h3 id="authn_login_successuserid">authn_login_success[:userid]<a class="headerlink" href="#authn_login_successuserid" title="Permanent link">&para;</a></h3>
@@ -3440,14 +4153,14 @@ INFO</p>
 <p><strong>Description</strong>
 An attempt to change a password that failed. May also trigger other events such as <code>authn_login_lock</code>.</p>
 <p><strong>Level:</strong>
-INFO</p>
+CRITICAL</p>
 <p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code>{
     &quot;datetime&quot;: &quot;2019-01-01 00:00:00,000&quot;,
     &quot;appid&quot;: &quot;foobar.netportal_auth&quot;,
-    &quot;event&quot;: &quot;authn_password_change:joebob1&quot;,
-    &quot;level&quot;: &quot;INFO&quot;,
-    &quot;description&quot;: &quot;User joebob1 failed to changing their password&quot;,
+    &quot;event&quot;: &quot;authn_password_change_fail:joebob1&quot;,
+    &quot;level&quot;: &quot;CRITICAL&quot;,
+    &quot;description&quot;: &quot;User joebob1 failed to change their password&quot;,
     ...
 }
 </code></pre></div>
@@ -3569,7 +4282,38 @@ All activity by privileged users such as admin should be recorded.</p>
     &quot;appid&quot;: &quot;foobar.netportal_auth&quot;,
     &quot;event&quot;: &quot;authz_admin:joebob1,user_privilege_change&quot;,
     &quot;level&quot;: &quot;WARN&quot;,
-    &quot;description&quot;: &quot;Administrtator joebob1 has updated privileges of user foobarapi from user to admin&quot;,
+    &quot;description&quot;: &quot;Administrator joebob1 has updated privileges of user foobarapi from user to admin&quot;,
+    ...
+}
+</code></pre></div>
+<hr />
+<h2 id="encryptiondecryption-crypt">Encryption/Decryption [CRYPT]<a class="headerlink" href="#encryptiondecryption-crypt" title="Permanent link">&para;</a></h2>
+<h3 id="crypt_decrypt_failuserid">crypt_decrypt_fail[userid]<a class="headerlink" href="#crypt_decrypt_failuserid" title="Permanent link">&para;</a></h3>
+<p><strong>Description</strong>
+Failure to perform encryption and decryption could be simply due to a system error, or it may be related to authorization failures where a user lacks permissions on the related data.</p>
+<p><strong>Level:</strong>: WARN</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;datetime&quot;: &quot;2019-01-01 00:00:00,000&quot;,
+    &quot;appid&quot;: &quot;foobar.netportal_auth&quot;,
+    &quot;event&quot;: &quot;crypt_decrypt_fail:joebob1&quot;,
+    &quot;level&quot;: &quot;WARN&quot;,
+    &quot;description&quot;: &quot;User joebob1 was unable to perform decryption&quot; + err,
+    ...
+}
+</code></pre></div>
+<hr />
+<h3 id="crypt_encrypt_failuserid">crypt_encrypt_fail[userid]<a class="headerlink" href="#crypt_encrypt_failuserid" title="Permanent link">&para;</a></h3>
+<p><strong>Description</strong>
+Failure to perform encryption and decryption could be simply due to a system error, or it may be related to authorization failures where a user lacks permissions on the related data.</p>
+<p><strong>Level:</strong>: WARN</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;datetime&quot;: &quot;2019-01-01 00:00:00,000&quot;,
+    &quot;appid&quot;: &quot;foobar.netportal_auth&quot;,
+    &quot;event&quot;: &quot;crypt_encrypt_fail:joebob1&quot;,
+    &quot;level&quot;: &quot;WARN&quot;,
+    &quot;description&quot;: &quot;User joebob1 was unable to perform encryption&quot; + err,
     ...
 }
 </code></pre></div>
@@ -3652,7 +4396,7 @@ When a file is deleted for normal reasons it should be recorded.</p>
 </code></pre></div>
 <hr />
 <h2 id="input-validation-input">Input Validation [INPUT]<a class="headerlink" href="#input-validation-input" title="Permanent link">&para;</a></h2>
-<h3 id="input_validation_failfielduserid">input_validation_fail[:field,userid]<a class="headerlink" href="#input_validation_failfielduserid" title="Permanent link">&para;</a></h3>
+<h3 id="input_validation_failfieldonefieldtwouserid">input_validation_fail:[(fieldone,fieldtwo...),userid]<a class="headerlink" href="#input_validation_failfieldonefieldtwouserid" title="Permanent link">&para;</a></h3>
 <p><strong>Description</strong>
 When input validation fails on the server-side it must either be because a) sufficient validation was not provided on the client, or b) client-side validation was bypassed. In either case it's an opportunity for attack and should be mitigated quickly.</p>
 <p><strong>Level:</strong>
@@ -3661,7 +4405,7 @@ WARN</p>
 <div class="highlight"><pre><span></span><code>{
     &quot;datetime&quot;: &quot;2019-01-01 00:00:00,000&quot;,
     &quot;appid&quot;: &quot;foobar.netportal_auth&quot;,
-    &quot;event&quot;: &quot;input_validation_fail:date_of_birth,joebob1&quot;,
+    &quot;event&quot;: &quot;input_validation_fail:(zip,date_of_birth),joebob1&quot;,
     &quot;level&quot;: &quot;WARN&quot;,
     &quot;description&quot;: &quot;User joebob1 submitted data that failed validation.&quot;,
     ...
@@ -3695,7 +4439,7 @@ CRITICAL</p>
     &quot;datetime&quot;: &quot;2019-01-01 00:00:00,000&quot;,
     &quot;appid&quot;: &quot;foobar.netportal_auth&quot;,
     &quot;event&quot;: &quot;malicious_extraneous:dr@evil.com,creditcardnum,Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0&quot;,
-    &quot;level&quot;: &quot;WARN&quot;,
+    &quot;level&quot;: &quot;CRITICAL&quot;,
     &quot;description&quot;: &quot;User dr@evil.com included field creditcardnum in the request which is not handled by this service.&quot;,
     ...
 }
@@ -3704,7 +4448,7 @@ CRITICAL</p>
 <h3 id="malicious_attack_tooluseridiptoolnameuseragent">malicious_attack_tool:[userid|IP,toolname,useragent]<a class="headerlink" href="#malicious_attack_tooluseridiptoolnameuseragent" title="Permanent link">&para;</a></h3>
 <p><strong>Description</strong>
 When obvious attack tools are identified either by signature or by user agent they should be logged.</p>
-<p><strong>TODO:</strong> A future version of this standard should link to known attack tools, signatures and user-agent strings. For instance, the tool "Nikto" leaves behind its user agent by default with a string like <strong><em>"Mozilla/5.00 (Nikto/2.1.6) (Evasions:None) (Test:Port Check)"</em></strong></p>
+<p>For example, the tool "Nikto" leaves behind its user agent by default with a string like <strong><em>"Mozilla/5.00 (Nikto/2.1.6) (Evasions:None) (Test:Port Check)"</em></strong></p>
 <p><strong>Level:</strong>
 CRITICAL</p>
 <p><strong>Example:</strong></p>
@@ -3712,7 +4456,7 @@ CRITICAL</p>
     &quot;datetime&quot;: &quot;2019-01-01 00:00:00,000&quot;,
     &quot;appid&quot;: &quot;foobar.netportal_auth&quot;,
     &quot;event&quot;: &quot;malicious_attack_tool:127.0.0.1,nikto,Mozilla/5.00 (Nikto/2.1.6) (Evasions:None) (Test:Port Check)&quot;,
-    &quot;level&quot;: &quot;WARN&quot;,
+    &quot;level&quot;: &quot;CRITICAL&quot;,
     &quot;description&quot;: &quot;Attack traffic indicating use of Nikto coming from 127.0.0.1&quot;,
     ...
 }
@@ -3729,7 +4473,7 @@ CRITICAL</p>
     &quot;datetime&quot;: &quot;2019-01-01 00:00:00,000&quot;,
     &quot;appid&quot;: &quot;foobar.netportal_auth&quot;,
     &quot;event&quot;: &quot;malicious_cors:127.0.0.1,Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0,attack.evil.com&quot;,
-    &quot;level&quot;: &quot;WARN&quot;,
+    &quot;level&quot;: &quot;CRITICAL&quot;,
     &quot;description&quot;: &quot;An illegal cross-origin request from 127.0.0.1 was referred from attack.evil.com&quot;
     ...
 }
@@ -3745,7 +4489,7 @@ CRITICAL</p>
     &quot;datetime&quot;: &quot;2019-01-01 00:00:00,000&quot;,
     &quot;appid&quot;: &quot;foobar.netportal_auth&quot;,
     &quot;event&quot;: &quot;malicious_direct:joebob1, Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0&quot;,
-    &quot;level&quot;: &quot;WARN&quot;,
+    &quot;level&quot;: &quot;CRITICAL&quot;,
     &quot;description&quot;: &quot;User joebob1 attempted to access an object to which they are not authorized&quot;,
     ...
 }
@@ -3764,7 +4508,7 @@ WARN</p>
 <div class="highlight"><pre><span></span><code>{
     &quot;datetime&quot;: &quot;2019-01-01 00:00:00,000&quot;,
     &quot;appid&quot;: &quot;foobar.netportal_auth&quot;,
-    &quot;event&quot;: &quot;malicious_direct:joebob1, /users/admin/some/important/path,0511,0777&quot;,
+    &quot;event&quot;: &quot;permissions_changed:joebob1, /users/admin/some/important/path,0511,0777&quot;,
     &quot;level&quot;: &quot;WARN&quot;,
     &quot;description&quot;: &quot;User joebob1 changed permissions on /users/admin/some/important/path&quot;,
     ...
@@ -3845,13 +4589,13 @@ WARN</p>
 <p><strong>Description</strong>
 When a user reaches a part of the application out of sequence it may indicate intentional abuse of the business logic and should be tracked.</p>
 <p><strong>Level:</strong>
-WARN</p>
+CRITICAL</p>
 <p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code>{
     &quot;datetime&quot;: &quot;2019-01-01 00:00:00,000&quot;,
     &quot;appid&quot;: &quot;foobar.netportal_auth&quot;,
     &quot;event&quot;: &quot;sequence_fail:joebob1&quot;,
-    &quot;level&quot;: &quot;WARN&quot;,
+    &quot;level&quot;: &quot;CRITICAL&quot;,
     &quot;description&quot;: &quot;User joebob1 has reached a part of the application out of the normal application flow.&quot;,
     ...
 }
@@ -3884,7 +4628,7 @@ INFO</p>
     &quot;datetime&quot;: &quot;2019-01-01 00:00:00,000&quot;,
     &quot;appid&quot;: &quot;foobar.netportal_auth&quot;,
     &quot;event&quot;: &quot;session_renewed:joebob1&quot;,
-    &quot;level&quot;: &quot;WARN&quot;,
+    &quot;level&quot;: &quot;INFO&quot;,
     &quot;description&quot;: &quot;User joebob1 was warned of expiring session and extended.&quot;,
     ...
 }
@@ -3900,7 +4644,7 @@ INFO</p>
     &quot;datetime&quot;: &quot;2019-01-01 00:00:00,000&quot;,
     &quot;appid&quot;: &quot;foobar.netportal_auth&quot;,
     &quot;event&quot;: &quot;session_expired:joebob1,revoked&quot;,
-    &quot;level&quot;: &quot;WARN&quot;,
+    &quot;level&quot;: &quot;INFO&quot;,
     &quot;description&quot;: &quot;User joebob1 session expired due to administrator revocation.&quot;,
     ...
 }
@@ -3910,13 +4654,13 @@ INFO</p>
 <p><strong>Description</strong>
 In the case a user attempts to access systems with an expire session it may be helpful to log, especially if combined with subsequent login failure. This could identify a case where a malicious user is attempting a session hijack or directly accessing another person's machine/browser.</p>
 <p><strong>Level:</strong>
-WARN</p>
+CRITICAL</p>
 <p><strong>Example:</strong></p>
 <div class="highlight"><pre><span></span><code>{
     &quot;datetime&quot;: &quot;2019-01-01 00:00:00,000&quot;,
     &quot;appid&quot;: &quot;foobar.netportal_auth&quot;,
     &quot;event&quot;: &quot;session_use_after_expire:joebob1&quot;,
-    &quot;level&quot;: &quot;WARN&quot;,
+    &quot;level&quot;: &quot;CRITICAL&quot;,
     &quot;description&quot;: &quot;User joebob1 attempted access after session expired.&quot;,
     ...
 }
@@ -4092,11 +4836,22 @@ WARN</p>
 
 
 
+
+
+  
+  
+
+
+
+
+
+
                 
               </article>
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
@@ -4108,7 +4863,7 @@ WARN</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+      ©Copyright <script>document.write(new Date().getFullYear())</script> - Cheat Sheets Series Team - This work is licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
     </div>
   
   
@@ -4128,10 +4883,11 @@ WARN</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>
