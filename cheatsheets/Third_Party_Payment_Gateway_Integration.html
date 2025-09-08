@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Infrastructure_as_Code_Security_Cheat_Sheet.html">
+        <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Third_Party_Payment_Gateway_Integration.html">
       
       
-        <link rel="prev" href="HTTP_Strict_Transport_Security_Cheat_Sheet.html">
+        <link rel="prev" href="Third_Party_Javascript_Management_Cheat_Sheet.html">
       
       
-        <link rel="next" href="Injection_Prevention_Cheat_Sheet.html">
+        <link rel="next" href="Threat_Modeling_Cheat_Sheet.html">
       
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Infrastructure as Code Security - OWASP Cheat Sheet Series</title>
+        <title>Third Party Payment Gateway Integration.md - OWASP Cheat Sheet Series</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#infrastructure-as-code-security-cheatsheet" class="md-skip">
+        <a href="#secure-integration-of-third-party-payment-gateways-cheat-sheet" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Infrastructure as Code Security
+              Third Party Payment Gateway Integration.md
             
           </span>
         </div>
@@ -1189,30 +1189,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Infrastructure as Code Security
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="Infrastructure_as_Code_Security_Cheat_Sheet.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="Infrastructure_as_Code_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1221,86 +1201,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Introduction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#security-best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      Security best practices
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#develop-and-distribute" class="md-nav__link">
-    <span class="md-ellipsis">
-      Develop and Distribute
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deploy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deploy
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#runtime" class="md-nav__link">
-    <span class="md-ellipsis">
-      Runtime
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2297,10 +2197,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Third_Party_Payment_Gateway_Integration.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Third Party Payment Gateway Integration.md
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Third_Party_Payment_Gateway_Integration.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2309,6 +2229,95 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-payment-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the Payment Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-can-go-wrong-at-each-step-and-how-to-prevent-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Can Go Wrong at Each Step and How to Prevent It
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Can Go Wrong at Each Step and How to Prevent It">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sending-order-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Sending Order data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-redirect-to-webhook" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Redirect to webhook
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-and-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging and Monitoring
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2711,40 +2720,40 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Introduction">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-payment-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the Payment Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-can-go-wrong-at-each-step-and-how-to-prevent-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Can Go Wrong at Each Step and How to Prevent It
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Can Go Wrong at Each Step and How to Prevent It">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#security-best-practices" class="md-nav__link">
+  <a href="#1-sending-order-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Security best practices
+      1. Sending Order data
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#develop-and-distribute" class="md-nav__link">
+  <a href="#2-redirect-to-webhook" class="md-nav__link">
     <span class="md-ellipsis">
-      Develop and Distribute
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deploy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deploy
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#runtime" class="md-nav__link">
-    <span class="md-ellipsis">
-      Runtime
+      2. Redirect to webhook
     </span>
   </a>
   
@@ -2752,6 +2761,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-and-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging and Monitoring
+    </span>
+  </a>
   
 </li>
       
@@ -2782,60 +2800,92 @@
   
 
 
-<h1 id="infrastructure-as-code-security-cheatsheet">Infrastructure as Code Security Cheatsheet<a class="headerlink" href="#infrastructure-as-code-security-cheatsheet" title="Permanent link">&para;</a></h1>
-<!---
-Copyright 2021 Nokia
-Licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License
-SPDX-License-Identifier: CC-BY-SA-3.0
---->
-
+<h1 id="secure-integration-of-third-party-payment-gateways-cheat-sheet">Secure Integration of Third-Party Payment Gateways Cheat Sheet<a class="headerlink" href="#secure-integration-of-third-party-payment-gateways-cheat-sheet" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>Infrastructure as code (IaC), also known as software-defined infrastructure, allows the configuration and deployment of infrastructure components faster with consistency by allowing them to be defined as a code and also enables repeatable deployments across environments.</p>
-<h3 id="security-best-practices">Security best practices<a class="headerlink" href="#security-best-practices" title="Permanent link">&para;</a></h3>
-<p>Here are some of the security best practices for IaC that can be easily integrated into the Software Development Lifecycle:</p>
-<h3 id="develop-and-distribute">Develop and Distribute<a class="headerlink" href="#develop-and-distribute" title="Permanent link">&para;</a></h3>
-<ul>
-<li>IDE plugins - Leverage standard security plug-ins in the integrated development environment (IDE) which helps in the early detection of potential risks and drastically reduces the time to address any issues later in the development cycle. Plugins such as TFLint, Checkov, Docker Linter, docker-vulnerability-extension, Security Scan, Contrast Security, etc., help in the security assessment of the IaC.</li>
-<li>Threat modelling - Build the threat modelling landscape earlier in the development cycle to ensure there is enough visibility of the high-risk, high-volume aspects of the code and flexibility to include security throughout to ensure the assets are safely managed.</li>
-<li>Managing secrets -  Secrets are confidential data and information such as application tokens required for authentication, passwords, and SSH (Secure Shell) keys. The problem is not the secrets, but where you store them. If you are using a simple text file or SCMs like Git, then the secrets can be easily exposed. Open-source tools such as truffleHog, git-secrets, GitGuardian and similar can be utilized to detect such vulnerable management of secrets. See the <a href="Secrets_Management_Cheat_Sheet.html">Secrets Management Cheat Sheet</a> for more information.</li>
-<li>Version control - Version control is the practice of tracking and managing changes to software code. Ensure all the changes to the IaC are tracked with the right set of information that helps in any revert operation. The important part is that you’re checking in those changes alongside the features they support and not separately. A feature’s infrastructure requirements should be a part of a feature’s branch or merge request. Git is generally used as the source code version control system.</li>
+<p>Integrating third-party payment gateways allows businesses to securely outsource payment processing. These gateways handle sensitive data like cardholder information and offer reduced PCI DSS scope if integrated correctly.</p>
+<p>However, insecure integration can lead to severe vulnerabilities—ranging from payment spoofing and order manipulation to fraud and business logic flaws. This cheat sheet outlines secure practices for integrating any third-party payment gateway, focusing on a general flow. It identifies potential failure points at each step and provides practical recommendations to prevent common mistakes.</p>
+<h2 id="understanding-the-payment-flow">Understanding the Payment Flow<a class="headerlink" href="#understanding-the-payment-flow" title="Permanent link">&para;</a></h2>
+<p>A typical third-party payment flow consists of five core steps:</p>
+<ol>
 <li>
-<p>Principle of least privilege - define the access management policies based on the principle of least privilege with the following priority items:</p>
-<ul>
-<li>Defining who is and is not authorized to create/update/run/delete the scripts and inventory.</li>
-<li>Limiting the permissions of authorized IaC users to what is necessary to perform their tasks. The IaC scripts should ensure that the permissions granted to the various resources it creates are limited to what is required for them to perform their work.</li>
-</ul>
+<p><strong>Cart Preparation</strong><br />
+   The user selects items and initiates checkout.</p>
 </li>
 <li>
-<p>Static analysis - Analyzes code in isolation, identifying risks, misconfigurations, and compliance faults only relevant to the IaC itself. Tools such as kubescan, Snyk, Coverity etc, can be leveraged for static analysis of IaC.</p>
+<p><strong>Order Initialization (Merchant Backend → Payment Gateway)</strong><br />
+   The merchant backend creates a transaction or order via API and receives an <code>order_id</code> or <code>payment_url</code>.</p>
 </li>
-<li>Open Source dependency check - Analyzes the open source dependencies such as OS packages, libraries, etc., to identify potential risks. Tools such as BlackDuck, Snyk, WhiteSource Bolt for GitHub, and similar can be leveraged for open source dependency analysis of IaC.</li>
-<li>Container image scan - Image scanning refers to the process of analyzing the contents and the build process of a container image in order to detect security issues, vulnerabilities or potential risks. Open-source tools such as Dagda, Clair, Trivy, Anchore, etc., can be leveraged for container image analysis.
-CI/CD pipeline and Consolidated reporting - enabling the security checks to be made available in the CI/CD pipeline enables the analysis of each of the code changes, excludes the need for manual intervention, and enables maintaining the history of compliance. Along with consolidated reporting, these integrations enhance the speed of development of a secure IaC codebase. Open-source tools such as Jenkins, etc., can be leveraged to build the CI/CD pipelines, and DefectDojo and OWASP Glue can help in tying the checks together and visualizing the check results in a single dashboard.</li>
-<li>Artifact signing - Digital signing of artifacts at build time and validation of the signed data before use protects artifacts from tampering between build and runtime, thus ensuring the integrity and provenance of an artifact. Open-source tools such as TUF helps in the digital signing of artifacts.</li>
-</ul>
-<h3 id="deploy">Deploy<a class="headerlink" href="#deploy" title="Permanent link">&para;</a></h3>
+<li>
+<p><strong>User Redirection to Payment Gateway</strong><br />
+   The user is redirected to the gateway-hosted payment page.</p>
+</li>
+<li>
+<p><strong>Payment Execution (User → Gateway)</strong><br />
+   The user completes or fails the payment.</p>
+</li>
+<li>
+<p><strong>Return and Verification (Payment Gateway → Merchant)</strong><br />
+   The user is redirected to the merchant site (callback/return URL), and optionally, the gateway sends a server-to-server notification. The merchant verifies the result and proceeds with order fulfillment.</p>
+</li>
+</ol>
+<p>The following sequence diagram explains the steps above.</p>
+<p><img alt="Payment integration sequence flow" src="../assets/third_party_integration_workflow.png" /></p>
+<hr />
+<h2 id="what-can-go-wrong-at-each-step-and-how-to-prevent-it">What Can Go Wrong at Each Step and How to Prevent It<a class="headerlink" href="#what-can-go-wrong-at-each-step-and-how-to-prevent-it" title="Permanent link">&para;</a></h2>
+<h3 id="1-sending-order-data">1. Sending Order data<a class="headerlink" href="#1-sending-order-data" title="Permanent link">&para;</a></h3>
+<p><strong>Risks:</strong></p>
 <ul>
-<li>Inventory management:<ul>
-<li>Commissioning - whenever a resource is deployed, ensure the resource is labeled, tracked and logged as part of the inventory management.</li>
-<li>Decommissioning - whenever a resource deletion is initiated, ensure the underlying configurations are erased, data is securely deleted and the resource is completely removed from the runtime as well as from the inventory management.</li>
-<li>Tagging - It is essential to tag cloud assets properly. During IaC operations, untagged assets are most likely to result in ghost resources that make it difficult to detect, visualize, and gain observability within the cloud environment and can affect the posture causing a drift. These ghost resources can add to billing costs, make maintenance difficult, and affect the reliability. The only solution to this is careful tagging and monitoring for untagged resources.</li>
+<li>Price tampering or product substitution via client-side manipulation.</li>
+<li>Missing server-side cart validation.</li>
+</ul>
+<p><strong>Mitigations:</strong></p>
+<ul>
+<li>Validate all cart details (product IDs, prices, discounts) on the backend.</li>
+<li>Recalculate totals server-side using trusted data before order creation.</li>
+</ul>
+<hr />
+<h3 id="2-redirect-to-webhook">2. Redirect to webhook<a class="headerlink" href="#2-redirect-to-webhook" title="Permanent link">&para;</a></h3>
+<p><strong>Risks:</strong></p>
+<ul>
+<li>Trusting unauthenticated or spoofed callbacks.</li>
+<li>Processing orders before verifying payment status.</li>
+<li>Race conditions from multiple callbacks.</li>
+<li>Replaying callbacks to trigger repeated fulfillment (e.g., multiple shipments, account credits).</li>
+<li>Assuming user redirection parameters are trustworthy (these are untrusted and can be manipulated).</li>
+</ul>
+<p><strong>Mitigations:</strong></p>
+<ul>
+<li>Validate all cart details (product IDs, prices, discounts) on the backend.</li>
+<li>Always verify the payment status server-side with the gateway’s API before fulfilling the order.</li>
+<li>Match the expected amount, currency, and order ID.</li>
+<li>Validate the authenticity of callbacks (e.g., HMAC signatures, secret tokens).</li>
+<li>Implement idempotency: only process an order once regardless of how many times the callback is received.</li>
+<li>Use a unique transaction ID with an expiry timestamp to mitigate callback replay attacks. Reject any callback with expired or reused transaction IDs.</li>
+<li>Only server-to-server callbacks should be trusted for payment verification and order fulfillment.</li>
+<li>Log all callback attempts for forensic analysis.</li>
+</ul>
+<h2 id="logging-and-monitoring">Logging and Monitoring<a class="headerlink" href="#logging-and-monitoring" title="Permanent link">&para;</a></h2>
+<p><strong>Why it matters:</strong>
+Even with proper validation and logic, monitoring is crucial for detecting abuse, fraud attempts, or system misbehavior.</p>
+<p><strong>Recommendations:</strong></p>
+<ul>
+<li>Log all payment attempts (initiation, redirects, callbacks) with timestamps and IPs.</li>
+<li>Alert on:<ul>
+<li>Unexpected order statuses (e.g., "Paid" without any gateway confirmation).</li>
+<li>Excessive callback attempts for the same order.</li>
+<li>Payment failures followed by repeated attempts with identical data.</li>
 </ul>
 </li>
-<li>Dynamic analysis - Dynamic analysis helps in evaluating any existing environments and services that it will interoperate with or run on. This helps in uncovering potential risks due to the interoperability. Open-source tools such as ZAP, Burp, GVM, etc., can be leveraged for dynamic analysis.</li>
+<li>Store raw request data for callbacks to aid investigation.</li>
+<li>Incorporate fraud and risk scoring mechanisms to detect carding attacks and other suspicious activities during payment execution.</li>
 </ul>
-<h3 id="runtime">Runtime<a class="headerlink" href="#runtime" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Immutability of infrastructure - The idea behind immutable infrastructure is to build the infrastructure components to an exact set of specifications. No deviation, no changes. If a change to a specification is required, then a whole new set of infrastructure is provisioned based on the updated requirements, and the previous infrastructure is taken out of service as obsolete.</li>
-<li>Logging - Keeping a record is a critical aspect to keeping an eye on risks. You should enable logging - both security logs and audit logs - while provisioning infrastructure, as they help assess the security risks related to sensitive assets. They also assist in analyzing the root cause of incidents and in identifying potential threats. Open-source tools such as ELK, etc., can be leveraged for log analysis.</li>
-<li>Monitoring - Continuous monitoring assists in looking out for any security and compliance violations, helps in identifying attacks and also provides alerts upon such incidents. Certain solutions also incorporate new technologies like AI to identify potential threats early. Open-source tools such as Prometheus, Grafana, etc., can be leveraged for monitoring of cloud infrastructure.</li>
-<li>Runtime threat detection: Implementing a runtime threat detection solution helps in recognizing unexpected application behavior and alerts on threats at runtime. Open-source tools such as Falco, etc., can be leveraged for runtime threat detection. Certain application such as Contrast (Contrast Community Edition) can also detect OWASP Top 10 attacks on the application during runtime and help block them in order to protect and secure the application.</li>
-</ul>
+<hr />
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Securing Infrastructure as code: <a href="https://www.opcito.com/blogs/securing-infrastructure-as-code">https://www.opcito.com/blogs/securing-infrastructure-as-code</a></li>
-<li>Infrastructure as code security: <a href="https://dzone.com/articles/infrastructure-as-code-security">https://dzone.com/articles/infrastructure-as-code-security</a></li>
-<li>Shifting cloud security left with infrastructure as code: <a href="https://securityboulevard.com/2020/04/shifting-cloud-security-left-with-infrastructure-as-code/">https://securityboulevard.com/2020/04/shifting-cloud-security-left-with-infrastructure-as-code/</a></li>
+<li><a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/10-Business_Logic_Testing/10-Test-Payment-Functionality">OWASP Web Security Testing Guide – Business Logic Testing</a></li>
+<li><a href="https://stripe.com/docs/api/idempotent_requests">Idempotency in Payment APIs – Stripe Docs</a></li>
+<li><a href="https://docs.konnect.network/docs/en/api-integration/intro">3rd Party Payment Gateway API integration</a></li>
+<li><a href="https://www.payway.com/blog/carding-explained-how-to-stop-a-silent-threat-to-your-business">How to identify a carding attack</a></li>
 </ul>
 
 
