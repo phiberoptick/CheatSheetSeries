@@ -4176,7 +4176,7 @@
 <li>Please read <a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#cookies">Session Management Cheat Sheet</a> for a detailed explanation on cookie configuration options.</li>
 </ul>
 <h3 id="strict-transport-security-hsts">Strict-Transport-Security (HSTS)<a class="headerlink" href="#strict-transport-security-hsts" title="Permanent link">&para;</a></h3>
-<p>The HTTP <code>Strict-Transport-Security</code> response header (often abbreviated as HSTS) lets a website tell browsers that it should only be accessed using HTTPS, instead of using HTTP.</p>
+<p>The HTTP <code>Strict-Transport-Security</code> response header (often abbreviated as HSTS) instructs browsers to only access the website using HTTPS, even if a user attempts to connect over HTTP.</p>
 <h4 id="recommendation_6">Recommendation<a class="headerlink" href="#recommendation_6" title="Permanent link">&para;</a></h4>
 <blockquote>
 <p><code>Strict-Transport-Security: max-age=63072000; includeSubDomains; preload</code></p>
@@ -4339,9 +4339,14 @@ If you do not control links on your website, you might want to set <code>off</co
 <div class="highlight"><pre><span></span><code><span class="x">header(&quot;X-Frame-Options: DENY&quot;);</span>
 </code></pre></div>
 <h3 id="apache">Apache<a class="headerlink" href="#apache" title="Permanent link">&para;</a></h3>
-<p>Below is an <code>.htaccess</code> sample configuration which sets the <code>X-Frame-Options</code> header in Apache. Note that without the <code>always</code> option, the header will only be sent for certain status codes, as described in <a href="https://httpd.apache.org/docs/2.4/mod/mod_headers.html#header">the Apache documentation</a>.</p>
+<p>Below is an <code>.htaccess</code> sample configuration which sets the <code>X-Frame-Options</code> header in Apache.</p>
+<p>As described in the <a href="https://httpd.apache.org/docs/2.4/mod/mod_headers.html#header">Apache documentation</a>, <code>Header set</code> (default <code>onsuccess</code>) and <code>Header always set</code> operate on separate internal header tables.</p>
+<p>In some cases, both header tables may be used, which can result in duplicate headers if the same header is configured in both contexts.</p>
+<p>If a header needs to be removed entirely, it should be unset in both contexts (<code>onsuccess</code> and <code>always</code>).</p>
+<p>To avoid duplication and ensure the header is sent on all responses, unset it first and then use <code>always set</code>:</p>
 <div class="highlight"><pre><span></span><code>&lt;IfModule mod_headers.c&gt;
-Header always set X-Frame-Options &quot;DENY&quot;
+  Header unset X-Frame-Options
+  Header always set X-Frame-Options &quot;DENY&quot;
 &lt;/IfModule&gt;
 </code></pre></div>
 <h3 id="iis">IIS<a class="headerlink" href="#iis" title="Permanent link">&para;</a></h3>
