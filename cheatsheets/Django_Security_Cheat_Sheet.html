@@ -1094,6 +1094,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#content-security-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Security Policy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cookies" class="md-nav__link">
     <span class="md-ellipsis">
       Cookies
@@ -2945,6 +2954,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#content-security-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Security Policy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cookies" class="md-nav__link">
     <span class="md-ellipsis">
       Cookies
@@ -3133,6 +3151,13 @@
 <p>Include the <code>django.middleware.clickjacking.XFrameOptionsMiddleware</code> module in the <code>MIDDLEWARE</code> setting in your project's <code>settings.py</code> (This module should be listed after the <code>django.middleware.security.SecurityMiddleware</code> module as ordering is important). This module is used to set the following parameters:</p>
 <ul>
 <li><code>X_FRAME_OPTIONS</code>: Set this key to 'DENY' or 'SAMEORIGIN'. This setting adds the <code>X-Frame-Options</code> header to all HTTP responses. This protects against clickjacking attacks.</li>
+</ul>
+<h2 id="content-security-policy">Content Security Policy<a class="headerlink" href="#content-security-policy" title="Permanent link">&para;</a></h2>
+<p>Django does not provide built-in Content Security Policy (CSP) support by default. CSP can be implemented using third-party libraries such as <code>django-csp</code> or by configuring HTTP response headers.</p>
+<p>For more details:</p>
+<ul>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">OWASP Content Security Policy Cheat Sheet</a></li>
+<li><a href="https://docs.djangoproject.com/en/stable/topics/security/">Django Security Documentation</a></li>
 </ul>
 <h2 id="cookies">Cookies<a class="headerlink" href="#cookies" title="Permanent link">&para;</a></h2>
 <ul>
