@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Web_Service_Security_Cheat_Sheet.html">
+        <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Email_Validation_and_Verification_Cheat_Sheet.html">
       
       
-        <link rel="prev" href="WebSocket_Security_Cheat_Sheet.html">
+        <link rel="prev" href="Drone_Security_Cheat_Sheet.html">
       
       
-        <link rel="next" href="XML_External_Entity_Prevention_Cheat_Sheet.html">
+        <link rel="next" href="Error_Handling_Cheat_Sheet.html">
       
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Web Service Security - OWASP Cheat Sheet Series</title>
+        <title>Email Validation and Verification - OWASP Cheat Sheet Series</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#web-service-security-cheat-sheet" class="md-skip">
+        <a href="#email-validation-and-verification-in-identity-systems-cheat-sheet" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Web Service Security
+              Email Validation and Verification
             
           </span>
         </div>
@@ -1084,10 +1084,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Email_Validation_and_Verification_Cheat_Sheet.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Email Validation and Verification
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Email_Validation_and_Verification_Cheat_Sheet.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1096,6 +1116,326 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Goals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#threat-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Threat Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email-canonicalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Email Canonicalization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Email Canonicalization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email-format-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Email Format Validation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Email Format Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unicode-and-idn-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unicode and IDN Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unicode and IDN Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-sensitivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Sensitivity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Case Sensitivity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email-ownership-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Email Ownership Verification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Email Ownership Verification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#password-reset-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Password Reset Flows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Password Reset Flows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email-change-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Email Change Workflows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Email Change Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anti-enumeration-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anti-Enumeration Controls
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anti-Enumeration Controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temporary-email-abuse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temporary Email Abuse
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Temporary Email Abuse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email-as-an-authentication-factor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Email as an Authentication Factor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Email as an Authentication Factor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-and-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging and Monitoring
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging and Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2638,30 +2978,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Web Service Security
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="Web_Service_Security_Cheat_Sheet.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="Web_Service_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2670,194 +2990,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#transport-confidentiality" class="md-nav__link">
-    <span class="md-ellipsis">
-      Transport Confidentiality
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#server-authentication" class="md-nav__link">
-    <span class="md-ellipsis">
-      Server Authentication
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#user-authentication" class="md-nav__link">
-    <span class="md-ellipsis">
-      User Authentication
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#transport-encoding" class="md-nav__link">
-    <span class="md-ellipsis">
-      Transport Encoding
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-integrity" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Integrity
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-confidentiality" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Confidentiality
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#authorization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Authorization
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schema-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schema Validation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#content-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Content Validation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#output-encoding" class="md-nav__link">
-    <span class="md-ellipsis">
-      Output Encoding
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#virus-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Virus Protection
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-size" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Size
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#availability" class="md-nav__link">
-    <span class="md-ellipsis">
-      Availability
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Availability">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#resources-limiting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resources Limiting
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#message-throughput" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Throughput
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#xml-denial-of-service-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      XML Denial of Service Protection
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#endpoint-security-profile" class="md-nav__link">
-    <span class="md-ellipsis">
-      Endpoint Security Profile
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3032,145 +3164,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#transport-confidentiality" class="md-nav__link">
+  <a href="#goals" class="md-nav__link">
     <span class="md-ellipsis">
-      Transport Confidentiality
+      Goals
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#server-authentication" class="md-nav__link">
+  <a href="#threat-model" class="md-nav__link">
     <span class="md-ellipsis">
-      Server Authentication
+      Threat Model
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-authentication" class="md-nav__link">
+  <a href="#email-canonicalization" class="md-nav__link">
     <span class="md-ellipsis">
-      User Authentication
+      Email Canonicalization
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#transport-encoding" class="md-nav__link">
-    <span class="md-ellipsis">
-      Transport Encoding
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-integrity" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Integrity
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-confidentiality" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Confidentiality
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#authorization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Authorization
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schema-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schema Validation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#content-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Content Validation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#output-encoding" class="md-nav__link">
-    <span class="md-ellipsis">
-      Output Encoding
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#virus-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Virus Protection
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-size" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Size
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#availability" class="md-nav__link">
-    <span class="md-ellipsis">
-      Availability
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Availability">
+    <nav class="md-nav" aria-label="Email Canonicalization">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#resources-limiting" class="md-nav__link">
+  <a href="#recommendations" class="md-nav__link">
     <span class="md-ellipsis">
-      Resources Limiting
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#message-throughput" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Throughput
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#xml-denial-of-service-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      XML Denial of Service Protection
+      Recommendations
     </span>
   </a>
   
@@ -3182,9 +3206,249 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#endpoint-security-profile" class="md-nav__link">
+  <a href="#email-format-validation" class="md-nav__link">
     <span class="md-ellipsis">
-      Endpoint Security Profile
+      Email Format Validation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Email Format Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unicode-and-idn-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unicode and IDN Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unicode and IDN Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-sensitivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Sensitivity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Case Sensitivity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email-ownership-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Email Ownership Verification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Email Ownership Verification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#password-reset-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Password Reset Flows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Password Reset Flows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email-change-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Email Change Workflows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Email Change Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anti-enumeration-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anti-Enumeration Controls
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anti-Enumeration Controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temporary-email-abuse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temporary Email Abuse
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Temporary Email Abuse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email-as-an-authentication-factor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Email as an Authentication Factor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Email as an Authentication Factor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-and-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging and Monitoring
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging and Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
     </span>
   </a>
   
@@ -3208,75 +3472,138 @@
   
 
 
-<h1 id="web-service-security-cheat-sheet">Web Service Security Cheat Sheet<a class="headerlink" href="#web-service-security-cheat-sheet" title="Permanent link">&para;</a></h1>
+<h1 id="email-validation-and-verification-in-identity-systems-cheat-sheet">Email Validation and Verification in Identity Systems Cheat Sheet<a class="headerlink" href="#email-validation-and-verification-in-identity-systems-cheat-sheet" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>This article is focused on providing guidance for securing web services and preventing web services related attacks.</p>
-<p>Please notice that due to the difference in implementation between different frameworks, this cheat sheet is kept at a high level.</p>
-<h2 id="transport-confidentiality">Transport Confidentiality<a class="headerlink" href="#transport-confidentiality" title="Permanent link">&para;</a></h2>
-<p>Transport confidentiality protects against eavesdropping and man-in-the-middle attacks against web service communications to/from the server.</p>
-<p><strong>Rule</strong>: All communication with and between web services containing sensitive features, an authenticated session, or transfer of sensitive data must be encrypted using well-configured <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS</a>. This is recommended even if the messages themselves are encrypted because <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS</a> provides numerous benefits beyond traffic confidentiality including integrity protection, replay defenses, and server authentication. For more information on how to do this properly see the <a href="Transport_Layer_Security_Cheat_Sheet.html">Transport Layer Security Cheat Sheet</a>.</p>
-<h2 id="server-authentication">Server Authentication<a class="headerlink" href="#server-authentication" title="Permanent link">&para;</a></h2>
-<p><strong>Rule</strong>: TLS must be used to authenticate the service provider to the service consumer. The service consumer should verify the server certificate is issued by a trusted provider, is not expired, is not revoked, matches the domain name of the service, and that the server has proven that it has the private key associated with the public key certificate (by properly signing something or successfully decrypting something encrypted with the associated public key).</p>
-<h2 id="user-authentication">User Authentication<a class="headerlink" href="#user-authentication" title="Permanent link">&para;</a></h2>
-<p>User authentication verifies the identity of the user or the system trying to connect to the service. Such authentication is usually a function of the container of the web service.</p>
-<p><strong>Rule</strong>: If used, Basic Authentication must be conducted over <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS</a>, but Basic Authentication is not recommended because it discloses secrets in plan text (base64 encoded) in HTTP Headers.</p>
-<p><strong>Rule</strong>: Client Certificate Authentication using <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">Mutual-TLS</a> is a common form of authentication that is recommended where appropriate. See: <a href="Authentication_Cheat_Sheet.html">Authentication Cheat Sheet</a>.</p>
-<h2 id="transport-encoding">Transport Encoding<a class="headerlink" href="#transport-encoding" title="Permanent link">&para;</a></h2>
-<p><a href="https://en.wikipedia.org/wiki/SOAP">SOAP</a> encoding styles are meant to move data between software objects into XML format and back again.</p>
-<p><strong>Rule</strong>: Enforce the same encoding style between the client and the server.</p>
-<h2 id="message-integrity">Message Integrity<a class="headerlink" href="#message-integrity" title="Permanent link">&para;</a></h2>
-<p>This is for data at rest. The integrity of data in transit can easily be provided by <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS</a>.</p>
-<p>When using <a href="https://en.wikipedia.org/wiki/Public-key_cryptography">public key cryptography</a>, encryption does guarantee confidentiality but it does not guarantee integrity since the receiver's public key is public. For the same reason, encryption does not ensure the identity of the sender.</p>
-<p><strong>Rule</strong>: For XML data, use XML digital signatures to provide message integrity using the sender's private key. This signature can be validated by the recipient using the sender's digital certificate (public key).</p>
-<h2 id="message-confidentiality">Message Confidentiality<a class="headerlink" href="#message-confidentiality" title="Permanent link">&para;</a></h2>
-<p>Data elements meant to be kept confidential must be encrypted using a strong encryption cipher with an adequate key length to deter brute-forcing.</p>
-<p><strong>Rule</strong>: Messages containing sensitive data must be encrypted using a strong encryption cipher. This could be transport encryption or message encryption.</p>
-<p><strong>Rule</strong>: Messages containing sensitive data that must remain encrypted at rest after receipt must be encrypted with strong data encryption, not just transport encryption.</p>
-<h2 id="authorization">Authorization<a class="headerlink" href="#authorization" title="Permanent link">&para;</a></h2>
-<p>Web services need to authorize web service clients the same way web applications authorize users. A web service needs to make sure a web service client is authorized to perform a certain action (coarse-grained) on the requested data (fine-grained).</p>
-<p><strong>Rule</strong>: A web service should authorize its clients whether they have access to the method in question. Following an authentication challenge, the web service should check the privileges of the requesting entity whether they have access to the requested resource. This should be done on every request, and a challenge-response Authorization mechanism added to sensitive resources like password changes, primary contact details such as email, physical address, payment or delivery instructions.</p>
-<p><strong>Rule</strong>: Ensure access to administration and management functions within the Web Service Application is limited to web service administrators. Ideally, any administrative capabilities would be in an application that is completely separate from the web services being managed by these capabilities, thus completely separating normal users from these sensitive functions.</p>
-<h2 id="schema-validation">Schema Validation<a class="headerlink" href="#schema-validation" title="Permanent link">&para;</a></h2>
-<p>Schema validation enforces constraints and syntax defined by the schema.</p>
-<p><strong>Rule</strong>: Web services must validate <a href="https://en.wikipedia.org/wiki/SOAP">SOAP</a> payloads against their associated XML schema definition (<a href="https://www.w3schools.com/xml/schema_intro.asp">XSD</a>).</p>
-<p><strong>Rule</strong>: The <a href="https://www.w3schools.com/xml/schema_intro.asp">XSD</a> defined for a <a href="https://en.wikipedia.org/wiki/SOAP">SOAP</a> web service should, at a minimum, define the maximum length and character set of every parameter allowed to pass into and out of the web service.</p>
-<p><strong>Rule</strong>: The <a href="https://www.w3schools.com/xml/schema_intro.asp">XSD</a> defined for a <a href="https://en.wikipedia.org/wiki/SOAP">SOAP</a> web service should define strong (ideally allow-list) validation patterns for all fixed format parameters (e.g., zip codes, phone numbers, list values, etc.).</p>
-<h2 id="content-validation">Content Validation<a class="headerlink" href="#content-validation" title="Permanent link">&para;</a></h2>
-<p><strong>Rule</strong>: Like any web application, web services need to validate input before consuming it. Content validation for XML input should include:</p>
+<p>Email addresses are widely used as primary identifiers in authentication and account recovery workflows. Improper handling of email validation, normalization, and verification can lead to account takeover, user enumeration, and identity confusion.</p>
+<p>This cheat sheet provides guidance on securely handling email addresses within identity systems.</p>
+<h2 id="goals">Goals<a class="headerlink" href="#goals" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Validation against malformed XML entities.</li>
-<li>Validation against <a href="https://en.wikipedia.org/wiki/Billion_laughs_attack">XML Bomb attacks</a>.</li>
-<li>Validating inputs using a strong allowlist.</li>
-<li>Validating against <a href="https://owasp.org/www-community/vulnerabilities/XML_External_Entity_%28XXE%29_Processing">external entity attacks</a>.</li>
+<li>Safely treat email as an identifier</li>
+<li>Prevent account takeover via email-based flows</li>
+<li>Reduce user enumeration risk</li>
+<li>Define secure verification and change workflows</li>
 </ul>
-<h2 id="output-encoding">Output Encoding<a class="headerlink" href="#output-encoding" title="Permanent link">&para;</a></h2>
-<p>Web services need to ensure that the output sent to clients is encoded to be consumed as data and not as scripts. This gets pretty important when web service clients use the output to render HTML pages either directly or indirectly using AJAX objects.</p>
-<p><strong>Rule</strong>: All the rules of output encoding applies as per <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html">Cross Site Scripting Prevention Cheat Sheet</a>.</p>
-<h2 id="virus-protection">Virus Protection<a class="headerlink" href="#virus-protection" title="Permanent link">&para;</a></h2>
-<p><a href="https://en.wikipedia.org/wiki/SOAP">SOAP</a> provides the ability to attach files and documents to <a href="https://en.wikipedia.org/wiki/SOAP">SOAP</a> messages. This gives the opportunity for hackers to attach viruses and malware to these <a href="https://en.wikipedia.org/wiki/SOAP">SOAP</a> messages.</p>
-<p><strong>Rule</strong>: Ensure Virus Scanning technology is installed and preferably inline so files and attachments could be checked before being saved on disk.</p>
-<p><strong>Rule</strong>: Ensure Virus Scanning technology is regularly updated with the latest virus definitions/rules.</p>
-<h2 id="message-size">Message Size<a class="headerlink" href="#message-size" title="Permanent link">&para;</a></h2>
-<p>Web services like web applications could be a target for DOS attacks by automatically sending the web services thousands of large size <a href="https://en.wikipedia.org/wiki/SOAP">SOAP</a> messages. This either cripples the application making it unable to respond to legitimate messages or it could take it down entirely.</p>
-<p><strong>Rule</strong>: <a href="https://en.wikipedia.org/wiki/SOAP">SOAP</a> Messages size should be limited to an appropriate size limit. Larger size limit (or no limit at all) increases the chances of a successful DoS attack.</p>
-<h2 id="availability">Availability<a class="headerlink" href="#availability" title="Permanent link">&para;</a></h2>
-<h3 id="resources-limiting">Resources Limiting<a class="headerlink" href="#resources-limiting" title="Permanent link">&para;</a></h3>
-<p>During regular operation, web services require computational power such as CPU cycles and memory. Due to malfunctioning or while under attack, a web service may required too much resources, leaving the host system unstable.</p>
-<p><strong>Rule</strong>: Limit the amount of CPU cycles the web service can use based on expected service rate, in order to have a stable system.</p>
-<p><strong>Rule</strong>: Limit the amount of memory the web service can use to avoid system running out of memory. In some cases the host system may start killing processes to free up memory.</p>
-<p><strong>Rule</strong>: Limit the number of simultaneous open files, network connections and started processes.</p>
-<h3 id="message-throughput">Message Throughput<a class="headerlink" href="#message-throughput" title="Permanent link">&para;</a></h3>
-<p>Throughput represents the number of web service requests served during a specific amount of time.</p>
-<p><strong>Rule</strong>: Configuration should be optimized for maximum message throughput to avoid running into DoS-like situations.</p>
-<h3 id="xml-denial-of-service-protection">XML Denial of Service Protection<a class="headerlink" href="#xml-denial-of-service-protection" title="Permanent link">&para;</a></h3>
-<p>XML Denial of Service is probably the most serious attack against web services. So the web service must provide the following validation:</p>
-<p><strong>Rule</strong>: Validation against recursive payloads.</p>
-<p><strong>Rule</strong>: Validation against oversized payloads.</p>
-<p><strong>Rule</strong>: Protection against <a href="https://www.ws-attacks.org/XML_Entity_Expansion">XML entity expansion</a>.</p>
-<p><strong>Rule</strong>: Validating against overlong element names. If you are working with <a href="https://en.wikipedia.org/wiki/SOAP">SOAP</a>-based Web Services, the element names are those <a href="https://en.wikipedia.org/wiki/SOAP">SOAP</a> Actions.</p>
-<p>This protection should be provided by your XML parser/schema validator. To verify, build test cases to make sure your parser to resistant to these types of attacks.</p>
-<h2 id="endpoint-security-profile">Endpoint Security Profile<a class="headerlink" href="#endpoint-security-profile" title="Permanent link">&para;</a></h2>
-<p><strong>Rule</strong>: Web services must be compliant with <a href="https://en.wikipedia.org/wiki/Web_Services_Interoperability">Web Services-Interoperability (WS-I)</a> Basic Profile at minimum.</p>
+<h2 id="threat-model">Threat Model<a class="headerlink" href="#threat-model" title="Permanent link">&para;</a></h2>
+<p>Attackers may attempt to:</p>
+<ul>
+<li>Register equivalent or visually similar email addresses</li>
+<li>Exploit inconsistent normalization logic</li>
+<li>Abuse password reset functionality</li>
+<li>Enumerate valid accounts</li>
+<li>Take over accounts through email change workflows</li>
+</ul>
+<h2 id="email-canonicalization">Email Canonicalization<a class="headerlink" href="#email-canonicalization" title="Permanent link">&para;</a></h2>
+<p>Applications must define a consistent normalization strategy before storing or comparing email addresses.</p>
+<h3 id="recommendations">Recommendations<a class="headerlink" href="#recommendations" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Normalize the domain portion to lowercase</li>
+<li>Avoid provider-specific transformations (e.g., Gmail dot removal) unless fully controlled</li>
+<li>Store both:<ul>
+<li>Original input (for display and communication)</li>
+<li>Canonical form (for comparison according to your policy)</li>
+</ul>
+</li>
+<li>Document the comparison policy explicitly and apply it consistently across registration, login, password reset, account recovery, and account linking flows</li>
+</ul>
+<h2 id="email-format-validation">Email Format Validation<a class="headerlink" href="#email-format-validation" title="Permanent link">&para;</a></h2>
+<p>Strict regex-based validation often rejects valid addresses or introduces inconsistencies.</p>
+<h3 id="recommendations_1">Recommendations<a class="headerlink" href="#recommendations_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use well-tested libraries instead of custom regex</li>
+<li>Accept a broad range of valid formats</li>
+<li>Reject clearly malformed input only</li>
+</ul>
+<h2 id="unicode-and-idn-considerations">Unicode and IDN Considerations<a class="headerlink" href="#unicode-and-idn-considerations" title="Permanent link">&para;</a></h2>
+<p>Unicode introduces spoofing risks via visually similar characters.</p>
+<h3 id="recommendations_2">Recommendations<a class="headerlink" href="#recommendations_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Normalize Unicode input</li>
+<li>Convert internationalized domains to punycode for comparison</li>
+<li>Be aware of homoglyph attacks (e.g., Latin vs Cyrillic characters)</li>
+<li>Be especially cautious with internationalized local-parts, because normalization and comparison behavior may differ across systems</li>
+</ul>
+<h2 id="case-sensitivity">Case Sensitivity<a class="headerlink" href="#case-sensitivity" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Domain part: always case-insensitive</li>
+<li>Local part: technically case-sensitive under SMTP, though many providers do not enforce this in practice</li>
+</ul>
+<h3 id="recommendation">Recommendation<a class="headerlink" href="#recommendation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Preserve the original email address as entered by the user</li>
+<li>Define an explicit comparison policy for the local part based on your identity architecture and interoperability requirements</li>
+<li>Only fold or normalize the local part when the system fully owns that behavior and the decision will not create account-collision or mistaken-account risk</li>
+</ul>
+<h2 id="email-ownership-verification">Email Ownership Verification<a class="headerlink" href="#email-ownership-verification" title="Permanent link">&para;</a></h2>
+<p>Email ownership must be verified before enabling account use.</p>
+<h3 id="recommendations_3">Recommendations<a class="headerlink" href="#recommendations_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use cryptographically secure, random tokens</li>
+<li>Ensure tokens are:<ul>
+<li>Single-use</li>
+<li>Time-limited</li>
+</ul>
+</li>
+<li>Do not activate accounts before verification is completed</li>
+</ul>
+<h2 id="password-reset-flows">Password Reset Flows<a class="headerlink" href="#password-reset-flows" title="Permanent link">&para;</a></h2>
+<p>Password reset is a high-risk operation.</p>
+<h3 id="recommendations_4">Recommendations<a class="headerlink" href="#recommendations_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use single-use, time-limited tokens</li>
+<li>Do not disclose whether an email exists in the system</li>
+<li>Invalidate tokens after use or expiration</li>
+<li>Rate limit reset requests</li>
+</ul>
+<h2 id="email-change-workflows">Email Change Workflows<a class="headerlink" href="#email-change-workflows" title="Permanent link">&para;</a></h2>
+<p>Changing an email address is equivalent to changing identity.</p>
+<h3 id="recommendations_5">Recommendations<a class="headerlink" href="#recommendations_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Require re-authentication</li>
+<li>Notify the existing email address of the change</li>
+<li>Require confirmation of the new email address</li>
+<li>Consider requiring confirmation from both addresses for high-risk systems</li>
+</ul>
+<h2 id="anti-enumeration-controls">Anti-Enumeration Controls<a class="headerlink" href="#anti-enumeration-controls" title="Permanent link">&para;</a></h2>
+<p>Attackers should not be able to determine whether an email is registered.</p>
+<h3 id="recommendations_6">Recommendations<a class="headerlink" href="#recommendations_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use consistent responses for login and reset flows</li>
+<li>Avoid timing discrepancies between valid and invalid cases</li>
+<li>Implement rate limiting and monitoring</li>
+</ul>
+<h2 id="temporary-email-abuse">Temporary Email Abuse<a class="headerlink" href="#temporary-email-abuse" title="Permanent link">&para;</a></h2>
+<p>Disposable email services can be used to bypass controls.</p>
+<h3 id="recommendations_7">Recommendations<a class="headerlink" href="#recommendations_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Maintain a list of known disposable domains if appropriate</li>
+<li>Prefer risk-based controls over strict blocking</li>
+<li>Monitor for suspicious patterns of account creation</li>
+</ul>
+<h2 id="email-as-an-authentication-factor">Email as an Authentication Factor<a class="headerlink" href="#email-as-an-authentication-factor" title="Permanent link">&para;</a></h2>
+<p>Email should not be treated as a strong authentication factor.</p>
+<h3 id="recommendations_8">Recommendations<a class="headerlink" href="#recommendations_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Treat email as a weak factor</li>
+<li>Require multi-factor authentication (MFA) for sensitive operations</li>
+<li>Do not rely on email alone for account security</li>
+</ul>
+<h2 id="logging-and-monitoring">Logging and Monitoring<a class="headerlink" href="#logging-and-monitoring" title="Permanent link">&para;</a></h2>
+<p>Monitoring email-related flows helps detect abuse.</p>
+<h3 id="recommendations_9">Recommendations<a class="headerlink" href="#recommendations_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Log verification attempts and failures</li>
+<li>Monitor password reset activity</li>
+<li>Detect abnormal patterns (e.g., high-frequency requests)</li>
+<li>Avoid logging full email addresses; mask or pseudonymize them where logging is necessary (e.g., <code>j***@example.com</code>)</li>
+<li>Never log verification, reset, or authentication tokens or full verification/reset URLs</li>
+<li>Treat email addresses and related identifiers in logs as personal or sensitive data and restrict access accordingly</li>
+</ul>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc5322">RFC 5322</a></li>
+<li><a href="Authentication_Cheat_Sheet.html">OWASP Authentication Cheat Sheet</a></li>
+<li><a href="Forgot_Password_Cheat_Sheet.html">OWASP Forgot Password Cheat Sheet</a></li>
+</ul>
 
 
 
