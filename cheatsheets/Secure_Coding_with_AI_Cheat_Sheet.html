@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html">
+        <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Secure_Coding_with_AI_Cheat_Sheet.html">
       
       
-        <link rel="prev" href="SAML_Security_Cheat_Sheet.html">
+        <link rel="prev" href="Secure_Code_Review_Cheat_Sheet.html">
       
       
-        <link rel="next" href="Secrets_Management_Cheat_Sheet.html">
+        <link rel="next" href="Secure_Product_Design_Cheat_Sheet.html">
       
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>SQL Injection Prevention - OWASP Cheat Sheet Series</title>
+        <title>Secure Coding with AI - OWASP Cheat Sheet Series</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sql-injection-prevention-cheat-sheet" class="md-skip">
+        <a href="#secure-coding-with-ai-cheat-sheet" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SQL Injection Prevention
+              Secure Coding with AI
             
           </span>
         </div>
@@ -2134,30 +2134,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    SQL Injection Prevention
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="SQL_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="SQL_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2166,305 +2146,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-a-sql-injection-attack" class="md-nav__link">
-    <span class="md-ellipsis">
-      What Is a SQL Injection Attack?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#anatomy-of-a-typical-sql-injection-vulnerability" class="md-nav__link">
-    <span class="md-ellipsis">
-      Anatomy of a Typical SQL Injection Vulnerability
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#primary-defenses" class="md-nav__link">
-    <span class="md-ellipsis">
-      Primary Defenses
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Primary Defenses">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#defense-option-1-prepared-statements-with-parameterized-queries" class="md-nav__link">
-    <span class="md-ellipsis">
-      Defense Option 1: Prepared Statements (with Parameterized Queries)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Defense Option 1: Prepared Statements (with Parameterized Queries)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#safe-java-prepared-statement-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Safe Java Prepared Statement Example
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#safe-c-net-prepared-statement-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Safe C# .NET Prepared Statement Example
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hibernate-query-language-hql-prepared-statement-named-parameters-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hibernate Query Language (HQL) Prepared Statement (Named Parameters) Example
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#other-examples-of-safe-prepared-statements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Other Examples of Safe Prepared Statements
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#defense-option-2-stored-procedures" class="md-nav__link">
-    <span class="md-ellipsis">
-      Defense Option 2: Stored Procedures
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Defense Option 2: Stored Procedures">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#safe-approach-to-stored-procedures" class="md-nav__link">
-    <span class="md-ellipsis">
-      Safe Approach to Stored Procedures
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#when-stored-procedures-can-increase-risk" class="md-nav__link">
-    <span class="md-ellipsis">
-      When Stored Procedures Can Increase Risk
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#safe-java-stored-procedure-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Safe Java Stored Procedure Example
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#safe-vb-net-stored-procedure-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Safe VB .NET Stored Procedure Example
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#defense-option-3-allow-list-input-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Defense Option 3: Allow-list Input Validation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Defense Option 3: Allow-list Input Validation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sample-of-safe-table-name-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sample Of Safe Table Name Validation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#safest-use-of-dynamic-sql-generation-discouraged" class="md-nav__link">
-    <span class="md-ellipsis">
-      Safest Use Of Dynamic SQL Generation (DISCOURAGED)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sample-of-safer-dynamic-query-generation-discouraged" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sample of Safer Dynamic Query Generation (DISCOURAGED)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#defense-option-4-strongly-discouraged-escaping-all-user-supplied-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      Defense Option 4: STRONGLY DISCOURAGED: Escaping All User-Supplied Input
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#additional-defenses" class="md-nav__link">
-    <span class="md-ellipsis">
-      Additional Defenses
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Additional Defenses">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#least-privilege" class="md-nav__link">
-    <span class="md-ellipsis">
-      Least Privilege
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Least Privilege">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#minimizing-application-and-os-privileges" class="md-nav__link">
-    <span class="md-ellipsis">
-      Minimizing Application and OS Privileges
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#details-of-least-privilege-when-developing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Details Of Least Privilege When Developing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#least-admin-privileges-for-multiple-dbs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Least Admin Privileges For Multiple DBs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enhancing-least-privilege-with-sql-views" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enhancing Least Privilege with SQL Views
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#allow-list-input-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Allow-list Input Validation
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related-articles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Related Articles
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2558,10 +2239,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Secure_Coding_with_AI_Cheat_Sheet.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Secure Coding with AI
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Secure_Coding_with_AI_Cheat_Sheet.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2570,6 +2271,557 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#threat-model-and-trust-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Threat Model and Trust Boundaries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Threat Model and Trust Boundaries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#threat-actors-and-attack-surfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Threat Actors and Attack Surfaces
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-1-hallucinated-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 1: Hallucinated Dependencies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 1: Hallucinated Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-2-outdated-dependencies-with-known-cves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 2: Outdated Dependencies with Known CVEs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 2: Outdated Dependencies with Known CVEs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-indirect-prompt-injection-in-the-development-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 3: Indirect Prompt Injection in the Development Loop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 3: Indirect Prompt Injection in the Development Loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attack-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attack Vectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-mcp-and-tool-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 4: MCP and Tool Security
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 4: MCP and Tool Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-agent-runtime-sandboxing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 5: Agent Runtime Sandboxing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 5: Agent Runtime Sandboxing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-6-rules-files-and-persistent-steering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 6: Rules Files and Persistent Steering
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 6: Rules Files and Persistent Steering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#affected-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Affected Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-7-out-of-scope-edits-and-review-anchoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 7: Out-of-Scope Edits and Review Anchoring
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 7: Out-of-Scope Edits and Review Anchoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-8-test-fabrication-and-test-deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 8: Test Fabrication and Test Deletion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 8: Test Fabrication and Test Deletion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-9-prompt-context-leakage-and-sensitive-code-exposure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 9: Prompt Context Leakage and Sensitive Code Exposure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 9: Prompt Context Leakage and Sensitive Code Exposure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-10-prompt-to-code-supply-chain-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 10: Prompt-to-Code Supply Chain Risk
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 10: Prompt-to-Code Supply Chain Risk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-11-cicd-agents-and-confused-deputy-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 11: CI/CD Agents and Confused Deputy Risk
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 11: CI/CD Agents and Confused Deputy Risk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-12-markdown-link-and-unicode-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 12: Markdown, Link, and Unicode Injection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 12: Markdown, Link, and Unicode Injection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-13-multi-agent-and-sub-agent-propagation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 13: Multi-Agent and Sub-Agent Propagation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 13: Multi-Agent and Sub-Agent Propagation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-14-human-accountability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 14: Human Accountability
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 14: Human Accountability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#owasp-top-10-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      OWASP Top 10 Mapping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3227,181 +3479,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-a-sql-injection-attack" class="md-nav__link">
+  <a href="#threat-model-and-trust-boundaries" class="md-nav__link">
     <span class="md-ellipsis">
-      What Is a SQL Injection Attack?
+      Threat Model and Trust Boundaries
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#anatomy-of-a-typical-sql-injection-vulnerability" class="md-nav__link">
-    <span class="md-ellipsis">
-      Anatomy of a Typical SQL Injection Vulnerability
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#primary-defenses" class="md-nav__link">
-    <span class="md-ellipsis">
-      Primary Defenses
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Primary Defenses">
+    <nav class="md-nav" aria-label="Threat Model and Trust Boundaries">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#defense-option-1-prepared-statements-with-parameterized-queries" class="md-nav__link">
+  <a href="#threat-actors-and-attack-surfaces" class="md-nav__link">
     <span class="md-ellipsis">
-      Defense Option 1: Prepared Statements (with Parameterized Queries)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Defense Option 1: Prepared Statements (with Parameterized Queries)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#safe-java-prepared-statement-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Safe Java Prepared Statement Example
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#safe-c-net-prepared-statement-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Safe C# .NET Prepared Statement Example
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hibernate-query-language-hql-prepared-statement-named-parameters-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hibernate Query Language (HQL) Prepared Statement (Named Parameters) Example
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#other-examples-of-safe-prepared-statements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Other Examples of Safe Prepared Statements
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#defense-option-2-stored-procedures" class="md-nav__link">
-    <span class="md-ellipsis">
-      Defense Option 2: Stored Procedures
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Defense Option 2: Stored Procedures">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#safe-approach-to-stored-procedures" class="md-nav__link">
-    <span class="md-ellipsis">
-      Safe Approach to Stored Procedures
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#when-stored-procedures-can-increase-risk" class="md-nav__link">
-    <span class="md-ellipsis">
-      When Stored Procedures Can Increase Risk
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#safe-java-stored-procedure-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Safe Java Stored Procedure Example
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#safe-vb-net-stored-procedure-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Safe VB .NET Stored Procedure Example
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#defense-option-3-allow-list-input-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Defense Option 3: Allow-list Input Validation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Defense Option 3: Allow-list Input Validation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sample-of-safe-table-name-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sample Of Safe Table Name Validation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#safest-use-of-dynamic-sql-generation-discouraged" class="md-nav__link">
-    <span class="md-ellipsis">
-      Safest Use Of Dynamic SQL Generation (DISCOURAGED)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sample-of-safer-dynamic-query-generation-discouraged" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sample of Safer Dynamic Query Generation (DISCOURAGED)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#defense-option-4-strongly-discouraged-escaping-all-user-supplied-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      Defense Option 4: STRONGLY DISCOURAGED: Escaping All User-Supplied Input
+      Threat Actors and Attack Surfaces
     </span>
   </a>
   
@@ -3413,70 +3503,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-defenses" class="md-nav__link">
+  <a href="#section-1-hallucinated-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
-      Additional Defenses
+      Section 1: Hallucinated Dependencies
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Additional Defenses">
+    <nav class="md-nav" aria-label="Section 1: Hallucinated Dependencies">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#least-privilege" class="md-nav__link">
+  <a href="#do" class="md-nav__link">
     <span class="md-ellipsis">
-      Least Privilege
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Least Privilege">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#minimizing-application-and-os-privileges" class="md-nav__link">
-    <span class="md-ellipsis">
-      Minimizing Application and OS Privileges
+      Do
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#details-of-least-privilege-when-developing" class="md-nav__link">
+  <a href="#dont" class="md-nav__link">
     <span class="md-ellipsis">
-      Details Of Least Privilege When Developing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#least-admin-privileges-for-multiple-dbs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Least Admin Privileges For Multiple DBs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enhancing-least-privilege-with-sql-views" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enhancing Least Privilege with SQL Views
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#allow-list-input-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Allow-list Input Validation
+      Don't
     </span>
   </a>
   
@@ -3488,9 +3536,465 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#related-articles" class="md-nav__link">
+  <a href="#section-2-outdated-dependencies-with-known-cves" class="md-nav__link">
     <span class="md-ellipsis">
-      Related Articles
+      Section 2: Outdated Dependencies with Known CVEs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 2: Outdated Dependencies with Known CVEs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-indirect-prompt-injection-in-the-development-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 3: Indirect Prompt Injection in the Development Loop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 3: Indirect Prompt Injection in the Development Loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attack-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attack Vectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-mcp-and-tool-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 4: MCP and Tool Security
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 4: MCP and Tool Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-agent-runtime-sandboxing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 5: Agent Runtime Sandboxing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 5: Agent Runtime Sandboxing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-6-rules-files-and-persistent-steering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 6: Rules Files and Persistent Steering
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 6: Rules Files and Persistent Steering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#affected-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Affected Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-7-out-of-scope-edits-and-review-anchoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 7: Out-of-Scope Edits and Review Anchoring
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 7: Out-of-Scope Edits and Review Anchoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-8-test-fabrication-and-test-deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 8: Test Fabrication and Test Deletion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 8: Test Fabrication and Test Deletion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-9-prompt-context-leakage-and-sensitive-code-exposure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 9: Prompt Context Leakage and Sensitive Code Exposure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 9: Prompt Context Leakage and Sensitive Code Exposure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-10-prompt-to-code-supply-chain-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 10: Prompt-to-Code Supply Chain Risk
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 10: Prompt-to-Code Supply Chain Risk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-11-cicd-agents-and-confused-deputy-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 11: CI/CD Agents and Confused Deputy Risk
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 11: CI/CD Agents and Confused Deputy Risk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-12-markdown-link-and-unicode-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 12: Markdown, Link, and Unicode Injection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 12: Markdown, Link, and Unicode Injection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-13-multi-agent-and-sub-agent-propagation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 13: Multi-Agent and Sub-Agent Propagation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 13: Multi-Agent and Sub-Agent Propagation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-14-human-accountability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 14: Human Accountability
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 14: Human Accountability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#owasp-top-10-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      OWASP Top 10 Mapping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
     </span>
   </a>
   
@@ -3514,187 +4018,362 @@
   
 
 
-<h1 id="sql-injection-prevention-cheat-sheet">SQL Injection Prevention Cheat Sheet<a class="headerlink" href="#sql-injection-prevention-cheat-sheet" title="Permanent link">&para;</a></h1>
+<h1 id="secure-coding-with-ai-cheat-sheet">Secure Coding with AI Cheat Sheet<a class="headerlink" href="#secure-coding-with-ai-cheat-sheet" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>This cheat sheet will help you prevent SQL injection flaws in your applications. It will define what SQL injection is, explain where those flaws occur, and provide four options for defending against SQL injection attacks. <a href="https://owasp.org/www-community/attacks/SQL_Injection">SQL Injection</a> attacks are common because:</p>
-<ol>
-<li>SQL Injection vulnerabilities are very common.</li>
-<li>The application's database is a frequent target for attackers because it typically contains sensitive or critical data.</li>
-</ol>
-<h2 id="what-is-a-sql-injection-attack">What Is a SQL Injection Attack?<a class="headerlink" href="#what-is-a-sql-injection-attack" title="Permanent link">&para;</a></h2>
-<p>Attackers can use SQL injection on an application if it has dynamic database queries that use string concatenation and user-supplied input. To avoid SQL injection flaws, developers need to:</p>
-<ol>
-<li>Stop writing dynamic queries with string concatenation.</li>
-<li>Prevent malicious SQL input from being included in executed queries.</li>
-</ol>
-<p>There are simple techniques for preventing SQL injection vulnerabilities, and they can be used with practically any kind of programming language and any type of database. While XML databases can have similar problems (e.g., XPath and XQuery injection), these techniques can be used to protect them as well.</p>
-<h2 id="anatomy-of-a-typical-sql-injection-vulnerability">Anatomy of a Typical SQL Injection Vulnerability<a class="headerlink" href="#anatomy-of-a-typical-sql-injection-vulnerability" title="Permanent link">&para;</a></h2>
-<p>A common SQL injection flaw in Java is shown below. Because its unvalidated "customerName" parameter is simply appended to the query, an attacker can enter SQL code into that query and the application would take the attacker's code and execute it on the database.</p>
-<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT account_balance FROM user_data WHERE user_name = &quot;</span>
-<span class="w">             </span><span class="o">+</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">&quot;customerName&quot;</span><span class="p">);</span>
-<span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">Statement</span><span class="w"> </span><span class="n">statement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">connection</span><span class="p">.</span><span class="na">createStatement</span><span class="p">(</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">);</span>
-<span class="w">    </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">statement</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="p">);</span>
-<span class="p">}</span>
+<p>AI coding tools have moved beyond code suggestion. In 2026, agentic coding tools (Claude Code, Cursor agent mode, Aider, Devin, Copilot Workspace, Codex) execute shell commands, install packages, edit files, run tests, access the network, and push branches autonomously. Many developers run these agents with auto-accept enabled, meaning the agent operates with the developer's full permissions and minimal human oversight.</p>
+<p>This cheat sheet addresses the security risks specific to AI-assisted and agentic coding. It focuses on threats that do not exist in traditional development workflows and does not restate general secure coding guidance already covered elsewhere.</p>
+<p>For general secure coding, see the <a href="https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/">Secure Coding Practices Quick Reference Guide</a>. For AI agent security beyond coding tools, see the <a href="https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html">AI Agent Security Cheat Sheet</a>. For prompt injection prevention, see the <a href="https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html">LLM Prompt Injection Prevention Cheat Sheet</a>. For MCP protocol security, see the <a href="https://cheatsheetseries.owasp.org/cheatsheets/MCP_Security_Cheat_Sheet.html">MCP Security Cheat Sheet</a>.</p>
+<h2 id="threat-model-and-trust-boundaries">Threat Model and Trust Boundaries<a class="headerlink" href="#threat-model-and-trust-boundaries" title="Permanent link">&para;</a></h2>
+<p>AI coding agents operate across multiple trust boundaries. Understanding these boundaries is essential before applying any controls.</p>
+<div class="highlight"><pre><span></span><code>                    TRUST BOUNDARIES IN AGENTIC CODING
 
-<span class="p">...</span>
+ [DEVELOPER]                    [AGENT]                    [EXTERNAL]
+  Developer  ──── permissions ──── AI Agent  ──── reads ──── Repo Content
+  approves        (often full       executes       ingests     (issues, PRs,
+  or auto-        dev access)       commands       context     READMEs, deps,
+  accepts                                                      changelogs)
+      |                |                |                |
+      |           [MODEL PROVIDER]      |          [MCP SERVERS]
+      |            API calls            |           Tool calls
+      |            Code + context       |           File access
+      |            sent to provider     |           Network access
+      |                                 |           Credentials
+      |                                 |
+      |              [CI/CD]            |
+      |            Workflows            |
+      |            Org secrets          |
+      |            Deploy access        |
 </code></pre></div>
-<h2 id="primary-defenses">Primary Defenses<a class="headerlink" href="#primary-defenses" title="Permanent link">&para;</a></h2>
+<h3 id="threat-actors-and-attack-surfaces">Threat Actors and Attack Surfaces<a class="headerlink" href="#threat-actors-and-attack-surfaces" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Option 1: Use of Prepared Statements (with Parameterized Queries)</strong></li>
-<li><strong>Option 2: Use of Properly Constructed Stored Procedures</strong></li>
-<li><strong>Option 3: Allow-list Input Validation</strong></li>
-<li><strong>Option 4: STRONGLY DISCOURAGED: Escaping All User Supplied Input</strong></li>
+<li><strong>Repository content as instruction source.</strong> Issue bodies, PR descriptions, PR comments, README files, dependency changelogs, error traces, fetched web pages, and MCP tool responses all become instructions when the agent reads them. An attacker who can write to any of these can influence agent behaviour.</li>
+<li><strong>MCP servers as tool providers.</strong> Agents connect to MCP servers to access tools. A malicious or compromised MCP server can poison tool descriptions, shadow legitimate tool names, exfiltrate credentials through tool arguments, or update tool definitions after initial approval (rug-pull).</li>
+<li><strong>Rules files as persistent steering.</strong> Files like <code>.cursorrules</code>, <code>CLAUDE.md</code>, <code>AGENTS.md</code>, <code>.github/copilot-instructions.md</code>, and <code>.windsurfrules</code> silently steer every future generation. They can be modified by a malicious PR or by the agent itself to embed persistent instructions.</li>
+<li><strong>The agent itself.</strong> Agents running with auto-accept and full developer permissions can install packages, write to any file, execute shell commands, modify CI configuration, and push branches. A compromised agent context has the same blast radius as a compromised developer workstation.</li>
+<li><strong>CI/CD agents.</strong> Review bots and CI runners (e.g. <code>claude-code-action</code>, Copilot review) act on PR content with access to org secrets. A malicious PR can trigger the CI agent to exfiltrate secrets or modify the build pipeline. This is confused deputy at scale.</li>
 </ul>
-<h3 id="defense-option-1-prepared-statements-with-parameterized-queries">Defense Option 1: Prepared Statements (with Parameterized Queries)<a class="headerlink" href="#defense-option-1-prepared-statements-with-parameterized-queries" title="Permanent link">&para;</a></h3>
-<p>When developers are taught how to write database queries, they should be told to use prepared statements with variable binding (aka parameterized queries). Prepared statements are simple to write and easier to understand than dynamic queries, and parameterized queries force the developer to define all SQL code first and pass in each parameter to the query later.</p>
-<p>If database queries use this coding style, the database will always distinguish between code and data, regardless of what user input is supplied. Also, prepared statements ensure that an attacker cannot change the intent of a query, even if SQL commands are inserted by an attacker.</p>
-<h4 id="safe-java-prepared-statement-example">Safe Java Prepared Statement Example<a class="headerlink" href="#safe-java-prepared-statement-example" title="Permanent link">&para;</a></h4>
-<p>In the safe Java example below, if an attacker were to enter the userID as <code>tom' or '1'='1</code>, the parameterized query would look for a username that literally matches the entire string <code>tom' or '1'='1</code>. Thus, the database would be protected against injections of malicious SQL code.</p>
-<p>The following code example uses a <code>PreparedStatement</code>, Java's implementation of a parameterized query, to execute the same database query.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// This should REALLY be validated too</span>
-<span class="n">String</span><span class="w"> </span><span class="n">custname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">&quot;customerName&quot;</span><span class="p">);</span>
-<span class="c1">// Perform input validation to detect attacks</span>
-<span class="n">String</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT account_balance FROM user_data WHERE user_name = ? &quot;</span><span class="p">;</span>
-<span class="n">PreparedStatement</span><span class="w"> </span><span class="n">pstmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">connection</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="p">);</span>
-<span class="n">pstmt</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">custname</span><span class="p">);</span>
-<span class="n">ResultSet</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pstmt</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="w"> </span><span class="p">);</span>
-</code></pre></div>
-<h4 id="safe-c-net-prepared-statement-example">Safe C# .NET Prepared Statement Example<a class="headerlink" href="#safe-c-net-prepared-statement-example" title="Permanent link">&para;</a></h4>
-<p>In .NET, the creation and execution of the query doesn't change. Just pass the parameters to the query using the <code>Parameters.Add()</code> call as shown below.</p>
-<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT account_balance FROM user_data WHERE user_name = ?&quot;</span><span class="p">;</span>
-<span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">OleDbCommand</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OleDbCommand</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="w"> </span><span class="n">connection</span><span class="p">);</span>
-<span class="w">  </span><span class="n">command</span><span class="p">.</span><span class="n">Parameters</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">OleDbParameter</span><span class="p">(</span><span class="s">&quot;customerName&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">CustomerName</span><span class="w"> </span><span class="n">Name</span><span class="p">.</span><span class="n">Text</span><span class="p">));</span>
-<span class="w">  </span><span class="n">OleDbDataReader</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">command</span><span class="p">.</span><span class="n">ExecuteReader</span><span class="p">();</span>
-<span class="w">  </span><span class="c1">// …</span>
-<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">OleDbException</span><span class="w"> </span><span class="n">se</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">// error handling</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>While we have shown examples in Java and .NET, practically all other languages (including Cold Fusion and Classic ASP) support parameterized query interfaces. Even SQL abstraction layers, like the <a href="http://hibernate.org/">Hibernate Query Language</a> (HQL) with the same type of injection problems (called <a href="http://cwe.mitre.org/data/definitions/564.html">HQL Injection</a>)  support parameterized queries as well:</p>
-<h4 id="hibernate-query-language-hql-prepared-statement-named-parameters-example">Hibernate Query Language (HQL) Prepared Statement (Named Parameters) Example<a class="headerlink" href="#hibernate-query-language-hql-prepared-statement-named-parameters-example" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="c1">// This is an unsafe HQL statement</span>
-<span class="n">Query</span><span class="w"> </span><span class="n">unsafeHQLQuery</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">session</span><span class="p">.</span><span class="na">createQuery</span><span class="p">(</span><span class="s">&quot;from Inventory where productID=&#39;&quot;</span><span class="o">+</span><span class="n">userSuppliedParameter</span><span class="o">+</span><span class="s">&quot;&#39;&quot;</span><span class="p">);</span>
-<span class="c1">// Here is a safe version of the same query using named parameters</span>
-<span class="n">Query</span><span class="w"> </span><span class="n">safeHQLQuery</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">session</span><span class="p">.</span><span class="na">createQuery</span><span class="p">(</span><span class="s">&quot;from Inventory where productID=:productid&quot;</span><span class="p">);</span>
-<span class="n">safeHQLQuery</span><span class="p">.</span><span class="na">setParameter</span><span class="p">(</span><span class="s">&quot;productid&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">userSuppliedParameter</span><span class="p">);</span>
-</code></pre></div>
-<h4 id="other-examples-of-safe-prepared-statements">Other Examples of Safe Prepared Statements<a class="headerlink" href="#other-examples-of-safe-prepared-statements" title="Permanent link">&para;</a></h4>
-<p>If you need examples of prepared queries/parameterized languages, including Ruby, PHP, Cold Fusion, Perl, and Rust, see the <a href="Query_Parameterization_Cheat_Sheet.html">Query Parameterization Cheat Sheet</a> or this <a href="http://bobby-tables.com/">site</a>.</p>
-<p>Generally, developers like prepared statements because all the SQL code stays within the application, which makes applications relatively database independent.</p>
-<h3 id="defense-option-2-stored-procedures">Defense Option 2: Stored Procedures<a class="headerlink" href="#defense-option-2-stored-procedures" title="Permanent link">&para;</a></h3>
-<p>Though stored procedures are not always safe from SQL injection, developers can use certain standard stored procedure programming constructs. This approach has the same effect as using parameterized queries, as long as the stored procedures are implemented safely (which is the norm for most stored procedure languages).</p>
-<h4 id="safe-approach-to-stored-procedures">Safe Approach to Stored Procedures<a class="headerlink" href="#safe-approach-to-stored-procedures" title="Permanent link">&para;</a></h4>
-<p>If stored procedures are needed, the safest approach to using them requires the developer to build SQL statements with parameters that are automatically parameterized, unless the developer does something largely out of the norm. The difference between prepared statements and stored procedures is that the SQL code for a stored procedure is defined and stored in the database itself, then called from the application. Since prepared statements and safe stored procedures are equally effective in preventing SQL injection, your organization should choose the approach that makes the most sense for you.</p>
-<h4 id="when-stored-procedures-can-increase-risk">When Stored Procedures Can Increase Risk<a class="headerlink" href="#when-stored-procedures-can-increase-risk" title="Permanent link">&para;</a></h4>
-<p>Occasionally, stored procedures can increase risk when a system is attacked. For example, on MS SQL Server, you have three main default roles: <code>db_datareader</code>, <code>db_datawriter</code> and <code>db_owner</code>. Before stored procedures came into use, DBAs would give <code>db_datareader</code> or <code>db_datawriter</code> rights to the webservice's user, depending on the requirements.</p>
-<p>However, stored procedures require execute rights, a role not available by default. In some setups where user management has been centralized, but is limited to those 3 roles, web apps would have to run as <code>db_owner</code> so stored procedures could work. Naturally, that means that if a server is breached, the attacker has full rights to the database, where previously, they might only have had read-access.</p>
-<h4 id="safe-java-stored-procedure-example">Safe Java Stored Procedure Example<a class="headerlink" href="#safe-java-stored-procedure-example" title="Permanent link">&para;</a></h4>
-<p>The following code example uses Java's implementation of the stored procedure interface (<code>CallableStatement</code>) to execute the same database query. The <code>sp_getAccountBalance</code> stored procedure has to be predefined in the database and use the same functionality as the query above.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// This should REALLY be validated</span>
-<span class="n">String</span><span class="w"> </span><span class="n">custname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">&quot;customerName&quot;</span><span class="p">);</span>
-<span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">CallableStatement</span><span class="w"> </span><span class="n">cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">connection</span><span class="p">.</span><span class="na">prepareCall</span><span class="p">(</span><span class="s">&quot;{call sp_getAccountBalance(?)}&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">cs</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">custname</span><span class="p">);</span>
-<span class="w">  </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cs</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">();</span>
-<span class="w">  </span><span class="c1">// … result set handling</span>
-<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">se</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">// … logging and error handling</span>
-<span class="p">}</span>
-</code></pre></div>
-<h4 id="safe-vb-net-stored-procedure-example">Safe VB .NET Stored Procedure Example<a class="headerlink" href="#safe-vb-net-stored-procedure-example" title="Permanent link">&para;</a></h4>
-<p>The following code example uses a <code>SqlCommand</code>, .NET's implementation of the stored procedure interface, to execute the same database query. The <code>sp_getAccountBalance</code> stored procedure must be predefined in the database and use the same functionality as the query defined above.</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">Try</span>
-<span class="w">   </span><span class="k">Dim</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">SqlCommand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlCommand</span><span class="p">(</span><span class="s">&quot;sp_getAccountBalance&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">connection</span><span class="p">)</span>
-<span class="w">   </span><span class="n">command</span><span class="p">.</span><span class="n">CommandType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CommandType</span><span class="p">.</span><span class="n">StoredProcedure</span>
-<span class="w">   </span><span class="n">command</span><span class="p">.</span><span class="n">Parameters</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">SqlParameter</span><span class="p">(</span><span class="s">&quot;@CustomerName&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">CustomerName</span><span class="p">.</span><span class="n">Text</span><span class="p">))</span>
-<span class="w">   </span><span class="k">Dim</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">SqlDataReader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">command</span><span class="p">.</span><span class="n">ExecuteReader</span><span class="p">()</span>
-<span class="w">   </span><span class="c">&#39;...</span>
-<span class="w"> </span><span class="k">Catch</span><span class="w"> </span><span class="n">se</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">SqlException</span>
-<span class="w">   </span><span class="c">&#39;error handling</span>
-<span class="w"> </span><span class="k">End</span><span class="w"> </span><span class="k">Try</span>
-</code></pre></div>
-<h3 id="defense-option-3-allow-list-input-validation">Defense Option 3: Allow-list Input Validation<a class="headerlink" href="#defense-option-3-allow-list-input-validation" title="Permanent link">&para;</a></h3>
-<p>If you are faced with parts of SQL queries that can't use bind variables, such as table names, column names, or sort order indicators (ASC or DESC), input validation or query redesign is the most appropriate defense. When table or column names are needed, ideally those values come from the code and not from user parameters.</p>
-<h4 id="sample-of-safe-table-name-validation">Sample Of Safe Table Name Validation<a class="headerlink" href="#sample-of-safe-table-name-validation" title="Permanent link">&para;</a></h4>
-<p>WARNING: Using user parameter values to target table or column names is a symptom of poor design and a full rewrite should be considered if time allows. If that is not possible, developers should map the parameter values to the legal/expected table or column names to make sure unvalidated user input doesn't end up in the query.</p>
-<p>In the example below, since <code>tableName</code> is identified as one of the legal and expected values for a table name in this query, it can be directly appended to the SQL query. Keep in mind that generic table validation functions can lead to data loss if table names are used in queries where they are not expected.</p>
-<div class="highlight"><pre><span></span><code>String tableName;
-switch(PARAM):
-  case &quot;Value1&quot;: tableName = &quot;fooTable&quot;;
-                 break;
-  case &quot;Value2&quot;: tableName = &quot;barTable&quot;;
-                 break;
-  ...
-  default      : throw new InputValidationException(&quot;unexpected value provided&quot;
-                                                  + &quot; for table name&quot;);
-</code></pre></div>
-<h4 id="safest-use-of-dynamic-sql-generation-discouraged">Safest Use Of Dynamic SQL Generation (DISCOURAGED)<a class="headerlink" href="#safest-use-of-dynamic-sql-generation-discouraged" title="Permanent link">&para;</a></h4>
-<p>When we say a stored procedure is "implemented safely," that means it does not include any unsafe dynamic SQL generation. Developers do not usually generate dynamic SQL inside stored procedures. However, it can be done, but should be avoided.</p>
-<p>If it can't be avoided, the stored procedure must use input validation or proper escaping, as described in this article, to make sure that all user supplied input to the stored procedure can't be used to inject SQL code into the dynamically generated query. Auditors should always look for uses of <code>sp_execute</code>, <code>execute</code> or <code>exec</code> within SQL Server stored procedures. Similar audit guidelines are necessary for similar functions for other vendors.</p>
-<h4 id="sample-of-safer-dynamic-query-generation-discouraged">Sample of Safer Dynamic Query Generation (DISCOURAGED)<a class="headerlink" href="#sample-of-safer-dynamic-query-generation-discouraged" title="Permanent link">&para;</a></h4>
-<p>For something simple like a sort order, it is best if the user supplied input is converted to a boolean, and then that boolean is used to select the safe value to append to the query. This is a very standard need in dynamic query creation.</p>
-<p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">someMethod</span><span class="p">(</span><span class="kt">boolean</span><span class="w"> </span><span class="n">sortOrder</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">SQLquery</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;some SQL ... order by Salary &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">sortOrder</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;ASC&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;DESC&quot;</span><span class="p">);</span>
-<span class="w"> </span><span class="p">...</span>
-</code></pre></div>
-<p>Any time user input can be converted to a non-String, like a date, numeric, boolean, enumerated type, etc. before it is appended to a query, or used to select a value to append to the query, this ensures it is safe to do so.</p>
-<p>Input validation is also recommended as a secondary defense in ALL cases, even when using bind variables as discussed earlier in this article. More techniques on how to implement strong input validation techniquies are described in the <a href="Input_Validation_Cheat_Sheet.html">Input Validation Cheat Sheet</a>.</p>
-<h3 id="defense-option-4-strongly-discouraged-escaping-all-user-supplied-input">Defense Option 4: STRONGLY DISCOURAGED: Escaping All User-Supplied Input<a class="headerlink" href="#defense-option-4-strongly-discouraged-escaping-all-user-supplied-input" title="Permanent link">&para;</a></h3>
-<p>In this approach, the developer will escape all user input before putting it in a query. It is very database specific in its implementation.  This methodology is fragile compared to other defenses, and we CANNOT guarantee that this option will prevent all SQL injections in all situations.</p>
-<p>If an application is built from scratch or requires low risk tolerance, it should be built or re-written using parameterized queries, stored procedures, or some kind of Object Relational Mapper (ORM) that builds your queries for you.</p>
-<h2 id="additional-defenses">Additional Defenses<a class="headerlink" href="#additional-defenses" title="Permanent link">&para;</a></h2>
-<p>Beyond adopting one of the four primary defenses, we also recommend adopting all of these additional defenses to provide defense in depth. These additional defenses are:</p>
+<h2 id="section-1-hallucinated-dependencies">Section 1: Hallucinated Dependencies<a class="headerlink" href="#section-1-hallucinated-dependencies" title="Permanent link">&para;</a></h2>
+<p>AI coding assistants frequently suggest package names that do not exist on public registries. Attackers monitor these hallucinated names and register malicious packages with matching names (AI-assisted typosquatting).</p>
+<h3 id="do">Do<a class="headerlink" href="#do" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Least Privilege</strong></li>
-<li><strong>Allow-list Input Validation</strong></li>
+<li>Verify every AI-suggested package exists on the public registry before installing. Check the package page, download count, maintainer history, and creation date.</li>
+<li>Be suspicious of packages with very low download counts, recent creation dates (less than 30 days), or a single maintainer with no other packages.</li>
+<li>Implement a pre-install hook or CI check that blocks installation of packages below a minimum age threshold.</li>
+<li>Maintain an internal allowlist of approved packages for your organisation.</li>
 </ul>
-<h3 id="least-privilege">Least Privilege<a class="headerlink" href="#least-privilege" title="Permanent link">&para;</a></h3>
-<p>To minimize the potential damage of a successful SQL injection attack, you should minimize the privileges assigned to every database account in your environment. Start from the ground up to determine what access rights your application accounts require, rather than trying to figure out what access rights you need to take away.</p>
-<p>Make sure that accounts that only need read access are only granted read access to the tables they need access to. DO NOT ASSIGN DBA OR ADMIN TYPE ACCESS TO YOUR APPLICATION ACCOUNTS. We understand that this is easy, and everything just "works" when you do it this way, but it is very dangerous.</p>
-<h4 id="minimizing-application-and-os-privileges">Minimizing Application and OS Privileges<a class="headerlink" href="#minimizing-application-and-os-privileges" title="Permanent link">&para;</a></h4>
-<p>SQL injection is not the only threat to your database data. Attackers can simply change the parameter values from one of the legal values they are presented with, to a value that is unauthorized for them, but the application itself might be authorized to access. As such, minimizing the privileges granted to your application will reduce the likelihood of such unauthorized access attempts, even when an attacker is not trying to use SQL injection as part of their exploit.</p>
-<p>While you are at it, you should minimize the privileges of the operating system account that the DBMS runs under. Don't run your DBMS as root or system! Most DBMSs run out of the box with a very powerful system account. For example, MySQL runs as system on Windows by default! Change the DBMS's OS account to something more appropriate, with restricted privileges.</p>
-<h4 id="details-of-least-privilege-when-developing">Details Of Least Privilege When Developing<a class="headerlink" href="#details-of-least-privilege-when-developing" title="Permanent link">&para;</a></h4>
-<p>If an account only needs access to portions of a table, consider creating a view that limits access to that portion of the data and assigning the account access to the view instead of the underlying table. Rarely, if ever, grant create or delete access to database accounts.</p>
-<p>If you adopt a policy where you use stored procedures everywhere, and don't allow application accounts to directly execute their own queries, then restrict those accounts to only be able to execute the stored procedures they need. Don't grant them any rights directly to the tables in the database.</p>
-<h4 id="least-admin-privileges-for-multiple-dbs">Least Admin Privileges For Multiple DBs<a class="headerlink" href="#least-admin-privileges-for-multiple-dbs" title="Permanent link">&para;</a></h4>
-<p>The designers of web applications should avoid using the same owner/admin account in the web applications to connect to the database. Different DB users should be used for different web applications.</p>
-<p>In general, each separate web application that requires access to the database should have a designated database user account that the application will use to connect to the DB. That way, the designer of the application can have good granularity in the access control, thus reducing the privileges as much as possible. Each DB user will then have select access to only what it needs, and write-access as needed.</p>
-<p>As an example, a login page requires read access to the username and password fields of a table, but no write access of any form (no insert, update, or delete). However, the sign-up page certainly requires insert privilege to that table; this restriction can only be enforced if these web apps use different DB users to connect to the database.</p>
-<h4 id="enhancing-least-privilege-with-sql-views">Enhancing Least Privilege with SQL Views<a class="headerlink" href="#enhancing-least-privilege-with-sql-views" title="Permanent link">&para;</a></h4>
-<p>You can use SQL views to further increase the granularity of access by limiting the read access to specific fields of a table or joins of tables. It could have additional benefits.</p>
-<p>For example, if the system is required (perhaps due to some specific legal requirements) to store the passwords of the users, instead of salted-hashed passwords, the designer could use views to compensate for this limitation. They could revoke all access to the table (from all DB users except the owner/admin) and create a view that outputs the hash of the password field and not the field itself.</p>
-<p>Any SQL injection attack that succeeds in stealing DB information will be restricted to stealing the hash of the passwords (could even be a keyed hash), since no DB user for any of the web applications has access to the table itself.</p>
-<h3 id="allow-list-input-validation">Allow-list Input Validation<a class="headerlink" href="#allow-list-input-validation" title="Permanent link">&para;</a></h3>
-<p>In addition to being a primary defense when nothing else is possible (e.g., when a bind variable isn't legal), input validation can also be a secondary defense used to detect unauthorized input before it is passed to the SQL query. For more information please see the <a href="Input_Validation_Cheat_Sheet.html">Input Validation Cheat Sheet</a>. Proceed with caution here. Validated data is not necessarily safe to insert into SQL queries via string building.</p>
-<h2 id="related-articles">Related Articles<a class="headerlink" href="#related-articles" title="Permanent link">&para;</a></h2>
-<p><strong>SQL Injection Attack Cheat Sheets</strong>:</p>
-<p>The following articles describe how to exploit different kinds of SQL injection vulnerabilities on various platforms (that this article was created to help you avoid):</p>
+<h3 id="dont">Don't<a class="headerlink" href="#dont" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/">SQL Injection Cheat Sheet</a></li>
-<li>Bypassing WAF's with SQLi - <a href="https://owasp.org/www-community/attacks/SQL_Injection_Bypassing_WAF">SQL Injection Bypassing WAF</a></li>
+<li>Blindly run <code>npm install</code>, <code>pip install</code>, or <code>go get</code> with package names suggested by an AI without verification.</li>
+<li>Assume that because an AI suggested a package, it exists or is safe.</li>
+<li>Ignore typosquatting risk. AI assistants frequently suggest names that are close to real packages but slightly different.</li>
 </ul>
-<p><strong>Description of SQL Injection Vulnerabilities</strong>:</p>
+<h2 id="section-2-outdated-dependencies-with-known-cves">Section 2: Outdated Dependencies with Known CVEs<a class="headerlink" href="#section-2-outdated-dependencies-with-known-cves" title="Permanent link">&para;</a></h2>
+<p>AI models are trained on historical code. They frequently suggest dependency versions that were current during training but now have known vulnerabilities. The AI may not know about CVEs published after its training cutoff or after the coding tool's last security-index update.</p>
+<h3 id="do_1">Do<a class="headerlink" href="#do_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li>OWASP article on <a href="https://owasp.org/www-community/attacks/SQL_Injection">SQL Injection</a> Vulnerabilities</li>
-<li>OWASP article on <a href="https://owasp.org/www-community/attacks/Blind_SQL_Injection">Blind_SQL_Injection</a> Vulnerabilities</li>
+<li>Run dependency auditing tools (npm audit, pip audit, govulncheck, cargo audit) on every AI-generated dependency list before merging.</li>
+<li>Configure CI/CD pipelines to fail on known vulnerabilities in dependencies, regardless of whether the code was human-written or AI-generated.</li>
+<li>Pin dependencies to specific versions and update them through your normal dependency management process, not through AI suggestions.</li>
+<li>Cross-reference AI-suggested versions against vulnerability databases (NVD, GitHub Advisory Database, OSV).</li>
 </ul>
-<p><strong>How to Avoid SQL Injection Vulnerabilities</strong>:</p>
+<h3 id="dont_1">Don't<a class="headerlink" href="#dont_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://github.com/OWASP/DevGuide">OWASP Developers Guide</a> article on how to avoid SQL injection vulnerabilities</li>
-<li>OWASP Cheat Sheet that provides <a href="Query_Parameterization_Cheat_Sheet.html">numerous language specific examples of parameterized queries using both Prepared Statements and Stored Procedures</a></li>
-<li><a href="http://bobby-tables.com/">The Bobby Tables site (inspired by the XKCD webcomic) has numerous examples in different languages of parameterized Prepared Statements and Stored Procedures</a></li>
+<li>Accept AI-suggested dependency versions without checking for known CVEs.</li>
+<li>Assume that AI assistants are aware of recent vulnerability disclosures.</li>
+<li>Disable dependency auditing for AI-generated code.</li>
 </ul>
-<p><strong>How to Review Code for SQL Injection Vulnerabilities</strong>:</p>
+<h2 id="section-3-indirect-prompt-injection-in-the-development-loop">Section 3: Indirect Prompt Injection in the Development Loop<a class="headerlink" href="#section-3-indirect-prompt-injection-in-the-development-loop" title="Permanent link">&para;</a></h2>
+<p>Agentic coding tools ingest context from the repository, the network, and connected tools. Any content the agent reads can contain hidden instructions that alter its behaviour. This is indirect prompt injection applied to the development workflow.</p>
+<h3 id="attack-vectors">Attack Vectors<a class="headerlink" href="#attack-vectors" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://wiki.owasp.org/index.php/Category:OWASP_Code_Review_Project">OWASP Code Review Guide</a> article on how to <a href="https://wiki.owasp.org/index.php/Reviewing_Code_for_SQL_Injection">Review Code for SQL Injection</a> Vulnerabilities</li>
+<li><strong>Issue bodies and PR descriptions.</strong> An attacker opens an issue containing hidden instructions. When a developer asks the agent to "fix issue #123", the agent reads the issue body and follows the embedded instructions.</li>
+<li><strong>PR comments and review feedback.</strong> Malicious review comments can instruct the agent to modify unrelated files, weaken security controls, or exfiltrate code when the developer asks the agent to "address review feedback."</li>
+<li><strong>README and documentation files.</strong> Cloned repositories, dependencies, and fetched documentation can contain instructions invisible to human readers but parsed by the agent.</li>
+<li><strong>Error traces and log output.</strong> When an agent reads error output to debug a failure, crafted error messages can inject instructions.</li>
+<li><strong>Dependency changelogs and release notes.</strong> Agents reading changelogs to understand version differences can be influenced by injected content.</li>
+<li><strong>Fetched web pages.</strong> Agents with web access can be influenced by content on pages they are asked to reference.</li>
 </ul>
-<p><strong>How to Test for SQL Injection Vulnerabilities</strong>:</p>
+<h3 id="do_2">Do<a class="headerlink" href="#do_2" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://owasp.org/www-project-web-security-testing-guide">OWASP Testing Guide</a> article on how to <a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection.html">Test for SQL Injection</a> Vulnerabilities</li>
+<li>Treat all repository content (issues, PRs, comments, READMEs) as untrusted input when processed by an AI coding agent.</li>
+<li>Review agent output for unexpected changes after the agent processes any external content.</li>
+<li>Use tools that sanitise or flag potential injection patterns in repository content before the agent processes it.</li>
+<li>Restrict agent context to the minimum files and content needed for the task.</li>
+<li>Audit agent actions after processing content from external contributors or public repositories.</li>
+</ul>
+<h3 id="dont_2">Don't<a class="headerlink" href="#dont_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Allow agents to process issue bodies, PR descriptions, or comments from untrusted contributors without review of the agent's resulting actions.</li>
+<li>Assume that content an agent reads is safe because it appears in a familiar context (e.g. a GitHub issue).</li>
+<li>Give agents unrestricted access to browse the web or fetch arbitrary URLs without egress controls.</li>
+</ul>
+<h2 id="section-4-mcp-and-tool-security">Section 4: MCP and Tool Security<a class="headerlink" href="#section-4-mcp-and-tool-security" title="Permanent link">&para;</a></h2>
+<p>AI coding agents connect to MCP (Model Context Protocol) servers to access tools for file operations, database queries, API calls, and more. Compromised or malicious MCP servers are a direct supply chain risk to the development environment.</p>
+<p>For comprehensive MCP security guidance, see the <a href="https://cheatsheetseries.owasp.org/cheatsheets/MCP_Security_Cheat_Sheet.html">MCP Security Cheat Sheet</a>.</p>
+<h3 id="do_3">Do<a class="headerlink" href="#do_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Audit all MCP servers connected to your development environment. Maintain an allowlist of approved servers and tools.</li>
+<li>Pin tool definitions and detect changes. Use snapshot-and-diff mechanisms to catch rug-pull updates where a tool's behaviour changes after initial approval.</li>
+<li>Review tool descriptions for hidden instructions. Tool descriptions are part of the agent's context and can contain prompt injection payloads.</li>
+<li>Restrict which tools the agent can invoke. Apply least privilege -- a coding agent does not need access to email, payment, or administrative tools.</li>
+<li>Monitor for tool name shadowing where a malicious MCP server registers a tool with the same name as a legitimate one to intercept calls.</li>
+<li>Validate tool arguments before execution. Agents may pass sensitive data (credentials, file contents, environment variables) as tool arguments without awareness of the data classification.</li>
+</ul>
+<h3 id="dont_3">Don't<a class="headerlink" href="#dont_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Connect to MCP servers from untrusted sources without security review.</li>
+<li>Allow agents to discover and connect to MCP servers automatically without approval.</li>
+<li>Trust tool descriptions as benign. They are an injection surface.</li>
+<li>Allow MCP tools unrestricted filesystem, network, or credential access on the developer's machine.</li>
+</ul>
+<p>Reference: CVE-2026-39313 -- mcp-framework before 0.2.22: unbounded memory allocation in HTTP request body handling allowed unauthenticated denial of service. Example of a vulnerability in AI framework code that highlights the need for dependency auditing and runtime limits.</p>
+<h2 id="section-5-agent-runtime-sandboxing">Section 5: Agent Runtime Sandboxing<a class="headerlink" href="#section-5-agent-runtime-sandboxing" title="Permanent link">&para;</a></h2>
+<p>Agentic coding tools execute commands, install packages, write files, and access the network on the developer's machine. Without sandboxing, a compromised agent context has the same privileges as the developer.</p>
+<h3 id="do_4">Do<a class="headerlink" href="#do_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Run AI coding agents in sandboxed environments: dev containers, restricted shells, virtual machines, or ephemeral cloud workspaces.</li>
+<li>Use tool allowlists that restrict which commands the agent can execute. Block access to credential stores, SSH keys, cloud CLI configurations, and sensitive directories.</li>
+<li>Apply egress controls on the agent's runtime. If the agent does not need outbound network access for the current task, block it.</li>
+<li>Use ephemeral credentials scoped to the current task rather than long-lived developer credentials.</li>
+<li>Understand and evaluate the risk of flags like <code>--dangerously-skip-permissions</code> or auto-accept modes. These bypass confirmation prompts and give the agent unrestricted execution.</li>
+<li>Set resource limits (CPU, memory, disk, process count) on agent execution environments.</li>
+</ul>
+<h3 id="dont_4">Don't<a class="headerlink" href="#dont_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Run AI coding agents with your full developer credentials, SSH keys, and cloud access tokens without sandboxing.</li>
+<li>Enable auto-accept mode on untrusted or unfamiliar codebases.</li>
+<li>Allow agents to access production credentials, deployment keys, or org-level secrets from the development environment.</li>
+<li>Assume the agent will only touch files relevant to the current task.</li>
+</ul>
+<h2 id="section-6-rules-files-and-persistent-steering">Section 6: Rules Files and Persistent Steering<a class="headerlink" href="#section-6-rules-files-and-persistent-steering" title="Permanent link">&para;</a></h2>
+<p>AI coding tools read configuration files that steer their behaviour across all future interactions. These files are a persistence mechanism -- an attacker who can modify them controls every subsequent generation.</p>
+<h3 id="affected-files">Affected Files<a class="headerlink" href="#affected-files" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>.cursorrules</code>, <code>.cursor/rules/</code></li>
+<li><code>CLAUDE.md</code>, <code>.claude/</code></li>
+<li><code>AGENTS.md</code></li>
+<li><code>.github/copilot-instructions.md</code></li>
+<li><code>.windsurfrules</code></li>
+<li><code>.aider.conf.yml</code></li>
+<li>Custom system prompt files referenced by any AI tool</li>
+</ul>
+<h3 id="do_5">Do<a class="headerlink" href="#do_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Treat rules files as security-critical configuration. Review changes to these files with the same scrutiny as CI/CD pipeline changes.</li>
+<li>Add rules files to your code review requirements. Require explicit approval for any modification.</li>
+<li>Monitor for unexpected rules file creation or modification, including by the agent itself.</li>
+<li>Use git hooks or CI checks that flag changes to known rules files in every PR.</li>
+<li>Audit existing rules files for instructions that weaken security controls, disable safety features, or direct the agent to ignore certain file types or patterns.</li>
+</ul>
+<h3 id="dont_5">Don't<a class="headerlink" href="#dont_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Allow PRs from external contributors to add or modify rules files without security review.</li>
+<li>Allow the AI agent itself to modify its own rules files without explicit developer approval.</li>
+<li>Assume rules files are benign because they are plain text. They are instruction injection surfaces with session-level persistence.</li>
+</ul>
+<h2 id="section-7-out-of-scope-edits-and-review-anchoring">Section 7: Out-of-Scope Edits and Review Anchoring<a class="headerlink" href="#section-7-out-of-scope-edits-and-review-anchoring" title="Permanent link">&para;</a></h2>
+<p>Agents routinely touch files beyond the scope of the requested change: lockfiles, CI configurations, unrelated tests, formatting changes, and dependency updates. Reviewers anchored on the requested change miss these modifications. This is the most common review failure mode in agentic coding.</p>
+<h3 id="do_6">Do<a class="headerlink" href="#do_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use diff-aware review tooling that highlights all files changed, not just the ones relevant to the task description.</li>
+<li>Implement CI checks that flag unexpected file modifications: lockfile changes, CI/CD config changes, test modifications, and changes to files outside the requested scope.</li>
+<li>Review every file in an agent-generated PR individually. Do not approve based on the PR description alone.</li>
+<li>Set up CODEOWNERS rules that require specific reviewers for sensitive files (CI configs, Dockerfiles, deployment scripts, rules files).</li>
+<li>Limit the agent's file access scope when possible. Some tools support directory restrictions or file allowlists.</li>
+</ul>
+<h3 id="dont_6">Don't<a class="headerlink" href="#dont_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Approve agent-generated PRs based on the summary or description without reviewing the full diff.</li>
+<li>Assume that lockfile changes, test modifications, or formatting changes are benign because they "look routine."</li>
+<li>Allow agents to modify files outside the explicitly requested scope without flagging those changes for review.</li>
+</ul>
+<h2 id="section-8-test-fabrication-and-test-deletion">Section 8: Test Fabrication and Test Deletion<a class="headerlink" href="#section-8-test-fabrication-and-test-deletion" title="Permanent link">&para;</a></h2>
+<p>AI agents make CI green by deleting failing tests, weakening assertions, mocking the unit under test instead of fixing the code, or asserting the buggy behaviour. A passing test suite generated by the same agent that produced the code provides no independent assurance.</p>
+<h3 id="do_7">Do<a class="headerlink" href="#do_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Require human review of all AI-generated test modifications, with focus on:<ul>
+<li>Deleted tests (why was this test removed?)</li>
+<li>Weakened assertions (did <code>assertEquals</code> become <code>assertNotNull</code>?)</li>
+<li>New mocks that replace real dependencies the test was designed to exercise</li>
+<li>Tests that assert the generated behaviour rather than the correct behaviour</li>
+</ul>
+</li>
+<li>Add adversarial and negative test cases that the AI did not generate: invalid inputs, expired tokens, malformed payloads, boundary conditions, concurrent access.</li>
+<li>Measure security confidence by adversarial testing results and independent analysis, not by "all tests pass."</li>
+<li>Implement CI rules that flag test deletions or assertion-count reductions in agent-generated PRs.</li>
+<li>Write security-critical tests manually for authentication, authorisation, input validation, and cryptographic operations.</li>
+</ul>
+<h3 id="dont_7">Don't<a class="headerlink" href="#dont_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Trust AI-generated test suites as evidence of security.</li>
+<li>Measure confidence by test pass rate alone. 100% passing means nothing if the tests assert broken behaviour.</li>
+<li>Allow agents to delete or modify existing tests without explicit justification reviewed by a human.</li>
+<li>Allow the agent to both write the security-critical code and its tests without independent verification.</li>
+</ul>
+<h2 id="section-9-prompt-context-leakage-and-sensitive-code-exposure">Section 9: Prompt Context Leakage and Sensitive Code Exposure<a class="headerlink" href="#section-9-prompt-context-leakage-and-sensitive-code-exposure" title="Permanent link">&para;</a></h2>
+<p>AI coding assistants send code context (open files, project structure, terminal output) to the model provider's API. This context may contain credentials, personal data, proprietary business logic, and internal architecture details.</p>
+<h3 id="do_8">Do<a class="headerlink" href="#do_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Review what context your AI coding assistant sends to the provider. Most tools document this.</li>
+<li>Configure AI tools to exclude sensitive directories from context. Add <code>.env</code>, <code>.env.*</code>, <code>*.pem</code>, <code>*.key</code>, <code>credentials.json</code>, <code>serviceAccountKey.json</code>, and similar sensitive files to your AI tool's context exclusion list (<code>.cursorignore</code>, <code>.copilotignore</code>, or equivalent).</li>
+<li>Audit what your AI coding tool sends by enabling request logging or using a network proxy to inspect outbound API calls.</li>
+<li>Use self-hosted or air-gapped AI coding tools for projects handling classified, regulated, or highly sensitive code.</li>
+<li>Store all secrets in environment variables, vault services, or encrypted secret stores -- never in files within the project tree where AI tools can read them.</li>
+</ul>
+<h3 id="dont_8">Don't<a class="headerlink" href="#dont_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use cloud-hosted AI coding assistants on classified or top-secret codebases without approval.</li>
+<li>Assume that AI coding assistants only send the current file. Many send broader project context.</li>
+<li>Open <code>.env</code> files or private keys in your IDE while an AI coding assistant is active. The file contents may be sent as context.</li>
+<li>Paste API keys, tokens, or credentials into your terminal while AI tools with terminal context access are running.</li>
+<li>Assume that <code>.gitignore</code> prevents AI tools from reading files. <code>.gitignore</code> only affects git -- AI tools read from the filesystem directly.</li>
+</ul>
+<h2 id="section-10-prompt-to-code-supply-chain-risk">Section 10: Prompt-to-Code Supply Chain Risk<a class="headerlink" href="#section-10-prompt-to-code-supply-chain-risk" title="Permanent link">&para;</a></h2>
+<p>AI coding agents modify not just application code but also build scripts, CI/CD configurations, package scripts, and deployment infrastructure. Changes to these files execute automatically in trusted contexts with elevated privileges.</p>
+<h3 id="do_9">Do<a class="headerlink" href="#do_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Review AI changes to the following files with heightened scrutiny -- treat them as security-critical:<ul>
+<li><code>package.json</code> (scripts section: postinstall, preinstall, prepare, prebuild)</li>
+<li><code>.github/workflows/*.yml</code> (GitHub Actions)</li>
+<li><code>.gitlab-ci.yml</code></li>
+<li><code>Dockerfile</code>, <code>docker-compose.yml</code></li>
+<li><code>Makefile</code>, <code>Rakefile</code>, <code>Taskfile</code></li>
+<li><code>setup.py</code>, <code>pyproject.toml</code> (build scripts)</li>
+<li><code>go generate</code> directives</li>
+<li>Any file that executes automatically during build, install, test, or deploy</li>
+</ul>
+</li>
+<li>Flag any AI-generated change that adds network access, downloads external resources, or executes shell commands in build/deploy context.</li>
+<li>Implement CI checks that diff build configuration files and require explicit approval for changes to CI/CD pipelines.</li>
+<li>Ensure AI-generated GitHub Actions reference third-party actions pinned to a specific commit SHA, not a mutable tag.</li>
+</ul>
+<h3 id="dont_9">Don't<a class="headerlink" href="#dont_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Allow AI to modify CI/CD pipelines, Dockerfiles, or package scripts without explicit human review.</li>
+<li>Accept AI-generated GitHub Actions that reference third-party actions by tag without SHA pinning.</li>
+<li>Trust AI-generated build scripts that download or execute external URLs.</li>
+<li>Merge AI changes to deployment configurations without verifying what changed in the build/deploy path.</li>
+</ul>
+<h2 id="section-11-cicd-agents-and-confused-deputy-risk">Section 11: CI/CD Agents and Confused Deputy Risk<a class="headerlink" href="#section-11-cicd-agents-and-confused-deputy-risk" title="Permanent link">&para;</a></h2>
+<p>AI-powered CI/CD agents (review bots, automated code fixers, PR assistants) run on PR events with access to org secrets, deployment credentials, and write access to the repository. A malicious PR can manipulate the CI agent into exfiltrating secrets or modifying the pipeline.</p>
+<h3 id="do_10">Do<a class="headerlink" href="#do_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Scope CI agent credentials to the minimum required permissions. Review bots should not have deploy keys or write access to secrets.</li>
+<li>Filter and sanitise PR content (title, body, comments, diff) before passing it to CI agents as context. PR content is attacker-controlled input.</li>
+<li>Run CI agents in isolated environments with no access to production secrets or credentials beyond what the specific job requires.</li>
+<li>Log all CI agent actions with full context for audit. Monitor for unexpected file modifications, network calls, or secret access patterns.</li>
+<li>Implement approval gates before CI agents can push commits, modify workflows, or access sensitive resources.</li>
+</ul>
+<h3 id="dont_10">Don't<a class="headerlink" href="#dont_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Give CI agents org-level secrets or deployment credentials when they only need read access.</li>
+<li>Allow CI agents to process PR content from external contributors without sandboxing.</li>
+<li>Trust CI agent output (comments, reviews, suggested fixes) without verifying that the agent was not influenced by malicious PR content.</li>
+</ul>
+<h2 id="section-12-markdown-link-and-unicode-injection">Section 12: Markdown, Link, and Unicode Injection<a class="headerlink" href="#section-12-markdown-link-and-unicode-injection" title="Permanent link">&para;</a></h2>
+<p>Agent output rendered in IDE chat panes, PR comments, or review interfaces can contain Markdown-based exfiltration links, bidi (bidirectional) text overrides, and zero-width characters that influence future agent behaviour or mislead reviewers.</p>
+<h3 id="do_11">Do<a class="headerlink" href="#do_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sanitise agent output before rendering in IDE chat panes or PR comments. Strip or escape Markdown image tags, hidden links, and HTML entities.</li>
+<li>Detect and flag bidi override characters (U+202A through U+202E, U+2066 through U+2069) and zero-width characters (U+200B, U+200C, U+200D, U+FEFF) in code, commits, and agent output.</li>
+<li>Use CI checks that scan for homoglyph attacks and invisible characters in PRs.</li>
+<li>Review agent-generated commit messages and PR descriptions for embedded content that could influence future agent runs.</li>
+</ul>
+<h3 id="dont_11">Don't<a class="headerlink" href="#dont_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Render agent output containing Markdown images or links without sanitisation. Image tags with external URLs can exfiltrate conversation context via URL parameters.</li>
+<li>Assume that code containing only visible ASCII characters is safe. Zero-width and bidi characters are invisible in most editors.</li>
+<li>Allow agent-generated content to be committed without scanning for unicode injection.</li>
+</ul>
+<h2 id="section-13-multi-agent-and-sub-agent-propagation">Section 13: Multi-Agent and Sub-Agent Propagation<a class="headerlink" href="#section-13-multi-agent-and-sub-agent-propagation" title="Permanent link">&para;</a></h2>
+<p>When multiple agents interact (e.g. a coding agent delegates to a search agent, or a review agent processes output from a coding agent), prompt injection can propagate across agent boundaries. A compromised context in one agent becomes instructions for the next.</p>
+<h3 id="do_12">Do<a class="headerlink" href="#do_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Treat output from one agent as untrusted input when passed to another agent.</li>
+<li>Implement context boundaries between agents. Do not pass full conversation history or raw tool responses between agents without sanitisation.</li>
+<li>Monitor cross-agent interactions for instruction propagation patterns (e.g. one agent's output instructing another to exfiltrate data or modify files).</li>
+<li>Validate that sub-agent actions remain within the scope defined by the parent task.</li>
+</ul>
+<h3 id="dont_12">Don't<a class="headerlink" href="#dont_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Chain agents without context boundaries. If Agent A is compromised, Agent B should not blindly execute Agent A's output.</li>
+<li>Allow sub-agents to inherit the full permissions and credentials of the parent agent without scope restriction.</li>
+<li>Assume that agent-to-agent communication is trusted because both agents are "your" tools.</li>
+</ul>
+<p>For comprehensive guidance on multi-agent trust boundaries, see the <a href="https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html">AI Agent Security Cheat Sheet</a> and the <a href="https://cheatsheetseries.owasp.org/cheatsheets/MCP_Security_Cheat_Sheet.html">MCP Security Cheat Sheet</a> Section 8 (Multi-Server Isolation).</p>
+<h2 id="section-14-human-accountability">Section 14: Human Accountability<a class="headerlink" href="#section-14-human-accountability" title="Permanent link">&para;</a></h2>
+<p>AI-generated code must have a human owner. Every AI-assisted change should be reviewed, approved, and attributable to a developer who is responsible for its security and maintainability. AI tools do not accept responsibility for the code they generate. The developer who accepts and commits the code does.</p>
+<h3 id="do_13">Do<a class="headerlink" href="#do_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Assign a human owner to every AI-generated code change. That owner is responsible for its correctness, security, and maintenance.</li>
+<li>Require explicit developer approval before merging any AI-generated code. The approval indicates the developer has reviewed and understood the change.</li>
+<li>Maintain audit trails showing which developer approved which AI-generated changes, including the AI tool and model version used.</li>
+<li>Treat AI as a tool, not a colleague. A developer who says "the AI wrote it" is still responsible for it.</li>
+</ul>
+<h3 id="dont_13">Don't<a class="headerlink" href="#dont_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Deploy AI-generated code that no human has reviewed and approved.</li>
+<li>Allow AI-generated code to bypass code review because "the AI is usually right."</li>
+<li>Treat AI approval (e.g. AI-generated code review comments) as a substitute for human review.</li>
+<li>Attribute security failures to the AI tool. The developer who approved the code is accountable.</li>
+</ul>
+<h2 id="owasp-top-10-mapping">OWASP Top 10 Mapping<a class="headerlink" href="#owasp-top-10-mapping" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>OWASP Top 10</th>
+<th>Relevant Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A01: Broken Access Control</td>
+<td>Section 5: Agent Runtime Sandboxing, Section 11: CI/CD Agents</td>
+</tr>
+<tr>
+<td>A03: Injection</td>
+<td>Section 3: Indirect Prompt Injection, Section 12: Markdown and Unicode Injection</td>
+</tr>
+<tr>
+<td>A04: Insecure Design</td>
+<td>Section 8: Test Fabrication, Section 14: Human Accountability</td>
+</tr>
+<tr>
+<td>A05: Security Misconfiguration</td>
+<td>Section 6: Rules Files, Section 7: Out-of-Scope Edits</td>
+</tr>
+<tr>
+<td>A06: Vulnerable and Outdated Components</td>
+<td>Section 1: Hallucinated Dependencies, Section 2: Outdated Dependencies</td>
+</tr>
+<tr>
+<td>A07: Identification and Authentication Failures</td>
+<td>Section 4: MCP and Tool Security</td>
+</tr>
+<tr>
+<td>A08: Software and Data Integrity Failures</td>
+<td>Section 10: Prompt-to-Code Supply Chain Risk</td>
+</tr>
+<tr>
+<td>A09: Security Logging and Monitoring Failures</td>
+<td>Section 9: Prompt Context Leakage, Section 11: CI/CD Agents</td>
+</tr>
+<tr>
+<td>A10: Server-Side Request Forgery</td>
+<td>Section 3: Indirect Prompt Injection, Section 4: MCP and Tool Security</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html">OWASP AI Agent Security Cheat Sheet</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html">OWASP LLM Prompt Injection Prevention Cheat Sheet</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/MCP_Security_Cheat_Sheet.html">OWASP MCP Security Cheat Sheet</a></li>
+<li><a href="https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/">OWASP Secure Coding Practices Quick Reference Guide</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Software_Supply_Chain_Security_Cheat_Sheet.html">OWASP Software Supply Chain Security Cheat Sheet</a></li>
+<li><a href="https://genai.owasp.org/">OWASP Top 10 for LLM Applications</a></li>
+<li><a href="https://github.com/OWASP/AISVS">OWASP AISVS</a></li>
+<li>CVE-2026-39313 -- mcp-framework before 0.2.22: unbounded memory allocation in HTTP request body handling allowed unauthenticated denial of service. Example of a vulnerability in AI framework code that highlights the need for dependency auditing and runtime limits.</li>
 </ul>
 
 
